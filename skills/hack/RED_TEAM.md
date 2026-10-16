@@ -1,6 +1,6 @@
 # Red-Team Execution
 
-Use with `SKILL.md` §§2–3. How to pick targets, expand scope, and close out. Exploit recipes live in deep topic skills.
+Use with the shared scope/evidence rules in `SKILL.md`. How to pick targets, expand scope, and close out. Exploit recipes live in deep topic skills.
 
 ## Before kickoff
 
@@ -9,7 +9,7 @@ Use with `SKILL.md` §§2–3. How to pick targets, expand scope, and close out.
 - Create the evidence directory and a change log (scope expansion, high-severity finds, pauses)
 - Agree the immediate-notify threshold for high-severity finds
 
-No authorization letter or equivalent approval → stop.
+Reuse established authorization. If authority for an active action is missing, stop that action and clarify; continue permitted local review and planning.
 
 ## Impact ladder
 
@@ -27,7 +27,7 @@ Layer 7 may go in an appendix. It is not a primary result.
 
 ## Engagement loop
 
-See field features first, then open the matching check class (`SKILL.md` §3 and `TEST_MATRIX.md`). Opening one class is not firing only that shot. Unlisted field surfaces still get tested.
+See field features first, then open the matching check class (technical routing and `TEST_MATRIX.md` when broad coverage is requested). Opening one class is not firing only that shot. Unlisted field surfaces still get tested.
 
 ```
 Authorization and scope → passive recon → attack-surface inventory → priority path
@@ -50,7 +50,7 @@ Do not empty-scan a site.
 6. **With a session, walk the object graph immediately**: list → detail → attachment / export / approval; swap identifiers at each layer. Do not keep throwing quotes at business endpoints after you are in.
 7. **Minimum to change sites**: portrait exists, inventory exists, matrix ticked or N/A+reason per entry, confirmed medium on an object either chained up or falsified. A thin shell can be falsified at a glance — do not pad time with the full matrix.
 
-Username/password boxes are not injection surfaces. Extra tenant/module fields on the login API are.
+Login fields can reach database queries or other interpreters. Decide from the actual input flow or implementation; field names alone neither prove nor rule out injection. Avoid repeating probes against a confirmed upstream login gate.
 
 ## Scope-expansion protocol
 
@@ -66,7 +66,7 @@ Actions:
 1. Record asset, how found, time
 2. Confirm ownership (whose cert, whose page, whose org account)
 3. Write the expansion reason
-4. Shallow probe first (alive, fingerprint, is there an entry); request depth only if valuable
+4. Check the established scope before probing; record out-of-scope candidates and request expansion before interacting with them
 5. No exploit, no password spray, no intrusive scan before approval
 
 Missing boundary assets is negligence. Expanding without a record is a violation.

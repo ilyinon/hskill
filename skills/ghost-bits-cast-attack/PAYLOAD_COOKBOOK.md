@@ -188,22 +188,22 @@ talk; verify the vendor advisory before relying on a single number.
 |--------------------------|----------------------------|--------|----------------------------------|---------------------------|
 | Apache Commons BCEL      | ClassLoader RCE            | A      | (no CVE; advisory upgrade)       | >= 6.12.0                 |
 | Jackson Databind         | `\uXXXX` JSON SQLi         | A + C  | (advisory upgrade)               | latest 2.x                |
-| Fastjson                 | `\u` / `\x` escape, autotype | C    | re-enables CVE-2017-18349 chains | latest 2.x series         |
+| Fastjson                 | `\u` / `\x` escape, autotype | C    | candidate chain: CVE-2017-18349 chains | latest 2.x series         |
 | Apache Tomcat            | RFC2231 `filename*` upload | A      | (advisory upgrade)               | latest 9 / 10 / 11        |
 | Spring Framework         | URL decode path traversal  | A      | CVE-2025-41242 (PR #34673)       | check Spring advisory     |
-| Spring Framework         | `class.module.classLoader` | A      | re-enables CVE-2022-22965        | n/a (filter at WAF)       |
-| Jetty                    | URL decode `%2>` folding   | B      | re-enables CVE-2023-32315        | latest 11.x / 12.x        |
+| Spring Framework         | `class.module.classLoader` | A      | candidate chain: CVE-2022-22965        | n/a (filter at WAF)       |
+| Jetty                    | URL decode `%2>` folding   | B      | candidate chain: CVE-2023-32315        | latest 11.x / 12.x        |
 | Undertow                 | URL decode bypass          | A      | (advisory upgrade)               | latest                    |
 | Vert.x                   | URL decode + multipart     | A      | (advisory upgrade)               | latest                    |
-| Angus Mail / Jakarta Mail| SMTP CRLF                  | A      | re-enables CVE-2025-57733 class  | latest                    |
+| Angus Mail / Jakarta Mail| SMTP CRLF                  | A      | candidate chain: CVE-2025-57733 class  | latest                    |
 | Apache HttpClient        | header CRLF                | A      | HTTPCLIENT-1974 / 1978           | >= 4.5.10 or migrate to 5 |
 | ActiveJ HTTP             | response CRLF              | A      | (advisory upgrade)               | latest                    |
 | JDK HttpServer           | response splitting         | A      | CVE-2026-21933                   | check JDK advisory        |
 | Lettuce (Redis)          | RESP CRLF                  | A      | (advisory upgrade)               | latest                    |
 | Jodd                     | path traversal             | A      | (advisory upgrade)               | latest                    |
 | XMLWriter                | tag / attr injection       | A      | (advisory upgrade)               | latest                    |
-| GeoServer                | re-enables RCE             | B      | re-enables CVE-2024-36401        | >= 2.28.3                 |
-| Openfire                 | re-enables auth bypass     | B      | re-enables CVE-2023-32315        | >= 5.0.4                  |
+| GeoServer                | conditional RCE chain             | B      | candidate chain: CVE-2024-36401        | >= 2.28.3                 |
+| Openfire                 | conditional auth-bypass chain     | B      | candidate chain: CVE-2023-32315        | >= 5.0.4                  |
 
 ---
 

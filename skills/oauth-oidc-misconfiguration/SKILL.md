@@ -6,7 +6,10 @@ description: >-
 
 # SKILL: OAuth and OIDC Misconfiguration — Redirects, PKCE, Scopes, and Token Binding
 
-> **AI LOAD INSTRUCTION**: Use this skill when the target uses OAuth 2.0 or OpenID Connect and you need a focused misconfiguration checklist: redirect URI validation, state and nonce handling, PKCE enforcement, token audience, and account binding mistakes.
+## Evidence threshold
+
+Map the complete client/provider flow and test using owned accounts. Missing state, nonce, or PKCE is a candidate only in the relevant flow and binding model; confirm a forbidden account binding, code/token acceptance, or identity transition rather than treating one parameter as a universal proof.
+
 
 ## 1. WHEN TO LOAD THIS SKILL
 

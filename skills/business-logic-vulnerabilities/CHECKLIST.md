@@ -183,7 +183,7 @@
 | 资源 ID 必须做归属校验，不只校验"已登录" | 经典水平越权：登录后接口拿 ID 不做归属判断 | 用 A 账号访问 B 的 user_id 资源 |
 | 角色字段（role/level）不可在 cookie / 请求体中可修改 | base64 cookie `uid=admin1` | 改 cookie 中 uid / role 字段后 replay |
 | RBAC 数据一致性：UI 删除权限后数据库 sys_menu 不残留重复行 | 后端业务逻辑常见缺陷：sys_menu 重复行致权限取消未真正生效 | 取消用户某权限后查 sys_menu 表是否仍有该记录 |
-| Cookie 替换不能拿到管理员数据 | 抓 admin Cookie 给普通用户用即越权，是经典 cookie 替换攻击 | 用 admin 抓包，普通账号 replay 用 admin Cookie |
+| 低权限会话不能访问禁止的管理员功能 | 有效 admin Cookie 代表管理员，替换会话后成功不证明越权 | 保持普通账号 A 的 Cookie，访问其无权使用的功能，并与授权基线比较 |
 | `/admin/*` 路径 Filter 用 `request.getServletPath()` 而非 `getRequestURI()` | `getRequestURI` 不规范化路径，分号截断后判定失效 | 试 `/admin/;/login` 是否绕过 |
 | 路径中 `..//` 不能截断 Filter | `/FilterDemo/../../index.jsp` 截断绕过登录检查的经典 Servlet 缺陷 | 提交 `/admin/../../home`、`/admin/..%2F..%2F` 看响应 |
 | 后台 URL 不暴露 / 不可枚举 | 后台入口直接命中（如 `main.php`）即未授权访问 | 试常见路径 `admin.php`、`/admin`、`/manage` |

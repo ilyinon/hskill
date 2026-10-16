@@ -6,7 +6,10 @@ description: >-
 
 # SKILL: CSV Formula Injection
 
-> **AI LOAD INSTRUCTION**: This skill covers formula/DDE-style injection in CSV and spreadsheet contexts, obfuscation, cloud-sheet primitives, and safe testing methodology. Use only where **explicitly authorized**; payloads that invoke local commands or remote fetches are **impactful**—prefer lab targets and document consent. Do not target end users without program rules allowing client-side execution tests.
+## Evidence threshold
+
+Use harmless arithmetic in a local copy of the actual export/import workflow and record product, version, locale, and cell type. A formula-looking string or a security prompt is not command execution. Quoting CSV fields does not itself force spreadsheet text interpretation.
+
 
 ## 0. QUICK START
 
@@ -138,7 +141,8 @@ Example safe export transformation (conceptual):
 
 ```text
 Input:  =1+1
-Output: '=1+1   OR   \t=1+1   OR   (empty prefix) with escaped quotes per RFC 4180
+Output: '=1+1   (only if the target importer preserves text interpretation)
+RFC 4180 quoting protects CSV structure, not formula evaluation. Verify after reopening/reimporting.
 ```
 
 **Note**: when correlating business exports, reports, and API export parameters, combine with injection, business-logic, and API-security skills.

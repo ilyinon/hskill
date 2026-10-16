@@ -6,7 +6,10 @@ description: >-
 
 # SKILL: Clickjacking — Expert Attack Playbook
 
-> **AI LOAD INSTRUCTION**: Clickjacking (UI redress) techniques. Covers iframe transparency tricks, X-Frame-Options bypass, CSP frame-ancestors, multi-step clickjacking, drag-and-drop attacks, and chaining with other vulnerabilities. Often a "low severity" finding that becomes critical when targeting admin actions.
+## Evidence threshold
+
+Verify the effective frame-ancestors/X-Frame-Options policy and actual authenticated browser behavior. Frameability is a prerequisite; demonstrate a meaningful permitted test action through UI redress before claiming impact. SameSite, reauthentication, interaction, and full ancestor-chain checks may prevent the proposed path.
+
 
 ## 1. CORE CONCEPT
 
@@ -31,7 +34,7 @@ Clickjacking loads a target page in a transparent iframe overlaid on an attacker
 X-Frame-Options: DENY           → cannot be framed (secure)
 X-Frame-Options: SAMEORIGIN     → only same-origin framing (secure for cross-origin)
 X-Frame-Options: ALLOW-FROM uri → deprecated, browser support inconsistent
-(header absent)                  → frameable! (vulnerable)
+(header absent)                  → inspect effective frame-ancestors and browser behavior
 ```
 
 ### Check CSP frame-ancestors
@@ -130,7 +133,7 @@ if (top !== self) { top.location = self.location; }
 
 ### Double-Framing
 
-If `X-Frame-Options: SAMEORIGIN` is set, but a same-origin page exists that can be framed (without XFO), use that page as an intermediary to frame the target.
+Double framing is not a generic SAMEORIGIN bypass: modern ancestor-chain enforcement can reject an attacker-controlled top-level origin. Test the complete ancestor chain and effective policy in the target browser.
 
 ---
 

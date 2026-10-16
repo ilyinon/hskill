@@ -6,7 +6,10 @@ description: >-
 
 # SKILL: API Auth and JWT Abuse — Token Trust, Header Tricks, and Rate Limits
 
-> **AI LOAD INSTRUCTION**: Use this skill when APIs rely on JWT, bearer tokens, API keys, or weak request identity signals. Focus on token trust boundaries, claim misuse, header spoofing, and rate-limit bypass.
+## Evidence threshold
+
+Confirm only when the server accepts a token/request outside its signing, identity, or authorization policy and a protected capability changes. A decoded claim, modified token, spoofed header, or changed status alone is a hypothesis; inspect the resulting principal and effective permissions.
+
 
 ## 1. TOKEN TRIAGE
 

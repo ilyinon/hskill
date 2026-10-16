@@ -1,6 +1,6 @@
 # Test Matrix and Effort
 
-Use with `SKILL.md` §3. What to hit first, what "tested" means per class, and when you must not stop. Probe recipes live in deep topic skills.
+Use with the shared scope/evidence rules in `SKILL.md` when broad assessment coverage is requested. What to hit first, what "tested" means per class, and when you must not stop. Probe recipes live in deep topic skills.
 
 ## 1. Effort order
 
@@ -32,7 +32,7 @@ Tick every class against the current endpoint inventory. Information disclosure 
 | Injection | Only endpoints where count, content, or a fetched URL can change. Each filter/sort/keyword param: baseline → probe → diff. Full "please log in" with no business fields → N/A the class. Pick probes for the actual stack; do not throw only quotes |
 | SSRF | Every URL / callback / webhook / file / fetch / import / preview / proxy parameter, proven to intranet, metadata, or an outbound control |
 | Command or template exec | Command, expression, template, deserialization, dangerous upload followed to execution or falsified |
-| Credentials | After copying a string, pass the liveness gate: production accepts the real value (rejects a fake) and one read-only call returns identity or a list |
+| Credentials | Establish exposure; classify validity separately. Perform minimal read-only validation only when credential use, destination, and action are in scope; otherwise mark validity unverified |
 | Default creds | Middleware/component naked defaults that actually issue a session. Login-form weak passwords are not mandatory. Hardcoded demo accounts are keys |
 | Sensitive paths | Swagger / Actuator / debug / heapdump / env; secrets found here get mined |
 | XSS | Reflected on reflection points; stored on write-then-read-back; combine with whether unauthenticated read is possible |
@@ -40,10 +40,10 @@ Tick every class against the current endpoint inventory. Information disclosure 
 | Path traversal | `file` / `path` / `filename` / `key` |
 | CSRF | Write succeeds with missing or bad token; self-only CSRF is not a primary result |
 | Logic and privilege | Write endpoints that add role/amount/state; multi-step skip; money/coupon/stock to small or negative; claim/approval gets one concurrency pass. No such endpoint → N/A |
-| Auth takeover | Inventory has issue-session, reset, rebind, ticket-swap, or step-up → tick. Username/password boxes are not injection surfaces |
+| Auth takeover | Inventory has issue-session, reset, rebind, ticket-swap, or step-up → tick. Login fields may reach an interpreter; determine applicability from the input flow |
 | Other field surfaces | Classes this table does not name still get tested |
 
-After classifying the surface, load the matching deep topic skill for probes (`SKILL.md` §3 signal table).
+After classifying the surface, load the matching deep topic skill for probes (use `ROUTING.md` only when the topic is unclear).
 
 ## 3. Do not stop on a half-chain
 
@@ -52,7 +52,7 @@ After classifying the surface, load the matching deep topic skill for probes (`S
 | File channel open | Business API, executable, path, or SSRF chain |
 | OTP or slider passed | Does the code return in-band, bind an account, reset swap the user |
 | Config has host but no creds | Keep looking for the full credential |
-| Copied a secret | Fake-vs-real + identity or list, read-only |
+| Copied a secret | Establish exposure; validate only within authorization, or record validity unverified |
 | Same-role readable, public static, HTTP 200 JSON | Pivot to cross-user, injection, or privilege |
 | Response sprouted id / download URL / token / internal host | Onto this site's queue |
 | List or detail passed | Same object's attachment, export, preview, approval — one more shot |
@@ -83,7 +83,7 @@ Classify the response before spraying:
 **Locked** (user gave a fixed site or list):
 
 - Do not scan unrelated brand lines before entering the site
-- Must follow: extra hosts the entry already ships, post-login gateway and API domain, extra paths on the same host, same-product business hosts in scripts
+- Record discovered gateways, API domains, and same-product hosts as candidates. Test only those included in the established scope; ownership or a link from the product is not additional authorization
 - If the user marked priority assets, hit that group first; do not stall on the first login wall
 
 **Exploratory** (user gave an org name and allowed boundary expansion):
@@ -108,7 +108,7 @@ A batch of sites that share the same login shell: finish auth endpoints on a rep
 - [ ] This round did not over-index on unauthenticated reads
 - [ ] Injection / SSRF / XSS / exec were actually tested, not one quote per path
 - [ ] Confirmed medium on an object was chained up; response clues entered the queue
-- [ ] Copied credentials passed the liveness gate
+- [ ] Credential exposure and validity were recorded separately; validation stayed within scope
 - [ ] Session findings were not written as anonymous unauthorized
 - [ ] Portrait was written; scripts extracted more than paths
 - [ ] Empty list / error was not treated as "please log in"

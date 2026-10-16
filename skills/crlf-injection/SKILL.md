@@ -6,7 +6,10 @@ description: >-
 
 # SKILL: CRLF Injection — Expert Attack Playbook
 
-> **AI LOAD INSTRUCTION**: CRLF injection (HTTP response splitting) techniques. Covers header injection, response body injection via double CRLF, XSS escalation, cache poisoning, and encoding bypass. Often overlooked by scanners but chains into XSS, session fixation, and cache attacks.
+## Evidence threshold
+
+Confirm a new header, message boundary, or distinct log record in the actual downstream parser using a harmless unique marker. Literal percent escapes or line breaks reflected inside an encoded value are insufficient. Header injection, body execution, cache sharing, and session fixation each require their own evidence.
+
 
 ## 0. RELATED ROUTING
 

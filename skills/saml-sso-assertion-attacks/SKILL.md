@@ -6,7 +6,10 @@ description: >-
 
 # SKILL: SAML SSO and Assertion Attacks — Signature Validation, Binding, and Trust Confusion
 
-> **AI LOAD INSTRUCTION**: Use this skill when the target uses SAML-based SSO and you need to validate assertion trust: signature coverage, audience and recipient checks, ACS handling, XML parsing weaknesses, and IdP/SP confusion.
+## Evidence threshold
+
+Confirm which exact signed element is consumed for identity and whether issuer, audience, recipient, freshness, and request binding match the intended SP/IdP flow. A parser error, unsigned unused node, or missing InResponseTo in a deliberately unsolicited IdP flow does not alone prove bypass.
+
 
 ## 1. WHEN TO LOAD THIS SKILL
 

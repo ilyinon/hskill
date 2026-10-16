@@ -451,16 +451,9 @@ if not is_internal(ip): allow
 response = http_get(ip)        # uses resolved IP directly
 ```
 
-### 4.6 DNS Rebinding for IMDSv2 Bypass
+### 4.6 DNS Rebinding Does Not Remove IMDSv2 Authentication
 
-```
-# IMDSv2 blocks requests with X-Forwarded-For header
-# But DNS rebinding hits from the instance itself:
-1. SSRF reaches attacker-controlled DNS name
-2. First resolution → public IP (passes filter)
-3. Second resolution → 169.254.169.254
-4. Request reaches IMDS from instance's own network → no X-Forwarded-For → success
-```
+Rebinding may bypass an application's separate destination check when validation and connection resolve differently. It does not itself obtain an IMDSv2 token. IMDSv2 still requires a permitted PUT token request and the returned token header on metadata requests; X-Forwarded-For is rejected on the token PUT. Header/method control, hop limits, and instance policy remain independent prerequisites. [AWS IMDS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html).
 
 ---
 

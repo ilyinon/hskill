@@ -1,12 +1,12 @@
 # Code Audit
 
-Use with `SKILL.md` §3 R6. The core is taint paths and missing controls, not a report of dangerous function names.
+Use with the shared scope/evidence rules in `SKILL.md`. The core is taint paths and missing controls, not a report of dangerous function names.
 
-## Phases (parallelizable; do not skip the mental model)
+## Phases (scale to the requested review; preserve the mental model)
 
 0. **Map**: language, framework, build, module boundaries, real entry points, where authn/authz actually land.
 1. **Mental model**: trust boundaries, data-to-storage paths, permission checkpoints, developer security assumptions, first-party vs dependency. If these are unclear, do not daydream across the whole repo.
-2. **Historical variants**: read fix commits of similar CVEs, extract the pattern, search the repo; check whether the fix blocked only one entry.
+2. **Historical variants**, when a relevant pattern or prior fix is identified: read its fix, search for variants, and check whether only one entry was blocked. Skip this phase when it does not inform the requested review.
 3. **Sink reverse**: list dangerous operations, walk parameters upward, mark filters, evaluate bypass.
 4. **Framework specialty**: audit framework features this repo actually uses (mass assignment, expressions, annotation authz, ORM dynamic concat, template engines). Do not scan a language encyclopedia.
 5. **Deep**: unlocked read-check-write, payment and state machines, hardcoded keys, dependency defects, reverted security fixes.

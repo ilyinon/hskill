@@ -6,7 +6,10 @@ description: >-
 
 # SKILL: GraphQL and Hidden Parameters — Introspection, Batching, and Undocumented Fields
 
-> **AI LOAD INSTRUCTION**: Use this skill when GraphQL exists or when REST documentation suggests optional, deprecated, or undocumented fields. Focus on schema discovery, hidden parameter abuse, and batching as a force multiplier.
+## Evidence threshold
+
+Introspection, a suggested field, batching support, or a schema definition alone is not a vulnerability. Confirm a protected read/write or a bounded policy violation using the same requesting identity and owned test objects; a field is not safely authorized merely because its parent was checked.
+
 
 ## 1. GRAPHQL FIRST PASS
 

@@ -6,7 +6,10 @@ description: >-
 
 # SKILL: API Recon and Docs — Endpoints, Schemas, and Version Surface
 
-> **AI LOAD INSTRUCTION**: Use this skill first when the target is a REST, mobile, or GraphQL API and you need to enumerate endpoints, documentation, versions, and hidden surface area before exploitation.
+## Evidence threshold
+
+Record endpoint/schema provenance, method, authentication, identifiers, role/tenant boundaries, and reachable versions. Documentation or an old route alone is not a vulnerability; scope and sensitive exposure must be established separately.
+
 
 ## 1. PRIMARY GOALS
 

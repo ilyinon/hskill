@@ -1,6 +1,6 @@
 # Source and Secret Leak Handling
 
-Use with `SKILL.md` §3 R5. Red team: mine the clue to the end. Blue team: treat it as an incident, not a low-severity info-leak ticket.
+Use with the shared scope/evidence rules in `SKILL.md`. Red team: mine the clue to the end. Blue team: treat it as an incident, not a low-severity info-leak ticket.
 
 How to detect and dump exposed VCS / backups: [insecure-source-code-management](../insecure-source-code-management/SKILL.md). This file is what to do after the leak is in hand.
 
@@ -53,7 +53,7 @@ Blue default: treat as already compromised; push the owner to rotate. Deleting t
 ## Verification discipline
 
 - Purpose is severity, not more damage
-- Fake-vs-real on production, plus one read-only call that returns identity or an object list — otherwise it is still a clue
+- Establish exposure from the artifact and access boundary. Track validity separately: verified / invalid / unverified. Only use a credential against an explicitly in-scope destination with permitted minimal read-only checks; do not make production validation mandatory.
 - One failed verification does not become a destructive retry
 - Full secrets do not go in report body, ticket plaintext, or chat
 - Report writes: type, location, last-four or fingerprint, permission scope, verification action, verification time

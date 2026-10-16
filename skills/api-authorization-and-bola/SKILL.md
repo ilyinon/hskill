@@ -6,14 +6,13 @@ description: >-
 
 # SKILL: API Authorization and BOLA — Object Access, Function Access, and Mass Assignment
 
-> **AI LOAD INSTRUCTION**: Use this skill when an API exposes object IDs, nested resources, or role-sensitive functions and you need a focused authorization test path: BOLA, BFLA, method abuse, and hidden field control.
 
 ## 1. CORE TEST LOOP
 
-1. Create Account A and Account B.
-2. As Account A, capture create, read, update, and delete flows.
-3. Replay with Account B's token.
-4. Test sibling endpoints, nested endpoints, and alternate HTTP verbs.
+1. Use authorized test accounts A/B and owned objects to establish the subject/object/action policy; if only one account exists, record that coverage limit.
+2. Capture an authorized baseline for each relevant action.
+3. Hold the requesting session fixed while changing the target to the other test account's protected object or a forbidden function; compare with the expected denial.
+4. Check relevant child resources and alternate methods using permitted test objects. A valid admin session demonstrates admin access, not escalation.
 
 ## 2. TEST SURFACES
 

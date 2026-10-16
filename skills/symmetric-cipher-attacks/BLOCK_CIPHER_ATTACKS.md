@@ -103,8 +103,13 @@ def padding_oracle_encrypt(plaintext, block_size, oracle):
 def cbc_multibyte_flip(ciphertext, block_size, changes):
     """
     changes: list of (absolute_position, old_byte, new_byte)
-    All changes must be in the SAME target block.
+    ciphertext excludes the IV; all changes must be in the same target
+    block, which must be block 1 or later. Modify a separately held IV for block 0.
     """
+    if any(pos < block_size or pos >= len(ciphertext) for pos, _, _ in changes):
+        raise ValueError("Target requires a valid previous ciphertext block")
+    if len({pos // block_size for pos, _, _ in changes}) > 1:
+        raise ValueError("Changes must target one plaintext block")
     ct = bytearray(ciphertext)
 
     for pos, old, new in changes:
@@ -262,25 +267,26 @@ def recover_lcg_truncated(known_upper_bits, modulus, a, b, unknown_bits):
 ## 5. MERSENNE TWISTER STATE RECOVERY
 
 ```python
+def _undo_right_xor(value, shift):
+    result = value
+    for _ in range((32 + shift - 1) // shift):
+        result = value ^ (result >> shift)
+    return result & 0xFFFFFFFF
+
+
+def _undo_left_xor_mask(value, shift, mask):
+    result = value
+    for _ in range((32 + shift - 1) // shift):
+        result = value ^ ((result << shift) & mask)
+    return result & 0xFFFFFFFF
+
+
 def untemper(y):
-    """Reverse MT19937 tempering to recover internal state."""
-    # Undo: y ^= y >> 18
-    y ^= y >> 18
-
-    # Undo: y ^= (y << 15) & 0xEFC60000
-    y ^= (y << 15) & 0xEFC60000
-
-    # Undo: y ^= (y << 7) & 0x9D2C5680 (need multiple steps)
-    y ^= (y <<  7) & 0x9D2C5680
-    y ^= (y << 14) & 0x9D2C5680
-    y ^= (y << 21) & 0x9D2C5680
-    y ^= (y << 28) & 0x9D2C5680
-
-    # Undo: y ^= y >> 11 (need two steps)
-    y ^= (y >> 11)
-    y ^= (y >> 22)
-
-    return y & 0xFFFFFFFF
+    """Reverse MT19937's four tempering operations on a 32-bit word."""
+    y = _undo_right_xor(y, 18)
+    y = _undo_left_xor_mask(y, 15, 0xEFC60000)
+    y = _undo_left_xor_mask(y, 7, 0x9D2C5680)
+    return _undo_right_xor(y, 11)
 
 def clone_mt(outputs_624):
     """Clone MT19937 state from 624 consecutive outputs."""

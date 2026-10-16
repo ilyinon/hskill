@@ -220,7 +220,7 @@ Upload JS file → <script src="/uploads/evil.js"></script>
 
 <!-- Multi-level clobbering: x.y.value -->
 <a id=x><a id=x name=y href="javascript:alert(1)">
-<!-- document.getElementById('x') returns HTMLCollection -->
+<!-- Named access (window.x) can return an HTMLCollection for duplicate IDs; getElementById('x') returns a single Element or null. -->
 <!-- x.y.href = "javascript:alert(1)" -->
 
 <!-- DomPurify bypass with cid: protocol -->

@@ -97,18 +97,15 @@ Before writing "anonymous" or "unauthorized with no identity", ask: did the brea
 - Still works with credentials stripped → then write unauthenticated
 - Tested with a session, then stripped the cookie in the report to label anonymous = forbidden
 
-### Secret liveness gate
+### Secret exposure and validity
 
-Copying a string is not a finding. Private keys, access keys, connection strings, JWTs, sessions usable as someone else, must satisfy both:
+Report demonstrated exposure separately from credential validity. Record the artifact location, who could access it, type/fingerprint, and potential permission scope. Track validity as verified, invalid, or unverified; suspected placeholders remain hypotheses.
 
-1. Fake rejected, real accepted by production
-2. One non-impacting read-only call returns identity or an object list
-
-Fail the gate → clue only. Placeholders, expired values, fake and real getting the same error, frontend salts used to encrypt a phone number — not results.
+Use minimal read-only validation only when the credential, destination, and action are within authorization. A permitted fake-versus-real control and identity response can establish validity, but live production use is not required to report supported exposure. Never place complete secret values in reports.
 
 ## Do not file as results
 
-A half-chain; weak password that never issued a session; connection string with host and no creds; secret that failed the liveness gate; self-only CSRF; missing security headers; expired cert with no exploit path; HTTP 200 JSON; same-role-readable or public ops data; unauthenticated SMS send with no account takeover or password change. If unsure, do not file.
+A half-chain; weak password that never issued a session; connection string with host and no creds; claims of usable credentials without evidence of validity; self-only CSRF; missing security headers; expired cert with no exploit path; HTTP 200 JSON; same-role-readable or public ops data; unauthenticated SMS send with no account takeover or password change. If unsure, do not file.
 
 Medium, high, and critical: write to disk as soon as confirmed. Do not batch until the end. Same type on the same URL in the same task: do not file twice.
 
@@ -137,7 +134,8 @@ Copy and fill. Delete inapplicable rows; do not leave filler.
 - Found how: red-team test / code audit / source leak / blue triage / hunt
 - Did the break carry a session: yes / no (session present → do not write "anonymous unauthorized")
 - Title register: anonymous unauthenticated (no session, reached someone else) / IDOR (session, someone else's object) / auth takeover / other
-- Secret liveness gate: n/a / not passed (clue) / passed (fake-vs-real + identity or list)
+- Secret exposure evidence:
+- Credential validity: n/a / verified / invalid / unverified; permitted validation and time:
 - Matrix ticks: unauth / IDOR / injection / SSRF / exec / logic / upload chain / other; no entry → N/A + reason
 
 ### Problem
