@@ -1,0 +1,22 @@
+{
+  "entrypoint": "account(validated_claims, accounts, include_issuer=True); flag fixed in caller",
+  "premise": "issuer allowlist, signature, audience and transaction checks separately validated in this model",
+  "accounts": [
+    {
+      "iss": "https://provider-one.example.invalid",
+      "sub": "77",
+      "local": "mira-local"
+    },
+    {
+      "iss": "https://provider-two.example.invalid",
+      "sub": "77",
+      "local": "pavel-local"
+    }
+  ],
+  "claims": {
+    "iss": "https://provider-two.example.invalid",
+    "sub": "77"
+  },
+  "policy": "identity is issuer+subject; no email auto-linking",
+  "goal": "determine whether same sub at two providers causes a local collision"
+}

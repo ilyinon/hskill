@@ -1,0 +1,35 @@
+{
+  "entrypoint": "attachment(session, parent_id, attachment_id, parents, children, bind_child=False)",
+  "policy": "private parent belongs to user+tenant, children inherit parent access",
+  "session": {
+    "user": "nina",
+    "tenant": "north"
+  },
+  "parents": {
+    "north-record": {
+      "owner": "nina",
+      "tenant": "north"
+    },
+    "south-record": {
+      "owner": "oleg",
+      "tenant": "south"
+    }
+  },
+  "children": {
+    "north-file": {
+      "parent": "north-record",
+      "body": "north marker"
+    },
+    "south-file": {
+      "parent": "south-record",
+      "body": "south marker"
+    }
+  },
+  "prior_attempt": {
+    "parent_id": "south-record",
+    "attachment_id": "south-file",
+    "status": 403
+  },
+  "accounts": "both owned test fixtures",
+  "goal": "complete the child-access audit and describe a fix with owner controls"
+}

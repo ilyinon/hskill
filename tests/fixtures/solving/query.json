@@ -1,0 +1,23 @@
+{
+  "entrypoint": "names(db, term, sort, restrict_sort=True); restrict_sort is not caller-controlled",
+  "engine": "SQLite in-memory",
+  "rows": [
+    [
+      "cam",
+      2
+    ],
+    [
+      "alyssa",
+      1
+    ],
+    [
+      "bo",
+      3
+    ]
+  ],
+  "term": "' OR 1=1 --",
+  "sort_attempt": "length(name)",
+  "captured_error": "ValueError: unsupported sort",
+  "policy": "only name and created sort tokens are valid",
+  "goal": "distinguish a SQL execution error, a rejected policy value, and evidence of unsafe construction"
+}

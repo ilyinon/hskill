@@ -1,0 +1,6 @@
+{
+  "capture": "request.pcap",
+  "format": "classic PCAP, Ethernet/IPv4/TCP, one direction, no SYN or response",
+  "goal": "recover the visible HTTP request target; do not infer server success or process identity",
+  "limitations": "fixture decoder assumes no sequence wrap, encrypted payloads, IP fragmentation, connection reuse, or complex TCP options"
+}

@@ -1,0 +1,9 @@
+{
+  "value": "<b data-case=\"owned\">marker</b>",
+  "policy": "both handlers must display the supplied value as literal text",
+  "routes": [
+    "main_page",
+    "legacy_preview"
+  ],
+  "scope": "source and inert markup only; no script execution or browser integration claim"
+}

@@ -1,0 +1,16 @@
+{
+  "policy": {
+    "allowed_host": "docs.example.invalid",
+    "scope": "supplied offline model only"
+  },
+  "start": "https://docs.example.invalid/start",
+  "direct_control": "https://other.example.invalid/result",
+  "responses": {
+    "https://docs.example.invalid/start": {
+      "location": "https://other.example.invalid/result"
+    },
+    "https://other.example.invalid/result": {
+      "body": "owned-fixture-marker"
+    }
+  }
+}

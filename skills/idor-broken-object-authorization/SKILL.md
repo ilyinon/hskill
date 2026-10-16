@@ -18,6 +18,10 @@ The unchanged principal reads or changes a protected object/function contrary to
 
 Another valid user's or admin's session changes the principal; public resources, opaque IDs, and enumeration alone do not establish IDOR.
 
+## Solving decisions
+
+When a prerequisite is unclear or an attempt fails, use [diagnostics](./references/diagnostics.md) to choose the next discriminating check. For a complete change-of-approach example with controls and a checked result, read the matching [worked case](./references/worked-cases.md). Keep the requested goal and remaining unproved edges explicit.
+
 ## References
 
 Choose the reference matching the current step; do not preload the catalog. Original section numbers are retained below. Select engine, version, and prerequisites before using examples; version/vendor tables are candidates to verify.

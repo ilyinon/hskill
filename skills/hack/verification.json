@@ -214,6 +214,268 @@
       "tested_environment": [],
       "tests": [],
       "limitations": "No browser/version was executed. Default-Lax exceptions, explicit Lax, credentialed CORS, preflight, cookies, CSRF checks, and actual action dispatch must be verified separately."
+    },
+    {
+      "id": "ssrf-redirect-policy-model",
+      "reference": "ssrf-server-side-request-forgery/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "reviewed offline worked model and independent controls only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "reviewed offline worked model and independent controls only"
+        }
+      ],
+      "tests": [
+        "test_solving_examples.SolvingExamples.test_redirect_policy_at_each_hop"
+      ],
+      "limitations": "Response-map fetch only; no network, DNS resolution, IP policy, or production HTTP client. Tests host policy at redirects, not every SSRF prerequisite."
+    },
+    {
+      "id": "sqlite-sort-boundary-model",
+      "reference": "sqli-sql-injection/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://www.sqlite.org/lang_select.html",
+        "https://docs.python.org/3/library/sqlite3.html"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "reviewed offline worked model and independent controls only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "reviewed offline worked model and independent controls only"
+        }
+      ],
+      "tests": [
+        "test_solving_examples.SolvingExamples.test_bound_value_and_raw_sort_are_separate"
+      ],
+      "limitations": "Actual in-memory SQLite parameter binding, raw ORDER BY expression, and finite sort mapping only. No database server, time/exfiltration payload, or unauthorized row extraction is validated."
+    },
+    {
+      "id": "nested-resource-binding-model",
+      "reference": "idor-broken-object-authorization/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "reviewed offline worked model and independent controls only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "reviewed offline worked model and independent controls only"
+        }
+      ],
+      "tests": [
+        "test_solving_examples.SolvingExamples.test_authorized_parent_does_not_authorize_foreign_child"
+      ],
+      "limitations": "Only the synthetic parent/child ownership model and both owner controls. No deployed API, session mechanism, or other object action is validated."
+    },
+    {
+      "id": "refund-business-uniqueness-model",
+      "reference": "business-logic-vulnerabilities/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "reviewed offline worked model and independent controls only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "reviewed offline worked model and independent controls only"
+        }
+      ],
+      "tests": [
+        "test_solving_examples.SolvingExamples.test_request_idempotency_and_business_uniqueness"
+      ],
+      "limitations": "Sequential in-memory full-refund model only; no payment operation or concurrency test. Partial refunds require a cumulative value invariant, not a universal single-refund rule."
+    },
+    {
+      "id": "jwt-recipient-policy-model",
+      "reference": "jwt-oauth-token-attacks/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc8725.html"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "reviewed offline worked model and independent controls only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "reviewed offline worked model and independent controls only"
+        }
+      ],
+      "tests": [
+        "test_solving_examples.SolvingExamples.test_valid_signature_is_not_recipient_authorization"
+      ],
+      "limitations": "Minimal HMAC/signature/issuer/audience model with scalar/list recipient controls. Not a full JWT implementation or production parser/library validation."
+    },
+    {
+      "id": "oidc-identity-pair-model",
+      "reference": "oauth-oidc-misconfiguration/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc8725.html"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "reviewed offline worked model and independent controls only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "reviewed offline worked model and independent controls only"
+        }
+      ],
+      "tests": [
+        "test_solving_examples.SolvingExamples.test_provider_subject_pair_preserves_local_identity"
+      ],
+      "limitations": "Only local mapping by issuer and subject. Upstream provider, signature, audience, transaction, and nonce validation are explicit premises; no provider integration was tested."
+    },
+    {
+      "id": "html-text-sink-model",
+      "reference": "xss-cross-site-scripting/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent",
+        "https://docs.python.org/3/library/html.html"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "reviewed offline worked model and independent controls only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "reviewed offline worked model and independent controls only"
+        }
+      ],
+      "tests": [
+        "test_solving_examples.SolvingExamples.test_alternate_html_text_sink_and_fix"
+      ],
+      "limitations": "Inert markup, escaping, and a simple HTMLParser check only. No JavaScript/browser execution, DOM integration, deployed XSS, or all-context sanitizer is validated."
+    },
+    {
+      "id": "stack-entry-contract-model",
+      "reference": "stack-overflow-and-rop/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://raw.githubusercontent.com/hjl-tools/x86-psABI/master/low-level-sys-info.tex"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "reviewed offline worked model and independent controls only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "reviewed offline worked model and independent controls only"
+        }
+      ],
+      "tests": [
+        "test_solving_examples.SolvingExamples.test_stack_contract_uses_actual_initial_position"
+      ],
+      "limitations": "Abstract eight-byte stack-word checker under the supplied entry alignment contract. No executable binary, loader, real gadget, mitigation bypass, or process chain was tested."
+    },
+    {
+      "id": "mt-state-installation-model",
+      "reference": "symmetric-cipher-attacks/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://docs.python.org/3/library/random.html"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "reviewed offline worked model and independent controls only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "reviewed offline worked model and independent controls only"
+        }
+      ],
+      "tests": [
+        "test_solving_examples.SolvingExamples.test_mt_state_index_and_withheld_continuation"
+      ],
+      "limitations": "624 consecutive full 32-bit outputs and CPython state layout only. Future words checked against an independently advanced stdlib instance; no original seed or cryptographic RNG recovery."
+    },
+    {
+      "id": "tcp-reassembly-fixture-model",
+      "reference": "traffic-analysis-pcap/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://www.ietf.org/archive/id/draft-ietf-opsawg-pcap-06.html"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "reviewed offline worked model and independent controls only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "reviewed offline worked model and independent controls only"
+        }
+      ],
+      "tests": [
+        "test_solving_examples.SolvingExamples.test_tcp_sequence_reassembly_and_missing_bytes"
+      ],
+      "limitations": "Bounded classic-PCAP Ethernet/IPv4/TCP decoder: reorder, exact duplicate, gap, overlap, and header-length controls. No network or process attribution; excludes wrap, fragmentation, TLS, and connection reuse."
     }
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "response_headers": {
+    "Content-Type": "application/json"
+  },
+  "response_body": "{\"message\": \"<b data-case=\\\"transfer\\\">status</b>\"}",
+  "policy": "message is displayed as literal text",
+  "scope": "source and response review; no browser execution",
+  "goal": "determine whether literal markup in this JSON demonstrates XSS"
+}

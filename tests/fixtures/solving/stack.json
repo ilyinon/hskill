@@ -1,0 +1,18 @@
+{
+  "architecture": "synthetic AMD64-like stack-accounting contract after a pivot; no executable supplied",
+  "saved_rip_slot": 81920,
+  "addresses": {
+    "ret": 4210704,
+    "pop_rdi_ret": 4210720,
+    "marker": 4210752
+  },
+  "expected_argument": 512,
+  "words": [
+    4210720,
+    512,
+    4210752
+  ],
+  "required_marker_entry_rsp_mod_16": 8,
+  "instruction_effects": "each ret consumes one 8-byte instruction word; pop_rdi consumes one additional 8-byte argument word",
+  "goal": "decide whether the supplied words satisfy the target contract, correcting only if necessary"
+}

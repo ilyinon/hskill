@@ -1,0 +1,23 @@
+{
+  "order": {
+    "id": "owned-partial-order",
+    "paid_cents": 100
+  },
+  "policy": "multiple legitimate partial refunds allowed; total per order must not exceed paid_cents",
+  "sequence": [
+    {
+      "amount": 60,
+      "request_id": "r1"
+    },
+    {
+      "amount": 60,
+      "request_id": "r1"
+    },
+    {
+      "amount": 60,
+      "request_id": "r2"
+    }
+  ],
+  "goal": "find the violated invariant and propose a repair retaining valid 60+40 partial refunds",
+  "scope": "integer local credits only; no concurrency evidence supplied"
+}

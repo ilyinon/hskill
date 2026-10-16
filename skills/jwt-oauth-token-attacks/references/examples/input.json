@@ -1,0 +1,7 @@
+{
+  "receiver": "reports",
+  "policy": "accept only fixture-issuer tokens intended for reports",
+  "baseline_audience": "reports",
+  "foreign_audience": "invoices",
+  "scope": "preissued synthetic tokens; no remote issuer or credential use"
+}

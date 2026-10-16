@@ -1,0 +1,28 @@
+{
+  "policy": "parent is private to owner and tenant; attachment inherits its parent policy",
+  "session": {
+    "user": "alice",
+    "tenant": "A"
+  },
+  "parents": {
+    "pA": {
+      "owner": "alice",
+      "tenant": "A"
+    },
+    "pB": {
+      "owner": "bob",
+      "tenant": "B"
+    }
+  },
+  "children": {
+    "cA": {
+      "parent": "pA",
+      "body": "alice fixture"
+    },
+    "cB": {
+      "parent": "pB",
+      "body": "bob fixture"
+    }
+  },
+  "accounts": "both owned test accounts"
+}

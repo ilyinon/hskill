@@ -18,6 +18,10 @@ Reproducible stream/packet references support the stated behavior and timeline.
 
 A port, long DNS name, beacon-like interval, or failed TLS decode alone is not malicious activity; retransmissions, truncation, decryption limits, and benign baselines matter.
 
+## Solving decisions
+
+When a prerequisite is unclear or an attempt fails, use [diagnostics](./references/diagnostics.md) to choose the next discriminating check. For a complete change-of-approach example with controls and a checked result, read the matching [worked case](./references/worked-cases.md). Keep the requested goal and remaining unproved edges explicit.
+
 ## References
 
 Choose the reference matching the current step; do not preload the catalog. Original section numbers are retained below. Select engine, version, and prerequisites before using examples; version/vendor tables are candidates to verify.

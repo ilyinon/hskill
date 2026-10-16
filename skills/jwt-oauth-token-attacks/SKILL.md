@@ -7,6 +7,10 @@ description: Validate JWT signatures, algorithm and key trust, claims, and token
 
 Map token type, configured algorithm/key source, issuer/audience, and resulting principal. Compare an accepted baseline with one controlled mutation and inspect effective permissions. Decoding, changing an unsigned claim, or possessing another valid token is not forgery.
 
+## Solving decisions
+
+When a prerequisite is unclear or an attempt fails, use [diagnostics](./references/diagnostics.md) to choose the next discriminating check. For a complete change-of-approach example with controls and a checked result, read the matching [worked case](./references/worked-cases.md). Keep the requested goal and remaining unproved edges explicit.
+
 ## References
 
 Read only the reference matching the current question.

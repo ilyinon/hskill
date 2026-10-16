@@ -1,0 +1,13 @@
+{
+  "order": {
+    "id": "owned-order-1",
+    "paid_cents": 100
+  },
+  "policy": "one full refund per order; total credited <= paid_cents",
+  "request_keys": [
+    "request-1",
+    "request-1",
+    "request-2"
+  ],
+  "scope": "sequential in-memory credits only"
+}

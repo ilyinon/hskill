@@ -34,12 +34,25 @@ Token counts cover file text only, not total model usage.
 
 `tests/test_reference_examples.py` checks selected mathematical examples.
 `tests/test_eval_fixtures.py` checks reviewed offline source models and binary
-artifact structure. Neither validates every exploit or version table.
+artifact structure. `tests/test_solving_examples.py` checks the ten self-contained
+worked models, including the failed approach and independent controls. These
+tests do not validate every exploit or version table.
 
 Use the blind preparation and grading workflow in [tests/EVALUATION.md](tests/EVALUATION.md)
-after changing routing or evidence rules. Its 18 cases include real local
+after changing routing or evidence rules. Its 28 cases include real local
 artifacts; expected outcomes stay outside the evaluating agent's context.
 Preserve answers, read logs, input/rubric digests, settings, and grading reasons.
+The ten `solve-*` transfer cases change values or preconditions from the worked
+cases. Keep those differences meaningful: include working defenses and valid
+alternatives so copying an example's fix cannot pass. Grade task completion,
+not just vulnerability classification.
+
+For diagnostic references, connect prerequisites and observed failures to the
+smallest distinguishing check. Separate setup errors, unmet preconditions,
+controlled negative results, and inconclusive evidence. Link intermediate
+capabilities to the requested result. Worked cases should show a real first
+failure, why the revised approach follows, and a control independent of the
+claimed success. Do not turn the case's fix into a universal rule.
 
 For overlapping subjects, choose a canonical home for the technique and link to
 it from adjacent workflows. API credential/proxy handling belongs in

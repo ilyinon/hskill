@@ -7,6 +7,10 @@ description: Review OAuth/OIDC redirect registration, callback/session binding, 
 
 Map authorization request, callback, token exchange, and resulting local/provider identity. Use owned test accounts and compare an accepted same-session baseline with a controlled mismatch. Missing state, nonce, or PKCE is a candidate only under the actual flow and binding model; demonstrate forbidden code acceptance, identity transition, or permission change.
 
+## Solving decisions
+
+When a prerequisite is unclear or an attempt fails, use [diagnostics](./references/diagnostics.md) to choose the next discriminating check. For a complete change-of-approach example with controls and a checked result, read the matching [worked case](./references/worked-cases.md). Keep the requested goal and remaining unproved edges explicit.
+
 ## References
 
 | Current question | Read |

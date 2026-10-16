@@ -1,0 +1,20 @@
+{
+  "premise": "signatures, issuer allowlist, audience, code/session binding and single use already validated; no live provider contacted",
+  "accounts": [
+    {
+      "iss": "https://idp-a.example.invalid",
+      "sub": "42",
+      "local": "alice-local"
+    },
+    {
+      "iss": "https://idp-b.example.invalid",
+      "sub": "42",
+      "local": "bob-local"
+    }
+  ],
+  "callback_claims": {
+    "iss": "https://idp-b.example.invalid",
+    "sub": "42"
+  },
+  "policy": "local identity is keyed by issuer and subject; no implicit linking across providers"
+}

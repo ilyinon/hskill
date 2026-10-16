@@ -34,10 +34,12 @@ A known topic can bypass category routers and engagement documents. Load scenari
 
 ## Work loop
 
-Map the relevant boundary → choose the highest-value plausible hypothesis → baseline and control → minimal proof or disproof → record → choose the next useful action.
+Define the requested result → map the relevant boundary → choose the highest-value plausible hypothesis → baseline and control → minimal proof or disproof → record → choose the next useful action.
 
 For broad web/API work, prioritize authentication, object/tenant permissions, and business state changes; use interpreter-specific checks when the observed surface supports them. Keep narrow requests narrow. Do not apply the whole web matrix to a binary, capture, configuration review, or one technical question.
 
-Follow a partial chain when it can change the conclusion within scope and budget. Stop or change approach when the hypothesis is disproved, evidence repeats without reducing uncertainty, the permitted proof is sufficient, or a scope/action limit is reached. Record untested work as not covered; N/A requires an applicability reason.
+Follow a partial chain when it can change the conclusion within scope and budget. A setup/tool error or an unmet prerequisite is not a valid negative result. Stop or change approach when the hypothesis is disproved, evidence repeats without reducing uncertainty, the permitted proof is sufficient, or a scope/action limit is reached. Record untested work as not covered; N/A requires an applicability reason.
 
 Maintain a compact working record only when task size warrants it: scope, known facts, hypotheses, checks already tried, evidence locations, and next action. Reuse it after context compaction. Match the final answer to the user's requested deliverable.
+
+When stuck, use topic diagnostics or the relevant part of [solving decisions](./SOLVING.md).

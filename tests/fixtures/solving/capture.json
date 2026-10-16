@@ -1,0 +1,5 @@
+{
+  "scope": "offline packet parsing only; no programs, network, or endpoints may be executed",
+  "capture": "three supplied classic-PCAP Ethernet IPv4 TCP records, one direction; no handshake or server reply",
+  "goal": "recover the request target and identify the effect of order/retransmission; state attribution limits"
+}

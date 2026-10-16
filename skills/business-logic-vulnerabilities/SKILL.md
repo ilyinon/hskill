@@ -18,6 +18,10 @@ The unchanged test principal breaks a defined authorization, state, quota, or va
 
 A success message, UI bypass, or valid admin session is not a logic flaw; assess intended policy and final state, and keep financial tests within permitted fixtures.
 
+## Solving decisions
+
+When a prerequisite is unclear or an attempt fails, use [diagnostics](./references/diagnostics.md) to choose the next discriminating check. For a complete change-of-approach example with controls and a checked result, read the matching [worked case](./references/worked-cases.md). Keep the requested goal and remaining unproved edges explicit.
+
 ## References
 
 Choose the reference matching the current step; do not preload the catalog. Original section numbers are retained below. Select engine, version, and prerequisites before using examples; version/vendor tables are candidates to verify.

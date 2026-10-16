@@ -1,0 +1,19 @@
+{
+  "architecture": "synthetic AMD64 stack model",
+  "addresses": {
+    "ret": 4198416,
+    "pop_rdi_ret": 4198432,
+    "marker": 4198464
+  },
+  "saved_rip_slot": 40968,
+  "expected_argument": 4660,
+  "required_entry_rsp_mod_16": 8,
+  "original_words": [
+    4198432,
+    4660,
+    4198464
+  ],
+  "offset_to_saved_rip": 40,
+  "goal": "repair the abstract marker call under the supplied ABI contract; no executable binary is provided",
+  "scope": "integer stack accounting only"
+}

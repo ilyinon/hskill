@@ -2,7 +2,7 @@
 
 The fixtures are small, synthetic offline artifacts. The suite includes source
 reviews, authorization controls, HTTP responses, a real minimal ELF, a one-packet
-PCAP, and an altered PNG. All files needed by each case are checked in. No live
+PCAP, a segmented TCP capture, and an altered PNG. All files needed by each case are checked in. No live
 target, real credential, external account, compiler, or provider is required.
 
 `eval_cases.json` contains the requests, artifact paths, and grading rubrics.
@@ -11,6 +11,19 @@ runner prepares blind inputs and checks result integrity; semantic grading is
 performed by a human or an independent agent after the answer is preserved.
 Unit tests exercise selected reviewed Python fixtures and arithmetic helpers.
 ELF and PCAP files are parsed statically, never executed.
+
+The suite has 28 cases. Ten `solve-*` cases transfer the diagnostic reasoning to
+new data or preconditions rather than repeating the published worked answers.
+They include already-enforced defenses, a partial-refund policy that permits
+multiple legitimate operations, an already-aligned stack, withheld generator
+continuation, and TCP reassembly with retransmission. A correct outcome can be
+a supported finding, a controlled rejection of a hypothesis, or a concrete
+non-finding result. Do not treat every task as vulnerability reporting.
+
+For numeric and capture tasks, the evaluator may write its own reviewed offline
+arithmetic or parser. It must not execute supplied fixture programs. Preserving
+the actual result is required; describing a possible method alone does not
+complete a task that asks for numbers or recovered bytes.
 
 ## Prepare a blind run
 

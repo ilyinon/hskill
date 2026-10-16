@@ -18,6 +18,10 @@ The server makes an attributable request outside the intended destination policy
 
 DNS-only callbacks, client-side browser requests, and timing alone do not prove full SSRF impact; IMDSv2 still requires its token flow and headers even if DNS rebinding bypasses an address check.
 
+## Solving decisions
+
+When a prerequisite is unclear or an attempt fails, use [diagnostics](./references/diagnostics.md) to choose the next discriminating check. For a complete change-of-approach example with controls and a checked result, read the matching [worked case](./references/worked-cases.md). Keep the requested goal and remaining unproved edges explicit.
+
 ## References
 
 Choose the reference matching the current step; do not preload the catalog. Original section numbers are retained below. Select engine, version, and prerequisites before using examples; version/vendor tables are candidates to verify.

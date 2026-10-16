@@ -1,0 +1,21 @@
+{
+  "engine": "SQLite",
+  "policy": "term is data; sort must be name or created",
+  "rows": [
+    [
+      "anna",
+      3
+    ],
+    [
+      "bo",
+      1
+    ],
+    [
+      "zoe",
+      2
+    ]
+  ],
+  "term_probe": "' OR 1=1 --",
+  "sort_probe": "length(name), name",
+  "scope": "in-memory database containing only these rows"
+}

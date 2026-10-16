@@ -1,0 +1,15 @@
+{
+  "entrypoint": "preview(url, responses, allowed_host, validate_each_hop=True); flag is server configuration, not request input",
+  "allowed_host": "manual.example.invalid",
+  "start": "https://manual.example.invalid/start",
+  "responses": {
+    "https://manual.example.invalid/start": {
+      "location": "https://other.example.invalid/end"
+    },
+    "https://other.example.invalid/end": {
+      "body": "owned marker"
+    }
+  },
+  "contract": "this offline model permits https requests only to allowed_host; all response records supplied; no DNS model",
+  "goal": "assess whether this entrypoint escapes the redirect destination policy"
+}

@@ -18,6 +18,10 @@ Input changes SQL structure or query semantics beyond the intended parameter val
 
 An error, quote reflection, or single delayed response is insufficient; correctly bound values are different from dynamically concatenated identifiers or clauses.
 
+## Solving decisions
+
+When a prerequisite is unclear or an attempt fails, use [diagnostics](./references/diagnostics.md) to choose the next discriminating check. For a complete change-of-approach example with controls and a checked result, read the matching [worked case](./references/worked-cases.md). Keep the requested goal and remaining unproved edges explicit.
+
 ## References
 
 Choose the reference matching the current step; do not preload the catalog. Original section numbers are retained below. Select engine, version, and prerequisites before using examples; version/vendor tables are candidates to verify.
