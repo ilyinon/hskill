@@ -1,0 +1,14 @@
+{
+  "candidate_url": "https://unique-7f4b.callback.example.invalid/probe",
+  "events": [
+    {
+      "type": "DNS",
+      "name": "unique-7f4b.callback.example.invalid",
+      "source": "192.0.2.53",
+      "source_role": "recursive resolver"
+    }
+  ],
+  "http_events": [],
+  "server_logs": null,
+  "destination_policy": null
+}

@@ -36,11 +36,11 @@ $ checksec ./binary
 | Protection | Check Command | Binary Indicator |
 |---|---|---|
 | ASLR | `cat /proc/sys/kernel/randomize_va_space` | OS-level (0=off, 1=partial, 2=full) |
-| PIE | `checksec` or `readelf -h` (Type: DYN) | Binary compiled with `-pie` |
-| NX | `checksec` or `readelf -l` (no RWE segment) | `gcc -z noexecstack` (default on) |
+| PIE | ELF type plus executable/dynamic metadata | ET_DYN alone may also be a shared library; identify the executable and applicable PIE flags |
+| Stack execute policy | `readelf -lW` / PT_GNU_STACK flags; runtime policy if available | Absence of RWE PT_LOAD does not establish stack NX. Missing PT_GNU_STACK leaves platform/loader behavior to verify |
 | Canary | `checksec` or look for `__stack_chk_fail@plt` | `gcc -fstack-protector-all` |
 | Partial RELRO | `readelf -l` (GNU_RELRO segment, `.got.plt` writable) | `gcc -Wl,-z,relro` |
-| Full RELRO | `readelf -l` + `.got` section read-only | `gcc -Wl,-z,relro,-z,now` |
+| Full RELRO | GNU_RELRO plus immediate-binding dynamic flags and relevant runtime mappings | `gcc -Wl,-z,relro,-z,now`; a section flag alone is insufficient |
 | FORTIFY | Presence of `__printf_chk`, `__memcpy_chk` etc. | `gcc -D_FORTIFY_SOURCE=2` |
 
 ---
@@ -59,7 +59,11 @@ ASLR randomizes base addresses of stack, heap, libc, and mmap regions at each ex
 | Format string leak | Format string vulnerability | `%N$p` for stack/libc/heap addresses |
 | Stack reading | Byte-by-byte (fork server) | Read stack byte-by-byte via crash oracle |
 
+Static indicators are evidence about the supplied artifact, not runtime enforcement. GNU stack-note and linker behavior are documented in [GNU ld options](https://sourceware.org/binutils/docs/ld/Options.html). A missing symbol or metadata record can leave the result unknown, especially in minimal or stripped files.
+
 ### ASLR Entropy (x86-64 Linux)
+
+Illustrative historical values below vary with architecture, kernel, configuration, and mapping; measure the permitted runtime before relying on an entropy estimate.
 
 | Region | Entropy (bits) | Positions |
 |---|---|---|
@@ -145,4 +149,3 @@ rop += p64(shellcode_addr)                 # jump to shellcode on now-executable
 See [arbitrary-write-to-rce](../../arbitrary-write-to-rce/SKILL.md) for comprehensive target list.
 
 ---
-

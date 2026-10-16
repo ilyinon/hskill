@@ -1,5 +1,8 @@
 # URL Parser Differentials & Advanced SSRF Techniques
 
+Verification status and limits: records `imds-v2-token-flow` in the [verification registry](../hack/verification.json).
+
+
 > **AI LOAD INSTRUCTION**: Load this when you need URL parser confusion tables, full cloud metadata endpoint catalogs, gopher:// payload recipes, DNS rebinding deep dives, or headless-browser/PDF-generator SSRF patterns. Assumes the main [SKILL.md](./SKILL.md) is already loaded for fundamentals.
 
 ---

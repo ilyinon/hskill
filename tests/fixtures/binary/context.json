@@ -1,0 +1,8 @@
+{
+  "scope": "static inspection of supplied file only; do not execute",
+  "questions": [
+    "file format and architecture",
+    "what can and cannot be inferred about protections"
+  ],
+  "build": "synthetic minimal ELF with one load segment and no section table"
+}

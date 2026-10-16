@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "coverage": "Partial registry for reviewed techniques. Absence of a record means untracked verification, not validated or invalid. Source review and offline fixture tests do not certify every example or affected software version.",
+  "techniques": [
+    {
+      "id": "jwt-algorithm-policy",
+      "reference": "jwt-oauth-token-attacks/references/jwt-signature-policy.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc7515.html",
+        "https://www.rfc-editor.org/rfc/rfc8725.html"
+      ],
+      "sources_reviewed_on": "2026-10-16",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "stdlib offline fixture/arithmetic test only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "stdlib offline fixture/arithmetic test only"
+        }
+      ],
+      "tests": [
+        "test_eval_fixtures.OfflineFixtures.test_jwt_signature_and_algorithm_controls"
+      ],
+      "limitations": "Only the supplied HS256 toy verifier and negative controls were executed. Not a production JWT implementation or a test of jwt_tool/hashcat/library CVEs."
+    },
+    {
+      "id": "jwt-key-confusion",
+      "reference": "jwt-oauth-token-attacks/references/jwt-signature-policy.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc8725.html#section-2.1"
+      ],
+      "sources_reviewed_on": "2026-10-16",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "No affected library/version or live target was tested. Requires mixed algorithm acceptance and public-key bytes used as an HMAC secret; public RS256 keys alone do not establish a flaw."
+    },
+    {
+      "id": "jwt-key-selection",
+      "reference": "jwt-oauth-token-attacks/references/jwt-key-selection.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc8725.html#section-3.10"
+      ],
+      "sources_reviewed_on": "2026-10-16",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Lookup and remote-key examples are conditional candidates. Tool CLI flags, JWKS export, SQL dialects, empty keys, and issuer trust must be checked for the actual implementation."
+    },
+    {
+      "id": "oauth-callback-binding",
+      "reference": "oauth-oidc-misconfiguration/references/callback-binding.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc9700.html#section-2.1",
+        "https://www.rfc-editor.org/rfc/rfc9700.html#section-4.8"
+      ],
+      "sources_reviewed_on": "2026-10-16",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "stdlib offline fixture/arithmetic test only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "stdlib offline fixture/arithmetic test only"
+        }
+      ],
+      "tests": [
+        "test_eval_fixtures.OfflineFixtures.test_pkce_binds_code_to_pending_session_and_is_single_use"
+      ],
+      "limitations": "Supplied S256/session binding model only, with mandatory PKCE for every grant. No provider/browser integration, nonce/signature processing, concurrency, or complete OAuth implementation is validated."
+    },
+    {
+      "id": "token-exposure",
+      "reference": "jwt-oauth-token-attacks/references/token-exposure.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Referer"
+      ],
+      "sources_reviewed_on": "2026-10-16",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Fragment exclusion from Referer was source-reviewed. Actual redirect fragment inheritance, page-script access, logging, and referrer-policy behavior were not browser-tested."
+    },
+    {
+      "id": "imds-v2-token-flow",
+      "reference": "ssrf-server-side-request-forgery/URL_PARSER_TRICKS.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html"
+      ],
+      "sources_reviewed_on": "2026-10-16",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "No EC2 instance or metadata endpoint was contacted. DNS, method/header control, hop limits, and HttpTokens policy are separate prerequisites; the fixture is an offline observation."
+    },
+    {
+      "id": "mt19937-inversion",
+      "reference": "symmetric-cipher-attacks/BLOCK_CIPHER_ATTACKS.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://docs.python.org/3/library/random.html"
+      ],
+      "sources_reviewed_on": "2026-10-16",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "stdlib offline fixture/arithmetic test only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "stdlib offline fixture/arithmetic test only"
+        }
+      ],
+      "tests": [
+        "test_reference_examples.ReferenceExamples.test_mt_tempering_round_trip",
+        "test_reference_examples.ReferenceExamples.test_mt_clone_predicts_independent_future_outputs"
+      ],
+      "limitations": "624 consecutive full 32-bit outputs from one CPython Random instance, compatible state layout. Not truncated/mixed outputs, SystemRandom, or cryptographic RNGs."
+    },
+    {
+      "id": "png-ihdr-layout",
+      "reference": "steganography-techniques/references/01-image-steganography.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://www.w3.org/TR/png-3/#11IHDR"
+      ],
+      "sources_reviewed_on": "2026-10-16",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "stdlib offline fixture/arithmetic test only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "stdlib offline fixture/arithmetic test only"
+        }
+      ],
+      "tests": [
+        "test_reference_examples.ReferenceExamples.test_png_ihdr_dimension_recovery_layout",
+        "test_eval_fixtures.OfflineFixtures.test_damaged_png_has_unique_small_crc_dimension_solution"
+      ],
+      "limitations": "IHDR byte layout and one bounded synthetic dimension-recovery case; a CRC mismatch alone does not establish cropping or hidden data."
+    },
+    {
+      "id": "cbc-bitflip-layout",
+      "reference": "symmetric-cipher-attacks/BLOCK_CIPHER_ATTACKS.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf"
+      ],
+      "sources_reviewed_on": "2026-10-16",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "stdlib offline fixture/arithmetic test only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "stdlib offline fixture/arithmetic test only"
+        }
+      ],
+      "tests": [
+        "test_reference_examples.ReferenceExamples.test_cbc_previous_block_and_iv_layout"
+      ],
+      "limitations": "Arithmetic previous-block delta only, with ciphertext excluding IV. Not a demonstrated application exploit or bypass of an authentication tag."
+    },
+    {
+      "id": "elf-static-protection",
+      "reference": "binary-protection-bypass/references/01-protection-identification.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://sourceware.org/binutils/docs/ld/Options.html"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "GNU stack/linker semantics source-reviewed. The ELF fixture header is parsed by test_eval_fixtures, but no loader, stack permission, ASLR, RELRO enforcement, or binary execution was tested."
+    },
+    {
+      "id": "csrf-cookie-and-cors-prerequisites",
+      "reference": "csrf-cross-site-request-forgery/references/02-oauth-csrf-state-parameter-missing.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie",
+        "https://fetch.spec.whatwg.org/#cors-protocol-and-credentials"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "No browser/version was executed. Default-Lax exceptions, explicit Lax, credentialed CORS, preflight, cookies, CSRF checks, and actual action dispatch must be verified separately."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "scope": "offline capture inspection only",
+  "capture_completeness": "single supplied packet; no endpoint logs",
+  "domain_reputation": "not supplied",
+  "question": "describe observed activity and attribution limits"
+}

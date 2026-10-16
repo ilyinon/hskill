@@ -1,5 +1,8 @@
 # Block Cipher Attacks — Detailed Scripts & Walkthrough
 
+Verification status and limits: records `mt19937-inversion, cbc-bitflip-layout` in the [verification registry](../hack/verification.json).
+
+
 > **AI LOAD INSTRUCTION**: Load this when you need full attack implementations, step-by-step walkthroughs, and edge-case handling for block cipher exploitation. Assumes the main [SKILL.md](./SKILL.md) is already loaded for attack selection and decision trees.
 
 ---

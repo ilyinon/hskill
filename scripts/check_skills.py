@@ -8,6 +8,7 @@ optional token counts may download tiktoken's encoding table on first use.
 """
 import argparse
 import json
+import math
 from pathlib import Path
 import re
 
@@ -36,7 +37,10 @@ def prose(text):
             continue
         if marker is None:
             # Exclude inline code while retaining code-formatted link labels.
-            output.append(re.sub(r"(`+).*?\1", "", line))
+            if re.match(r"^#{1,6}\s", line):
+                output.append(re.sub(r"(`+)(.*?)\1", r"\2", line))
+            else:
+                output.append(re.sub(r"(`+).*?\1", "", line))
     return "\n".join(output), marker is None
 
 
@@ -66,6 +70,7 @@ def inspect(root, max_entry_tokens=1600, encoding=None):
     warnings = []
     graph = {}
     token_rows = []
+    document_tokens = []
     if not root.is_dir():
         errors.append(f"Skills directory does not exist: {root}")
     elif not entries:
@@ -73,6 +78,8 @@ def inspect(root, max_entry_tokens=1600, encoding=None):
     text_by_path = {p: p.read_text() for p in files}
     for path, text in text_by_path.items():
         relative = str(path.relative_to(root))
+        if encoding:
+            document_tokens.append({"path": relative, "tokens": len(encoding.encode(text, disallowed_special=()))})
         _, balanced = prose(text)
         if not balanced:
             errors.append(f"{relative}: unclosed fenced example")
@@ -144,7 +151,40 @@ def inspect(root, max_entry_tokens=1600, encoding=None):
         "errors": errors, "warnings": warnings,
         "unreachable_references": orphaned,
         "entry_tokens": sorted(token_rows, key=lambda row: row["tokens"], reverse=True),
+        "document_tokens": document_tokens,
     }
+
+
+def compare_budget(result, baseline):
+    """Review material growth; thresholds are maintenance choices, not model limits."""
+    old = {row["path"]: row["tokens"] for row in baseline["document_tokens"]}
+    new = {row["path"]: row["tokens"] for row in result["document_tokens"]}
+    changes = []
+    for path in sorted(old.keys() | new.keys()):
+        before, after = old.get(path, 0), new.get(path, 0)
+        if before == after:
+            continue
+        changes.append({"path": path, "before": before, "after": after, "delta": after - before})
+        if path in old and after - before > max(64, math.ceil(before * 0.15)):
+            result["warnings"].append(f"{path}: token growth {before} -> {after}; review and intentionally refresh baseline")
+        elif path not in old and not path.endswith("/SKILL.md") and after > 2000:
+            result["warnings"].append(f"{path}: new reference exceeds 2000 tokens; review its task boundaries")
+    result["token_changes"] = changes
+    return changes
+
+
+def write_summary(path, result):
+    lines = ["## Skill checks", "", f"Skills: {result['skills']}; errors: {len(result['errors'])}; warnings: {len(result['warnings'])}.", ""]
+    changes = result.get("token_changes", [])
+    if changes:
+        lines += ["| File | Before | After | Delta |", "|---|---:|---:|---:|"]
+        lines += [f"| {row['path']} | {row['before']} | {row['after']} | {row['delta']:+d} |" for row in changes]
+    elif "token_changes" in result:
+        lines.append("No document token changes against the reviewed baseline.")
+    else:
+        lines.append("Token baseline comparison was not requested.")
+    lines += ["", "Counts cover Markdown text only; they do not measure total model usage.", ""]
+    path.write_text("\n".join(lines))
 
 
 def main():
@@ -153,18 +193,33 @@ def main():
     parser.add_argument("--tokens", action="store_true", help="Use cached o200k_base tokenizer; requires tiktoken")
     parser.add_argument("--max-entry-tokens", type=int, default=1600)
     parser.add_argument("--json", type=Path)
+    parser.add_argument("--baseline", type=Path, help="Compare document counts against an earlier --tokens --json report")
+    parser.add_argument("--strict", action="store_true", help="Fail on warnings as well as errors")
+    parser.add_argument("--summary", type=Path, help="Write a Markdown CI summary")
     args = parser.parse_args()
     if args.tokens and tiktoken is None:
         parser.error("--tokens requires tiktoken")
+    if args.baseline and not args.tokens:
+        parser.error("--baseline requires --tokens")
     encoding = tiktoken.get_encoding("o200k_base") if args.tokens else None
     result = inspect(args.root, args.max_entry_tokens, encoding)
+    if args.baseline:
+        try:
+            baseline = json.loads(args.baseline.read_text())
+            if not baseline.get("document_tokens"):
+                raise ValueError("baseline has no document token counts")
+            compare_budget(result, baseline)
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            parser.error(f"invalid token baseline: {exc}")
     if args.json:
         args.json.write_text(json.dumps(result, indent=2) + "\n")
-    summary = {k: v for k, v in result.items() if k != "entry_tokens"}
+    if args.summary:
+        write_summary(args.summary, result)
+    summary = {k: v for k, v in result.items() if k not in {"entry_tokens", "document_tokens"}}
     if result["entry_tokens"]:
         summary["largest_entries"] = result["entry_tokens"][:5]
     print(json.dumps(summary, indent=2))
-    raise SystemExit(bool(result["errors"]))
+    raise SystemExit(bool(result["errors"] or (args.strict and result["warnings"])))
 
 
 if __name__ == "__main__":

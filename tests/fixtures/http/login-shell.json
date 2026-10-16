@@ -1,0 +1,17 @@
+{
+  "requests": [
+    {
+      "path": "/private",
+      "principal": "anonymous",
+      "status": 403,
+      "body": "Forbidden"
+    },
+    {
+      "path": "//private",
+      "principal": "anonymous",
+      "status": 200,
+      "body": "<html><title>Login</title><form action=\"/login\">Sign in</form></html>"
+    }
+  ],
+  "protected_data_returned": false
+}

@@ -5,7 +5,7 @@ Read this only when the task does not already identify its technical topic. Sele
 | Evidence or task | Entry |
 |---|---|
 | Unknown application or API | [Surface mapping](../attack-surface-mapping/SKILL.md); API documentation: [API recon](../api-recon-and-docs/SKILL.md) |
-| Login, reset, session | [Authentication](../authbypass-authentication-flaws/SKILL.md); JWT: [tokens](../jwt-oauth-token-attacks/SKILL.md); federation: [OAuth/OIDC](../oauth-oidc-misconfiguration/SKILL.md) or [SAML](../saml-sso-assertion-attacks/SKILL.md) |
+| Login, reset, session | [Authentication](../authbypass-authentication-flaws/SKILL.md); JWT signing/key/claims: [validation](../jwt-oauth-token-attacks/SKILL.md); federation: [OAuth/OIDC](../oauth-oidc-misconfiguration/SKILL.md) or [SAML](../saml-sso-assertion-attacks/SKILL.md) |
 | Object, tenant, or function permissions | [IDOR](../idor-broken-object-authorization/SKILL.md); API-specific: [BOLA](../api-authorization-and-bola/SKILL.md) |
 | Input evaluated by an interpreter; type unclear | [Injection routing](../injection-checking/SKILL.md) |
 | URL fetched by server | [SSRF](../ssrf-server-side-request-forgery/SKILL.md) |

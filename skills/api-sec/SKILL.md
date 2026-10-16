@@ -1,16 +1,13 @@
 ---
 name: api-sec
-description: >-
-  Entry P1 category router for API security. Use when choosing between API
-  recon, authorization, token abuse, and hidden-parameter workflows before any
-  deeper API topic skill.
+description: Route an ambiguous API assessment between surface discovery, object permissions, API credentials, JWT trust, and GraphQL. Use a known specialty directly.
 ---
 
 # API Security Router
 
 This is the routing entry point for API security testing.
 
-Use this skill first to decide whether the API issue is mostly recon/docs, object authorization, token trust, or GraphQL/hidden parameters, then route to a deeper topic skill.
+When the boundary is unclear, use this optional router to decide whether the API issue is mostly recon/docs, object authorization, token trust, or GraphQL/hidden parameters, then route to a deeper topic skill.
 
 ## When to Use
 
@@ -31,11 +28,15 @@ Use this skill first to decide whether the API issue is mostly recon/docs, objec
 |---|---|
 | Swagger or OpenAPI is present | [api-recon-and-docs](../api-recon-and-docs/SKILL.md) |
 | IDs appear in URL, JSON, headers, or GraphQL args | [api-authorization-and-bola](../api-authorization-and-bola/SKILL.md) |
-| JWT token visible in traffic | [api-auth-and-jwt-abuse](../api-auth-and-jwt-abuse/SKILL.md) |
+| JWT signature, algorithm, key, or claim policy | [jwt-oauth-token-attacks](../jwt-oauth-token-attacks/SKILL.md) |
+| API key, credential extraction, proxy identity, or rate-limit boundary | [api-auth-and-jwt-abuse](../api-auth-and-jwt-abuse/SKILL.md) |
+| OAuth/OIDC callback or account binding | [oauth-oidc-misconfiguration](../oauth-oidc-misconfiguration/SKILL.md) |
 | `/graphql` or batched JSON arrays are present | [graphql-and-hidden-parameters](../graphql-and-hidden-parameters/SKILL.md) |
 | Registration, login, or profile updates accept extra fields | [api-authorization-and-bola](../api-authorization-and-bola/SKILL.md) then [api-auth-and-jwt-abuse](../api-auth-and-jwt-abuse/SKILL.md) |
 
-## Recommended Flow
+## Broad-assessment flow
+
+Use this sequence only for a requested broad review; known topics can skip it.
 
 1. Start with exposed endpoints and documentation assets
 2. Then evaluate object-level and function-level authorization

@@ -1,0 +1,14 @@
+{
+  "private_objects": true,
+  "access_rule": "owner and tenant must both match",
+  "accounts": {
+    "alice": {
+      "tenant": "A"
+    },
+    "bob": {
+      "tenant": "B"
+    }
+  },
+  "all_accounts_owned_test_accounts": true,
+  "scope": "offline fixture only"
+}

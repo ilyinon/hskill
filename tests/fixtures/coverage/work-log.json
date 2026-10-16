@@ -1,0 +1,16 @@
+{
+  "requested_endpoints": [
+    "GET /profile",
+    "GET /invoice/:id",
+    "POST /reset"
+  ],
+  "tested": [
+    "GET /profile"
+  ],
+  "untested": [
+    "GET /invoice/:id",
+    "POST /reset"
+  ],
+  "stop_reason": "time limit",
+  "applicability": "all endpoints are part of the requested authenticated API"
+}

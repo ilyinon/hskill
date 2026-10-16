@@ -1,28 +1,24 @@
 ---
 name: jwt-oauth-token-attacks
-description: >-
-  JWT and OAuth token attack playbook. Use when validating token trust, signing algorithms, key handling, claim abuse, bearer flows, and OAuth account-binding weaknesses.
+description: Validate JWT signatures, algorithm and key trust, claims, and token lifecycle. For OAuth/OIDC callback or account binding, use oauth-oidc-misconfiguration directly.
 ---
 
-# Jwt Oauth Token Attacks
+# JWT trust and validation
 
-## Working approach
-
-- Identify token type, signing verification, key source, issuer/audience, and resulting identity
-- Separate JWT validation from OAuth flow/binding checks
-- Compare an accepted baseline with a single controlled mutation and inspect the resulting authorization.
-
-## Evidence and limits
-
-A token or flow that violates the required trust policy is accepted and grants a demonstrated identity/capability.
-
-Decoding, changing an unsigned claim, or possessing another valid token is not forgery; URL fragments are not sent in the Referer header.
+Map token type, configured algorithm/key source, issuer/audience, and resulting principal. Compare an accepted baseline with one controlled mutation and inspect effective permissions. Decoding, changing an unsigned claim, or possessing another valid token is not forgery.
 
 ## References
 
-Choose the reference matching the current step; do not preload the catalog. Original section numbers are retained below. Select engine, version, and prerequisites before using examples; version/vendor tables are candidates to verify.
+Read only the reference matching the current question.
 
-| Current need / original sections | Read selectively |
+| Current question | Read |
 |---|---|
-| 1. JWT ANATOMY; 2. ATTACK 1 — ALGORITHM NONE (alg:none); 3. ATTACK 2 — RS256 TO HS256 KEY CONFUSION; 4. ATTACK 3 — JWT SECRET BRUTE FORCE; 5. ATTACK 4 — kid (Key ID) INJECTION; 6. ATTACK 5 — jku / x5u Header Injection; 7. OAUTH 2.0 — STATE PARAMETER MISSING (CSRF) | [Read](./references/01-jwt-anatomy.md) |
-| 8. OAUTH — REDIRECT_URI BYPASS; 9. OAUTH — IMPLICIT FLOW TOKEN THEFT; 10. OAUTH — SCOPE ESCALATION; 11. TOKEN LEAKAGE VECTORS; 12. JWT TESTING CHECKLIST; 13. OAUTH TESTING CHECKLIST | [Read](./references/02-oauth-redirect-uri-bypass.md) |
+| What token structure or claims are present? | [Format and decoding](./references/jwt-format.md) |
+| Unsigned acceptance, algorithm confusion, weak HMAC key | [Signature policy](./references/jwt-signature-policy.md) |
+| Key lookup or remote key trust: `kid`, `jku`, `x5u` | [Key selection](./references/jwt-key-selection.md) |
+| Issuer, audience, token kind, expiration, revocation | [Claims and lifecycle](./references/jwt-claims-lifecycle.md) |
+| URL, script, history, or logging exposure | [Token exposure](./references/token-exposure.md) |
+
+OAuth/OIDC redirects, PKCE, nonce, and account linking belong to [OAuth/OIDC](../oauth-oidc-misconfiguration/SKILL.md). API-key or proxy-header identity belongs to [API authentication](../api-auth-and-jwt-abuse/SKILL.md). A known JWT question needs no category router.
+
+Legacy section indexes remain available for existing links: [sections 1–7](./references/01-jwt-anatomy.md), [sections 8–13](./references/02-oauth-redirect-uri-bypass.md).

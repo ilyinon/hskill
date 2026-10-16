@@ -21,6 +21,7 @@ Run from the repository root with Python 3.9 or later:
 
 ```sh
 python3 scripts/check_skills.py
+python3 scripts/eval_skills.py validate
 python3 -m unittest discover -s tests -v
 ```
 
@@ -31,9 +32,47 @@ PyYAML enables full frontmatter parsing. With `tiktoken` installed, use
 token count may download the encoding table; ordinary checks do not need it.
 Token counts cover file text only, not total model usage.
 
-`tests/test_reference_examples.py` checks selected mathematical examples without
-contacting a target. It does not validate every exploit or version table.
-`tests/eval_cases.json` contains behavioral regression cases: run raw scenarios
-without exposing their expected behavior, then compare routing, proof, stopping,
-and context loaded against those expectations. Recheck affected scenarios after
-changing routing or evidence rules; record missing artifacts as limitations.
+`tests/test_reference_examples.py` checks selected mathematical examples.
+`tests/test_eval_fixtures.py` checks reviewed offline source models and binary
+artifact structure. Neither validates every exploit or version table.
+
+Use the blind preparation and grading workflow in [tests/EVALUATION.md](tests/EVALUATION.md)
+after changing routing or evidence rules. Its 18 cases include real local
+artifacts; expected outcomes stay outside the evaluating agent's context.
+Preserve answers, read logs, input/rubric digests, settings, and grading reasons.
+
+For overlapping subjects, choose a canonical home for the technique and link to
+it from adjacent workflows. API credential/proxy handling belongs in
+`api-auth-and-jwt-abuse`, JWT signing/key/claim validation in
+`jwt-oauth-token-attacks`, and OAuth/OIDC transaction binding in
+`oauth-oidc-misconfiguration`. Category routers are optional for ambiguous tasks.
+Use task-oriented reference names and index labels; keep compatibility paths
+when existing links need them.
+
+Record source review and actual offline validation separately in
+`skills/hack/verification.json`. Supply the checked version/configuration and
+limitations. A verification record must not imply that an untested library or
+CLI command was executed.
+
+## Continuous checks and token review
+
+The GitHub Actions workflow runs offline checks on Python 3.9 and full YAML/token
+checks on Python 3.13. It does not call an agent API or contact a test target.
+Optional check dependencies are pinned in `requirements-check.txt`.
+
+```sh
+python3 scripts/check_skills.py --tokens --strict --baseline tests/token_baseline.json
+```
+
+The reviewed baseline covers entry files and references. Existing-file growth
+above both 64 tokens and 15% triggers review; a new reference over 2,000 tokens
+also triggers review. Entry files retain the 1,600-token review threshold.
+`--strict` makes warnings fail CI. These are maintenance choices: inspect whether
+growth improves the skill, then intentionally refresh the baseline when justified:
+
+```sh
+python3 scripts/check_skills.py --tokens --strict --json tests/token_baseline.json
+```
+
+Keep the baseline update reviewable beside the content change. The CI summary
+shows per-document token changes; it is not a behavioral quality score.

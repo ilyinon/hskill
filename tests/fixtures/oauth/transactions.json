@@ -1,0 +1,33 @@
+{
+  "flow": "authorization code; S256 required for every code; verifier held server-side in pending session",
+  "state_parameter": null,
+  "pending": {
+    "alice-session": {
+      "verifier": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "client": "web",
+      "redirect_uri": "https://app.example.invalid/callback"
+    },
+    "bob-session": {
+      "verifier": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "client": "web",
+      "redirect_uri": "https://app.example.invalid/callback"
+    }
+  },
+  "issued": {
+    "alice-code": {
+      "challenge": "ZtNPunH49FD35FWYhT5Tv8I7vRKQJ8uxMaL0_9eHjNA",
+      "client": "web",
+      "redirect_uri": "https://app.example.invalid/callback",
+      "subject": "alice",
+      "used": false
+    },
+    "bob-code": {
+      "challenge": "8BtXImJhrjdWuTk24cTmuEn5pbCTP6O5GEO_QZW52WQ",
+      "client": "web",
+      "redirect_uri": "https://app.example.invalid/callback",
+      "subject": "bob",
+      "used": false
+    }
+  },
+  "question": "Does missing state alone prove login CSRF in this supplied model? Evaluate alice-session with bob-code and the valid baseline."
+}

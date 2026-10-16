@@ -1,0 +1,15 @@
+{
+  "context": "HTML text content inside p",
+  "requests": [
+    {
+      "input": "<b>probe</b>",
+      "status": 400,
+      "body": "rejected"
+    },
+    {
+      "input": "&lt;b&gt;probe&lt;/b&gt;",
+      "status": 200,
+      "body": "<p>&amp;lt;b&amp;gt;probe&amp;lt;/b&amp;gt;</p>"
+    }
+  ]
+}

@@ -1,79 +1,26 @@
 ---
 name: api-auth-and-jwt-abuse
-description: >-
-  API authentication and JWT abuse playbook. Use when testing bearer tokens, API keys, claim trust, header spoofing, rate limits, and API auth boundary weaknesses.
+description: Review API-key and bearer credential extraction, proxy identity headers, endpoint authentication consistency, and rate-limit boundaries. Use JWT validation directly for signing/key/claim questions, and OAuth/OIDC for federation flows.
 ---
 
-# SKILL: API Auth and JWT Abuse — Token Trust, Header Tricks, and Rate Limits
+# API authentication boundary
 
-## Evidence threshold
+- Identify how the endpoint extracts credentials and maps them to a principal, tenant, scopes, and permissions.
+- Compare the same operation with a valid baseline, missing/invalid credentials, and one controlled header or endpoint variant. Keep the principal fixed for authorization checks.
+- For forwarded identity or client IP, trace trusted proxy hops, header stripping, and which value the application actually consumes.
+- Test rate-limit behavior only within the permitted request budget. A different header or response status does not prove a bypass; show the protected action and counter behavior.
 
-Confirm only when the server accepts a token/request outside its signing, identity, or authorization policy and a protected capability changes. A decoded claim, modified token, spoofed header, or changed status alone is a hypothesis; inspect the resulting principal and effective permissions.
+## Evidence and limits
 
+Confirm an authentication flaw when a request outside the credential/identity policy gains a protected capability. Record the resulting principal and permissions. Batch execution, token decoding, or an accepted forwarded header alone is insufficient.
 
-## 1. TOKEN TRIAGE
+## References
 
-Inspect:
-
-- `alg`, `kid`, `jku`, `x5u`
-- role, org, tenant, scope, or privilege claims
-- issuer and audience mismatches
-- reuse of mobile and web tokens across products
-
-## 2. QUICK ATTACK PICKS
-
-| Pattern | First Test |
+| Current need | Read |
 |---|---|
-| `alg:none` acceptance | unsigned token with trailing dot |
-| RS256 confusion | switch to HS256 using public key as secret |
-| `kid` lookup trust | path traversal or injection in `kid` |
-| remote key fetch trust | attacker-controlled `jku` or `x5u` |
-| weak secret | offline crack with targeted wordlists |
-
-## 3. HIDDEN FIELDS AND BATCH ABUSE
-
-### Mass assignment field picks
-
-```text
-role
-isAdmin
-admin
-verified
-plan
-tier
-permissions
-org
-owner
-```
-
-### Rate limit and batch abuse picks
-
-```text
-X-Forwarded-For: 1.2.3.4
-X-Real-IP: 5.6.7.8
-Forwarded: for=9.9.9.9
-```
-
-GraphQL or JSON batch abuse candidates:
-
-- arrays of login mutations
-- bulk object fetches with varying IDs
-- repeated password reset or verification calls in one request
-
-## 4. RATE LIMIT BYPASS FAMILIES
-
-```text
-X-Forwarded-For
-X-Real-IP
-Forwarded
-User-Agent rotation
-Path case / slash variants
-```
-
-## 5. NEXT ROUTING
-
-- For GraphQL batching and hidden parameters: [graphql and hidden parameters](../graphql-and-hidden-parameters/SKILL.md)
-- For default credential and brute-force planning: [authentication bypass](../authbypass-authentication-flaws/SKILL.md)
-- For full JWT and OAuth depth: [jwt oauth token attacks](../jwt-oauth-token-attacks/SKILL.md)
-- For OAuth or OIDC configuration flaws in browser and SSO flows: [oauth oidc misconfiguration](../oauth-oidc-misconfiguration/SKILL.md)
-- For credentialed browser reads and origin trust bugs: [cors cross origin misconfiguration](../cors-cross-origin-misconfiguration/SKILL.md)
+| Header, rate-limit, or batch candidates | [API-specific candidates](./references/api-identity-controls.md) |
+| JWT signing, key trust, or claims | [JWT validation](../jwt-oauth-token-attacks/SKILL.md) |
+| OAuth/OIDC callback or account binding | [OAuth/OIDC](../oauth-oidc-misconfiguration/SKILL.md) |
+| Hidden writable fields or object permissions | [API authorization](../api-authorization-and-bola/SKILL.md) |
+| GraphQL batching and hidden parameters | [GraphQL](../graphql-and-hidden-parameters/SKILL.md) |
+| Login/reset/default-credential workflow | [Authentication](../authbypass-authentication-flaws/SKILL.md) |

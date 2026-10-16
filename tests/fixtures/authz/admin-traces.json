@@ -1,0 +1,25 @@
+{
+  "policy": "/admin requires admin role",
+  "requests": [
+    {
+      "session": "alice-session",
+      "principal": "alice",
+      "role": "user",
+      "path": "/admin",
+      "status": 403,
+      "body": {
+        "error": "forbidden"
+      }
+    },
+    {
+      "session": "admin-session",
+      "principal": "operator",
+      "role": "admin",
+      "path": "/admin",
+      "status": 200,
+      "body": {
+        "panel": "admin"
+      }
+    }
+  ]
+}

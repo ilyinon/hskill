@@ -24,6 +24,8 @@ Use this as the shared entry point. Read only the branch needed for the current 
 | Code audit | [Code audit](./CODE_AUDIT.md) |
 | Source/secret leak | [Leak handling](./SOURCE_LEAK.md) |
 | SOC triage, detection, or incident response | Relevant section of [blue-team workflow](./BLUE_TEAM.md) |
+| JWT signature, signing key, or token claims | [JWT validation](../jwt-oauth-token-attacks/SKILL.md) |
+| OAuth/OIDC callback, PKCE, or account binding | [OAuth/OIDC](../oauth-oidc-misconfiguration/SKILL.md) |
 | Specific technical question or artifact | Matching topic directly; use [routing](./ROUTING.md) only when the topic is unclear |
 | Broad assessment coverage | [Test matrix](./TEST_MATRIX.md), limited to observed surfaces and requested coverage |
 | Requested report or finding ready to preserve | Relevant template in [evidence/report](./EVIDENCE_REPORT.md) |

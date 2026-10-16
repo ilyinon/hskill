@@ -17,7 +17,7 @@ Routing note: prioritize PP when you see deep merges, recursive assign, `JSON.pa
 #constructor[prototype][polluted]=1
 ```
 
-When input can reflect into DOM or framework routing, pair with `alert(1)` / `console` checks to observe whether global object properties were polluted.
+When input can reflect into DOM or framework routing, inspect the actual prototype and own/inherited-property lookups; an alert or log alone does not prove shared-prototype mutation.
 
 ```text
 #__proto__[xxx]=alert(1)
@@ -55,7 +55,7 @@ If target code uses `lodash.merge`, `deep-extend`, `hoek.applyToDefaults`, or so
 
 This is not always equivalent to `__proto__` (filtering, JSON parsing, Bun/Node differences), so **test both paths**.
 
-**Core issue**: this is not just "one extra parameter"; in non-isolated merge logic, attacker-controlled keys point to **prototype objects**, giving **global** or shared template context malicious properties that later code reads normally, triggering gadgets.
+**Core issue**: this is not just "one extra parameter"; in non-isolated merge logic, attacker-controlled keys point to **prototype objects**, changing a target-specific or shared prototype depending on the assignment/merge semantics. Prove the actual inherited-property consumer before claiming a harmful gadget effect.
 
 ---
 
@@ -165,8 +165,8 @@ Prioritize use on **authorized** targets; automated tools can cause side effects
                                                    |
                               NO ------------------+------------------ YES
                               |                                         |
-                       Report PP as DoS /              Build minimal RCE or
-                       logic impact                   high-impact PoC
+                       Record mutation;               Prove the reachable
+                       impact unverified              effect within scope
                               |                                         |
                               +---------------------+-------------------+
                                                     |
@@ -176,4 +176,3 @@ Prioritize use on **authorized** targets; automated tools can cause side effects
 ```
 
 ---
-

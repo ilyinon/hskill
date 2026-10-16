@@ -1,0 +1,12 @@
+{
+  "allowed_actions": [
+    "read own test-account invoices",
+    "compare the two owned accounts"
+  ],
+  "forbidden_actions": [
+    "modify invoices",
+    "create persistence"
+  ],
+  "deliverable": "one confirmed authorization finding with read-only proof",
+  "proof_collected": "authz/bola-traces.json"
+}

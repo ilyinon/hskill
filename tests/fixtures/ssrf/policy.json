@@ -1,0 +1,8 @@
+{
+  "allowed_preview_hosts": [
+    "docs.example.invalid"
+  ],
+  "provided_source_is_complete": true,
+  "scope": "local code audit only",
+  "fetch_contract": "fetch performs the requested URL fetch without destination or redirect filtering"
+}

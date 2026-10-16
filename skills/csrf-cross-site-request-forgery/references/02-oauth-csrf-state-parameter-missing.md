@@ -2,18 +2,11 @@
 
 For other original section numbers, use the [entry index](../SKILL.md#references).
 
-## 9. OAUTH CSRF (STATE PARAMETER MISSING)
+<a id="9-oauth-csrf-state-parameter-missing"></a>
 
-OAuth flow without `state` parameter → CSRF on the OAuth authorization:
+## 9. OAUTH CALLBACK BINDING CANDIDATE
 
-**Attack**:
-1. Attacker initiates OAuth flow, gets authorization code
-2. Before exchanging code, stops the flow (captures the redirect URL with code)
-3. Sends victim the crafted URL: `https://target.com/oauth/callback?code=ATTACKER_CODE`
-4. Victim's browser exchanges the attacker's code → victim's account linked to attacker's OAuth provider
-
-**Impact**: Attacker can log in as victim.
-
+Missing `state` alone does not establish CSRF when the actual flow supplies another effective transaction-binding mechanism. Use the canonical [OAuth/OIDC callback-binding guidance](../../oauth-oidc-misconfiguration/references/callback-binding.md), which retains the controlled code-substitution technique, PKCE/nonce prerequisites, and impact distinction. Demonstrate the forbidden identity or account transition; login CSRF does not automatically establish account takeover.
 ---
 
 ## 10. CSRF TESTING CHECKLIST
@@ -26,7 +19,8 @@ OAuth flow without `state` parameter → CSRF on the OAuth authorization:
 □ Check SameSite attribute of session cookie
 □ Test if Content-Type change (json → form → text/plain) still processes
 □ Check CORS policy: does Access-Control-Allow-Credentials: true appear?
-   With wildcard or attacker origin? → exploitable JSON CSRF
+   Credentialed wildcard Origin is rejected by browsers; verify an allowed
+   attacker origin, cookies/preflight, and actual state change separately
 □ Check OAuth flows for missing state parameter
 □ Test referrer-based protection: send request with no Referer header
 □ Test referrer-based protection: spoof subdomain in referer
@@ -101,13 +95,13 @@ Normal flow: Frontend fetches /api/user/PROFILE_ID/settings
 Attack: Set PROFILE_ID to ../../admin/dangerous-action
 
 Result: Frontend's fetch() hits /api/admin/dangerous-action with victim's cookies
-This converts a path traversal into a CSRF-like attack without needing a CSRF token
+This can redirect a same-origin client into an unintended action if that client attaches valid session/CSRF material. Prove the controllable path and resulting forbidden action; traversal alone does not bypass every token check
 ```
 
 | Aspect | Traditional CSRF | CSPT2CSRF |
 |---|---|---|
 | Origin | Attacker's site | Same-origin JavaScript |
-| Token bypass | Needs token forgery | No token needed (same-origin) |
+| Token behavior | Test the actual CSRF defense | Client may attach a valid token; inspect its construction and the server check |
 | SameSite | Blocked by SameSite=Strict | Bypasses SameSite (same site!) |
 | Detection | Standard CSRF checks | Requires input validation on path segments |
 
@@ -117,7 +111,7 @@ This converts a path traversal into a CSRF-like attack without needing a CSRF to
 
 ### 13.1 Top-level navigation via `window.open()` (2-minute window)
 
-Chrome's Lax+POST exception: cookies with `SameSite=Lax` are sent on cross-site POST requests if the cookie was set within the last 2 minutes (exists for OAuth flows).
+Some browser versions apply a short Lax-allowing-unsafe window to a recently created cookie whose SameSite attribute was omitted. This does not describe an explicitly `SameSite=Lax` cookie. Verify browser/version, actual Set-Cookie attributes, cookie age, and navigation method before using this candidate. [Set-Cookie semantics](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie).
 
 ```javascript
 // Attacker page: trigger login to set a fresh cookie, then immediately CSRF
@@ -160,7 +154,7 @@ X-Method-Override: DELETE
 _method=PUT (Rails, Laravel, Symfony)
 ```
 
-SameSite=Lax allows the GET → framework processes it as POST/DELETE via override → CSRF on "POST-only" endpoints.
+This requires a framework that honors the supplied override on the browser-feasible request and an action lacking another effective CSRF check. Custom override headers can require a successful CORS preflight; a cross-site HTML form cannot freely set them. Show the actual request method, attached cookies/token, server dispatch, and resulting action.
 
 ---
 
@@ -210,4 +204,3 @@ Some backends accept both content types:
 If the server processes `role=admin&user_id=123` the same as `{"role":"admin","user_id":123}` → CSRF via plain HTML form without CORS preflight.
 
 ---
-

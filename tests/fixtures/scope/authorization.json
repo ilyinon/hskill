@@ -1,0 +1,9 @@
+{
+  "allowed_hosts": [
+    "app.example.invalid"
+  ],
+  "allowed_actions": [
+    "review supplied capture"
+  ],
+  "additional_hosts": "not authorized"
+}

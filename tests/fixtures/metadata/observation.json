@@ -1,0 +1,19 @@
+{
+  "instance_policy": {
+    "HttpTokens": "required"
+  },
+  "application": {
+    "validation_resolution": "203.0.113.7",
+    "connection_resolution": "169.254.169.254",
+    "controlled_method": "GET",
+    "controlled_headers": []
+  },
+  "captured_result": {
+    "method": "GET",
+    "path": "/latest/meta-data/",
+    "status": 401,
+    "token_present": false
+  },
+  "token_put": "not available to this primitive",
+  "scope": "analyze supplied data only; no metadata or credential requests"
+}

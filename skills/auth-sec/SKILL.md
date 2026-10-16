@@ -1,14 +1,11 @@
 ---
 name: auth-sec
-description: >-
-  Entry P1 category router for authentication and authorization. Use when
-  testing login flows, sessions, object authorization, JWT, OAuth, CORS, CSRF,
-  and enterprise SSO weaknesses before any deeper auth topic skill.
+description: Route an ambiguous authentication, authorization, browser-trust, or federation question to its specialty. Known JWT, OAuth/OIDC, BOLA, CORS, and CSRF questions can use the matching topic directly.
 ---
 
 # Authentication and Authorization Router
 
-This is the routing entry point for authentication, sessions, and authorization boundaries.
+Use this optional router when the relevant authentication or authorization boundary is unclear. A known topic can go directly to its specialty.
 
 Use it to decide whether the issue is mainly login mechanics, object-level authorization, browser trust boundaries, or identity protocols such as OAuth/JWT/SAML before going deeper.
 
@@ -22,13 +19,15 @@ Use it to decide whether the issue is mainly login mechanics, object-level autho
 
 - [Authentication Bypass](../authbypass-authentication-flaws/SKILL.md): login bypass, password reset, 2FA, enumeration, brute-force protections
 - [IDOR Broken Object Authorization](../idor-broken-object-authorization/SKILL.md): IDOR, BOLA, BFLA, missing object permissions
-- [JWT OAuth Token Attacks](../jwt-oauth-token-attacks/SKILL.md): algorithm confusion, key trust issues, claim abuse, token forgery
+- [JWT validation](../jwt-oauth-token-attacks/SKILL.md): signature/algorithm policy, key lookup, claims, token lifecycle
 - [OAuth OIDC Misconfiguration](../oauth-oidc-misconfiguration/SKILL.md): redirect URI, state, nonce, PKCE, account binding
 - [CSRF Cross Site Request Forgery](../csrf-cross-site-request-forgery/SKILL.md): CSRF tokens, SameSite, JSON CSRF, login CSRF
 - [CORS Cross Origin Misconfiguration](../cors-cross-origin-misconfiguration/SKILL.md): reflected Origin, credentialed cross-origin reads, allowlist bypass
 - [SAML SSO Assertion Attacks](../saml-sso-assertion-attacks/SKILL.md): assertion wrapping, signature validation, audience, ACS boundaries
 
-## Recommended Flow
+## Broad-assessment flow
+
+Use this sequence only for a requested broad review; a narrow question does not require earlier stages.
 
 1. First confirm the authentication model and session boundaries
 2. Then confirm object-level and function-level authorization

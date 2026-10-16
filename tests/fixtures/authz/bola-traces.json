@@ -1,0 +1,38 @@
+{
+  "handler": "read_invoice",
+  "requests": [
+    {
+      "principal": "alice",
+      "tenant": "A",
+      "path": "/invoice/a1",
+      "status": 200,
+      "body": {
+        "owner": "alice",
+        "tenant": "A",
+        "total": 17
+      }
+    },
+    {
+      "principal": "alice",
+      "tenant": "A",
+      "path": "/invoice/b1",
+      "status": 200,
+      "body": {
+        "owner": "bob",
+        "tenant": "B",
+        "total": 29
+      }
+    },
+    {
+      "principal": "bob",
+      "tenant": "B",
+      "path": "/invoice/b1",
+      "status": 200,
+      "body": {
+        "owner": "bob",
+        "tenant": "B",
+        "total": 29
+      }
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 For other original section numbers, use the [entry index](../SKILL.md#references).
 
+Verification status and limits: records `png-ihdr-layout` in the [verification registry](../../hack/verification.json).
+
+
 
 # SKILL: Steganography Techniques — Expert Analysis Playbook
 
@@ -178,4 +181,3 @@ if actual > expected:
 ```
 
 ---
-

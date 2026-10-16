@@ -72,3 +72,8 @@ common/yak/ssa2llvm/runtime/embed/ssa2llvm-runtime/
 # distillation pipeline cache (videos / PDFs / model raw outputs)
 distill-output/
 .distill-cache/
+
+# Python maintenance checks
+__pycache__/
+*.py[cod]
+.venv/
