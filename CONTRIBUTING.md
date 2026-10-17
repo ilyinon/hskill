@@ -42,7 +42,7 @@ checks 15 additional inert arithmetic/state contracts from canonical per-topic
 JSON data; it does not run product runtimes or skill payload catalogs.
 
 Use the blind preparation and grading workflow in [tests/EVALUATION.md](tests/EVALUATION.md)
-after changing routing or evidence rules. Its 44 cases include real local
+after changing routing or evidence rules. Its 47 cases include real local
 artifacts; expected outcomes stay outside the evaluating agent's context.
 Preserve answers, read logs, input/rubric digests, settings, and grading reasons.
 The ten `solve-*` and sixteen `extend-*` transfer cases change values or
@@ -56,8 +56,22 @@ from runner bookkeeping. Add meaningful alternative explanations and legitimate
 controls; a model must be able to refute the tempting hypothesis. Unknown inputs
 in a finite recording are untested, not controlled negatives. Preserve original
 sources and invalidate dependent conclusions when relevant conditions change.
-Keep the five shared complex-task references behind conditional `SOLVING.md`
+Keep shared complex-task references behind conditional `SOLVING.md`
 links rather than copying them into every specialist entry.
+
+Use [paired reference ablations](tests/ABLATION.md) to test a module's contribution.
+Freeze all other skill files, entries, metadata and raw task inputs; hide condition
+roles from semantic grading until answers and grades are preserved. Unknown model
+settings are not matching controlled conditions. Read logs are supplied records,
+not total usage telemetry. The three `reason-*` cases transfer mechanisms to
+values outside the instructional examples.
+
+Runtime helpers belong inside their owning skill so an installed standalone
+skill remains usable. The ledger model is canonical for the staged callback lab;
+avoid maintaining a second transition implementation. Calibrate models to supplied
+observations and controls. Derive metamorphic relations from explicit prerequisites;
+do not assume arbitrary reordering preserves behavior. Preflight validators must
+reject unsupported schema restrictions rather than silently ignoring them.
 
 For diagnostic references, connect prerequisites and observed failures to the
 smallest distinguishing check. Separate setup errors, unmet preconditions,

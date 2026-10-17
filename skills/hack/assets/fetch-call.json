@@ -1,0 +1,4 @@
+{
+  "action": "fetch",
+  "arguments": {"build": 8, "format": "base64-per-chunk"}
+}

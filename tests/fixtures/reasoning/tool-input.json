@@ -1,0 +1,61 @@
+{
+  "trusted_contract_source": "supplied installed-client help snapshot, client 4 release 12",
+  "contract": {
+    "type": "object",
+    "properties": {
+      "action": {
+        "type": "string",
+        "const": "read-chunk"
+      },
+      "arguments": {
+        "type": "object",
+        "properties": {
+          "release": {
+            "type": "integer",
+            "const": 12
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "base64-blocks"
+            ]
+          },
+          "cursor": {
+            "type": "string",
+            "const": "tail-6"
+          }
+        },
+        "required": [
+          "release",
+          "format",
+          "cursor"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "action",
+      "arguments"
+    ],
+    "additionalProperties": false
+  },
+  "failed_call": {
+    "action": "read-chunk",
+    "arguments": {
+      "release": 12,
+      "format": "base64",
+      "cursor": "tail-6",
+      "raw": true
+    }
+  },
+  "failure": "Client rejected arguments before contacting a server. No authorization or payload outcome was observed.",
+  "supplied_recording": {
+    "release": 12,
+    "encoding": "base64-blocks",
+    "blocks": [
+      "ZGVsdA==",
+      "YTo3Mgo="
+    ],
+    "transform": "Decode blocks separately and concatenate in listed order."
+  }
+}

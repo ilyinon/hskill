@@ -10,8 +10,12 @@ import json
 from pathlib import Path
 import re
 import shutil
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "skills/hack/scripts"))
+import hack_ledger_model
+import hack_tool_contract
 MANIFEST = ROOT / "tests/staged_cases.json"
 OUTCOMES = {"observation", "partial", "effect", "tool-error", "controlled-negative", "unknown"}
 
@@ -65,34 +69,12 @@ def callback(action, arguments):
     if (set(arguments) != {"policy", "events"} or not isinstance(arguments["policy"], str) or
             arguments["policy"] not in {"observed", "by-operation", "one-callback"}):
         return {"outcome": "tool-error", "result": "Expected policy and events array; see the action menu."}
-    events = arguments["events"]
-    if not isinstance(events, list) or len(events) > 32:
-        return {"outcome": "tool-error", "result": "events must be an array of at most 32 records"}
-    rows, seen_deliveries, seen_operations = [], set(), set()
-    credited = 0
-    for index, event in enumerate(events):
-        if not isinstance(event, dict) or event.get("type") not in {"log", "transport-error", "complete"}:
-            return {"outcome": "tool-error", "result": "Invalid event at index %d; no trial was run" % index}
-        if event["type"] != "complete":
-            continue
-        op, delivery = event.get("operation"), event.get("delivery")
-        amount = event.get("amount")
-        if (not isinstance(op, str) or op not in action["operations"] or
-                not isinstance(delivery, str) or not delivery or type(amount) is not int or
-                amount != action["operations"][op]):
-            return {"outcome": "tool-error", "result": "Operation, delivery, or amount invalid; no trial was run"}
-        policy = arguments["policy"]
-        duplicate = (delivery in seen_deliveries if policy == "observed" else
-                     op in seen_operations if policy == "by-operation" else bool(seen_operations))
-        applied = not duplicate
-        if applied:
-            credited += amount
-        rows.append({"operation": op, "delivery": delivery, "applied": applied, "amount": amount})
-        seen_deliveries.add(delivery)
-        seen_operations.add(op)
+    try:
+        result = hack_ledger_model.simulate(action["operations"], arguments["policy"], arguments["events"])
+    except ValueError as error:
+        return {"outcome": "tool-error", "result": str(error)}
     return {"outcome": "observation", "evidence": "ledger-replay",
-            "result": {"initial_credit": 0, "final_credit": credited, "rows": rows,
-                       "reset": "fresh ledger for this call"}}
+            "result": result}
 
 
 def observe(case, observed, name, arguments):
@@ -172,7 +154,11 @@ def load(session):
     return session, data, case, observed
 
 
-def act(session, request):
+def act(session, request, contract=None):
+    if contract is not None:
+        errors = hack_tool_contract.validate(contract, request)
+        if errors:
+            raise ValueError("Preflight rejected arguments; no action ran: " + "; ".join(errors))
     session, data, case, observed = load(session)
     if "submission" in data:
         raise ValueError("Session already submitted")
@@ -237,6 +223,7 @@ def main():
         sub.add_argument("--session", required=True)
         if command == "act":
             sub.add_argument("--input", required=True, type=Path)
+            sub.add_argument("--contract", type=Path, help="Optional current small-dialect argument contract; validates before any action")
         if command == "finish":
             sub.add_argument("--answer", required=True, type=Path)
     args = parser.parse_args()
@@ -246,7 +233,8 @@ def main():
         elif args.command == "start":
             result = start(args.case, args.session)
         elif args.command == "act":
-            result = act(args.session, json.loads(args.input.read_text()))
+            contract = hack_tool_contract.parse(args.contract.read_text()) if args.contract else None
+            result = act(args.session, hack_tool_contract.parse(args.input.read_text()), contract=contract)
         elif args.command == "status":
             result = status(args.session)
         else:

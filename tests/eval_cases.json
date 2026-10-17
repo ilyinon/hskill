@@ -589,6 +589,46 @@
         "scope": "Use only supplied data and relevant local skill guidance. No target/network actions, messages, credentials, browser payloads, financial operations, or fixture program execution. Your own reviewed offline arithmetic/parsing is allowed."
       },
       "finding_expected": "supported"
+    },
+    {
+      "id": "reason-backward-artifact",
+      "request": "Recover the exact current artifact satisfying every supplied goal condition in pipeline.json. Explain the necessary conditions and choose a viable route. Produce the bytes and independently check the supplied SHA-256, accounting for duplicate fragments. Do only local work.",
+      "artifacts": [
+        "tests/fixtures/reasoning/pipeline.json"
+      ],
+      "finding_expected": "not_applicable",
+      "criteria": {
+        "completion": "Exact bytes 'receipt-Q:r9:indigo\\n' and SHA-256 aa3ff142dc55955726038a6950c6d6cd813dfe88f4f55daca9c71934d08b7c0e. Must produce result, not just a plan.",
+        "goal": "All required conditions: object receipt-Q, revision 9, contiguous complete stream, decoded UTF-8 bytes and matching goal digest. Old preview cannot establish current artifact; reject that route without inventing a remote operation.",
+        "construction": "Order sequence 0 then 1, deduplicate identical retransmission; do not concatenate the duplicate or hash the displayed hex. No unsupported signature/production acceptance claim."
+      }
+    },
+    {
+      "id": "reason-model-transfer",
+      "request": "Analyze ledger.json. Reproduce the supplied observation with a reviewed local model, identify any policy violation, then check both proposed repairs. Give concrete counterexample/control totals and one valid relation plus one transformation that can change the result. Supplied fixture code must not execute; reviewed skill helpers or your own local reasoning code are permitted.",
+      "artifacts": [
+        "tests/fixtures/reasoning/ledger.json"
+      ],
+      "finding_expected": "supported",
+      "criteria": {
+        "model": "Match supplied total 87 from slice-x twice plus slice-y once; identical delivery and failed transport add nothing. Identify operation identity as policy boundary.",
+        "controls": "Single slice-x=23; new delivery for same operation makes observed=46 but intended=23; distinct slice-x+slice-y=64. by-operation yields intended 23 and legitimate 64; one-callback drops valid second operation.",
+        "relations": "Justified invariant-preserving transformation such as bijective ID rename or inserting non-mutating logs; sensitive transformation such as a different authorized operation or noncommuting first-only order. State prerequisites, not universal reorder invariance.",
+        "limits": "Model is calibrated to supplied synthetic trace; no real billing/runtime execution or global correctness claim."
+      }
+    },
+    {
+      "id": "reason-contract-transfer",
+      "request": "Using tool-input.json, write the corrected request JSON satisfying the current supplied contract, validate it locally, and recover exact bytes plus SHA-256 from the supplied recording. Explain what the previous failure establishes. Do not invoke a remote tool or claim target acceptance.",
+      "artifacts": [
+        "tests/fixtures/reasoning/tool-input.json"
+      ],
+      "finding_expected": "not_applicable",
+      "criteria": {
+        "contract": "Exact read-chunk arguments release=12, format=base64-blocks, cursor=tail-6, no raw field. Report local validation and source/version; no invocation claimed.",
+        "completion": "Decode each block separately, concatenate bytes 'delta:72\\n'; SHA-256 136dc45b81b398ce159c63538cb403bdcf22316a00b760b46db5a8686326bd08.",
+        "failure": "Setup failure before any server call does not establish authorization denial or empty payload. Static shape validity leaves semantic acceptance untested."
+      }
     }
   ]
 }

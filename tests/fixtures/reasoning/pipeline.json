@@ -1,0 +1,39 @@
+{
+  "goal": {
+    "object": "receipt-Q",
+    "revision": 9,
+    "encoding": "utf8",
+    "sha256": "aa3ff142dc55955726038a6950c6d6cd813dfe88f4f55daca9c71934d08b7c0e"
+  },
+  "allowed_work": "Read supplied artifacts and perform local decoding/hash checks only.",
+  "routes": {
+    "preview": {
+      "object": "receipt-Q",
+      "revision": 8,
+      "base64": "cmVjZWlwdC1ROnI4OmFtYmVyCg=="
+    },
+    "current": {
+      "object": "receipt-Q",
+      "revision": 9,
+      "encoding": "hex-per-fragment",
+      "fragments": [
+        {
+          "sequence": 1,
+          "hex": "513a72393a696e6469676f0a",
+          "final": true
+        },
+        {
+          "sequence": 0,
+          "hex": "726563656970742d",
+          "final": false
+        },
+        {
+          "sequence": 0,
+          "hex": "726563656970742d",
+          "final": false
+        }
+      ]
+    }
+  },
+  "notes": "Exact duplicate sequence records represent retransmission. The final artifact requires contiguous sequence numbers starting at 0, one matching object/revision and a final fragment. The old preview has no current-version acceptance guarantee."
+}

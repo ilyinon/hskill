@@ -1,6 +1,6 @@
 {
   "skills": 103,
-  "markdown_files": 603,
+  "markdown_files": 607,
   "full_yaml_validation": true,
   "errors": [],
   "warnings": [],
@@ -1322,7 +1322,7 @@
     },
     {
       "path": "hack/SOLVING.md",
-      "tokens": 715
+      "tokens": 710
     },
     {
       "path": "hack/SOURCE_LEAK.md",
@@ -1333,12 +1333,24 @@
       "tokens": 2026
     },
     {
+      "path": "hack/references/backward-planning.md",
+      "tokens": 461
+    },
+    {
       "path": "hack/references/chain-contracts.md",
       "tokens": 485
     },
     {
       "path": "hack/references/evidence-state.md",
       "tokens": 574
+    },
+    {
+      "path": "hack/references/executable-models.md",
+      "tokens": 474
+    },
+    {
+      "path": "hack/references/metamorphic-checks.md",
+      "tokens": 466
     },
     {
       "path": "hack/references/minimization.md",
@@ -1351,6 +1363,10 @@
     {
       "path": "hack/references/staged-progress.md",
       "tokens": 347
+    },
+    {
+      "path": "hack/references/tool-contracts.md",
+      "tokens": 466
     },
     {
       "path": "hash-attack-techniques/SKILL.md",

@@ -12,7 +12,7 @@ performed by a human or an independent agent after the answer is preserved.
 Unit tests exercise selected reviewed Python fixtures and arithmetic helpers.
 ELF and PCAP files are parsed statically, never executed.
 
-The suite has 44 cases. Ten `solve-*` cases transfer the diagnostic reasoning to
+The suite has 47 cases. Ten `solve-*` cases transfer the diagnostic reasoning to
 new data or preconditions rather than repeating the published worked answers.
 They include already-enforced defenses, a partial-refund policy that permits
 multiple legitimate operations, an already-aligned stack, withheld generator
@@ -37,6 +37,12 @@ Material coverage is recorded in `skills/hack/solving_coverage.json`; it is not
 runtime coverage. The 15 new `test_extended_solving.py` tests execute only the
 named arithmetic/state contracts from inert JSON. Supplied product traces in
 other examples were not observed by running those products.
+
+Three `reason-*` cases add backward construction of a current artifact, a
+calibrated state model with transformation controls, and tool-contract recovery.
+Their raw values differ from the instructional examples. They are excluded from
+runtime instructions, not guaranteed unknown to model training. Reviewed bundled
+skill helpers may run locally; supplied fixture programs still must not execute.
 
 ## Prepare a blind run
 
@@ -117,6 +123,11 @@ case set, input digests, and rubric digests. Compare conclusion quality first,
 then unnecessary reads and file-text tokens. Report suite coverage; passing this
 small corpus does not validate every technique or software version.
 
+To isolate one reference's contribution under frozen inputs and fresh independent
+contexts, use the separate [paired ablation workflow](ABLATION.md). It records
+module exposure and refuses controlled comparison when exact model/settings,
+matching tool conditions, complete grades or fresh contexts are unavailable.
+
 ## Evaluate tasks with progressive evidence
 
 Three additional cases in `staged_cases.json` exercise an export chain, a build
@@ -162,6 +173,14 @@ a rejection by the real system. Invalid CLI invocations and other agent actions
 are not counted. `repeated_inputs` counts identical calls, not wasted work: a
 repeat after a changed environment can be necessary. Review the trace to classify
 uninformative actions, and do not penalize a discriminating negative check.
+
+Optional `act --contract PATH` uses the reviewed validator bundled with `hack` to
+check a current small-dialect argument contract before running the action.
+Validation errors consume no simulated action and preserve session state. They
+still cost real work. Shape validity does not establish target acceptance or
+semantic prerequisites; unsupported schema keywords are rejected. The callback
+lab now uses the same canonical ledger helper as the installed skill. Its
+intended outputs and existing controls are unchanged.
 
 History, raw observations, published artifact versions, and the submitted answer
 are preserved. `status` replays the recorded history and checks input identity

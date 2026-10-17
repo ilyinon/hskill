@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "action": {"type": "string", "const": "fetch"},
+    "arguments": {
+      "type": "object",
+      "properties": {
+        "build": {"type": "integer", "const": 8},
+        "format": {"type": "string", "enum": ["base64-per-chunk"]}
+      },
+      "required": ["build", "format"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["action", "arguments"],
+  "additionalProperties": false
+}

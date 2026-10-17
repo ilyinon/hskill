@@ -1,0 +1,8 @@
+{
+  "operations": {"part-a": 30, "part-b": 20},
+  "policy": "observed",
+  "events": [
+    {"type": "complete", "operation": "part-a", "delivery": "d1", "amount": 30},
+    {"type": "complete", "operation": "part-a", "delivery": "d2", "amount": 30}
+  ]
+}

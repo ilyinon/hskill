@@ -1,0 +1,51 @@
+{
+  "authorized_operations": {
+    "slice-x": 23,
+    "slice-y": 41
+  },
+  "rule": "Each operation may credit once; both authorized operations may complete. Failed transports/logs do not credit. Fresh ledger per trial.",
+  "observed_handler": [
+    "if complete and delivery not in seen_deliveries: credit amount; remember delivery"
+  ],
+  "events": [
+    {
+      "type": "log"
+    },
+    {
+      "type": "complete",
+      "operation": "slice-x",
+      "delivery": "m1",
+      "amount": 23
+    },
+    {
+      "type": "transport-error",
+      "delivery": "m2"
+    },
+    {
+      "type": "complete",
+      "operation": "slice-x",
+      "delivery": "m1",
+      "amount": 23
+    },
+    {
+      "type": "complete",
+      "operation": "slice-x",
+      "delivery": "m3",
+      "amount": 23
+    },
+    {
+      "type": "complete",
+      "operation": "slice-y",
+      "delivery": "m4",
+      "amount": 41
+    }
+  ],
+  "supplied_observation": {
+    "initial_credit": 0,
+    "final_credit": 87
+  },
+  "candidate_repairs": [
+    "remember operation ID instead of delivery ID",
+    "allow only one callback per order"
+  ]
+}
