@@ -1,0 +1,31 @@
+{
+  "contract": "one least-significant bit per sample; groups of8 are MSB-first",
+  "samples": [
+    36,
+    37,
+    36,
+    36,
+    36,
+    36,
+    37,
+    37,
+    36,
+    37,
+    36,
+    36,
+    36,
+    36,
+    36,
+    37,
+    36,
+    37,
+    36,
+    37,
+    36,
+    37,
+    36,
+    36
+  ],
+  "payload_bytes": 3,
+  "independent_byte_sum": 216
+}

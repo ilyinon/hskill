@@ -18,6 +18,10 @@ A controlled reproduction establishes only the specified control's behavior and 
 
 A per-process patch, clean scan result, or absent event is not proof of universal AV/EDR invisibility; detection-risk tables are not guarantees and live control tampering needs explicit scope.
 
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.
+
 ## References
 
 Choose the reference matching the current step; do not preload the catalog. Original section numbers are retained below. Select engine, version, and prerequisites before using examples; version/vendor tables are candidates to verify.

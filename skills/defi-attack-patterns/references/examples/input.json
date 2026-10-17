@@ -1,0 +1,6 @@
+{
+  "contract": "all values are integer units; borrowed principal fully repaid before before_fee snapshot; fee is the only outstanding obligation",
+  "initial_owned": 100,
+  "owned_before_fee": 102,
+  "outstanding_fee": 3
+}

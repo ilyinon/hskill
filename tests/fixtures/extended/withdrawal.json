@@ -1,0 +1,19 @@
+{
+  "contract": "integer local state-machine trace only; outer and nested transfers commit",
+  "initial_credit": 10,
+  "policy": "total transferred for this credit must not exceed10",
+  "implementation_order": [
+    "check credit>0",
+    "external transfer using current credit",
+    "set credit=0"
+  ],
+  "trace": [
+    "outer checks10",
+    "outer external transfer10 begins",
+    "callback sees stored credit10",
+    "nested transfer10 commits then sets0",
+    "outer finishes then sets0"
+  ],
+  "final_transferred": 20,
+  "final_credit": 0
+}

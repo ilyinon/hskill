@@ -1,0 +1,6 @@
+{
+  "code_point": "760D",
+  "actual_conversion": "UTF-8",
+  "counterfactual_conversion": "low 8 bits",
+  "reachable_narrowing_sink": false
+}

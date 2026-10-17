@@ -21,6 +21,10 @@ A controlled request is parsed or routed across the intended boundary differentl
 
 A timeout, 400/500, or Content-Length/Transfer-Encoding conflict alone is not desynchronization; avoid shared-user connection contamination.
 
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.
+
 ## References
 
 Choose the reference matching the current step; do not preload the catalog. Original section numbers are retained below. Select engine, version, and prerequisites before using examples; version/vendor tables are candidates to verify.

@@ -1,0 +1,6 @@
+{
+  "contract": "one unsigned input word; original acceptance is (x+add) modulo 2^bits == target",
+  "bits": 8,
+  "add": 17,
+  "target": 3
+}

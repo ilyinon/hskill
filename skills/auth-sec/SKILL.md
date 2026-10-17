@@ -38,3 +38,7 @@ Use this sequence only for a requested broad review; a narrow question does not 
 
 - [api-sec](../api-sec/SKILL.md)
 - Default credentials, username variants, wordlist sizing, and port focus are consolidated in [authbypass-authentication-flaws](../authbypass-authentication-flaws/SKILL.md)
+
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.

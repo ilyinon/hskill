@@ -1,0 +1,9 @@
+{
+  "contract": "unsigned wrapping addition followed by unsigned less-than; no other effects",
+  "bits": 8,
+  "increment": 1,
+  "boundary_inputs": [
+    254,
+    255
+  ]
+}

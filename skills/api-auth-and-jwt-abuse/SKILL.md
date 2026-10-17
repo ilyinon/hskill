@@ -14,6 +14,10 @@ description: Review API-key and bearer credential extraction, proxy identity hea
 
 Confirm an authentication flaw when a request outside the credential/identity policy gains a protected capability. Record the resulting principal and permissions. Batch execution, token decoding, or an accepted forwarded header alone is insufficient.
 
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.
+
 ## References
 
 | Current need | Read |

@@ -1,0 +1,22 @@
+{
+  "window": [
+    100,
+    200
+  ],
+  "benign_execution": {
+    "owned_marker": true,
+    "process": "owned-test"
+  },
+  "collector_heartbeats": [
+    110,
+    140,
+    180
+  ],
+  "known_good_canary": {
+    "generated_at": 130,
+    "collected_at": 131
+  },
+  "alert_events_in_window": [],
+  "policy": "measure this test/profile/window only; no guarantee of universal detection or invisibility",
+  "other_detection_layers": "not supplied"
+}

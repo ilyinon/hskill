@@ -46,4 +46,6 @@ description: >-
 - For GraphQL and hidden parameter discovery: [graphql and hidden parameters](../graphql-and-hidden-parameters/SKILL.md)
 - For broader IDOR patterns outside APIs: [idor broken object authorization](../idor-broken-object-authorization/SKILL.md)
 
-For unclear or failed object-access checks, use the canonical [IDOR diagnostics](../idor-broken-object-authorization/references/diagnostics.md) and [nested-resource worked case](../idor-broken-object-authorization/references/worked-cases.md).
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.

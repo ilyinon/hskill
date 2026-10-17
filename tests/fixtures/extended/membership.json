@@ -1,0 +1,11 @@
+{
+  "dataset": "supplied held-out labeled synthetic examples; no model query needed",
+  "members": 40,
+  "nonmembers": 60,
+  "true_positive": 30,
+  "false_negative": 10,
+  "true_negative": 54,
+  "false_positive": 6,
+  "claimed_property": "performance beyond the always-majority baseline on this dataset",
+  "real_world_provenance": "not independently established"
+}

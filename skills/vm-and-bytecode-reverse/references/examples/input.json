@@ -1,0 +1,11 @@
+{
+  "contract": "LOAD16 consumes two little-endian bytes then ADD 257",
+  "operand_hex": "0100",
+  "control_operand_hex": "0200",
+  "byte_order": "little",
+  "add": 257,
+  "native_outputs": [
+    258,
+    259
+  ]
+}

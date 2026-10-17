@@ -1,0 +1,24 @@
+{
+  "contract": "all times share a trusted basis; half-open process lifetimes and process object identity supplied",
+  "processes": [
+    {
+      "object": "P1",
+      "pid": 41,
+      "name": "old-worker",
+      "start": 100,
+      "end": 150
+    },
+    {
+      "object": "P2",
+      "pid": 41,
+      "name": "new-browser",
+      "start": 200,
+      "end": 260
+    }
+  ],
+  "connection": {
+    "pid": 41,
+    "opened": 120,
+    "owner_object": "P1"
+  }
+}

@@ -1,62 +1,62 @@
 {
   "skills": 103,
-  "markdown_files": 410,
+  "markdown_files": 603,
   "full_yaml_validation": true,
   "errors": [],
   "warnings": [],
   "unreachable_references": [],
   "entry_tokens": [
     {
-      "skill": "crlf-injection",
-      "tokens": 1448
-    },
-    {
-      "skill": "insecure-source-code-management",
-      "tokens": 1388
-    },
-    {
-      "skill": "clickjacking",
-      "tokens": 1245
-    },
-    {
-      "skill": "csv-formula-injection",
-      "tokens": 1130
-    },
-    {
       "skill": "hack",
       "tokens": 888
     },
     {
       "skill": "api-sec",
-      "tokens": 684
+      "tokens": 736
+    },
+    {
+      "skill": "ghost-bits-cast-attack",
+      "tokens": 656
+    },
+    {
+      "skill": "injection-checking",
+      "tokens": 649
+    },
+    {
+      "skill": "path-traversal-lfi",
+      "tokens": 649
     },
     {
       "skill": "business-logic-vulnerabilities",
       "tokens": 636
     },
     {
-      "skill": "ghost-bits-cast-attack",
-      "tokens": 604
-    },
-    {
-      "skill": "injection-checking",
-      "tokens": 597
-    },
-    {
-      "skill": "path-traversal-lfi",
-      "tokens": 597
-    },
-    {
       "skill": "auth-sec",
-      "tokens": 563
+      "tokens": 615
+    },
+    {
+      "skill": "xxe-xml-external-entity",
+      "tokens": 589
     },
     {
       "skill": "sqli-sql-injection",
       "tokens": 556
     },
     {
-      "skill": "xxe-xml-external-entity",
-      "tokens": 537
+      "skill": "ssti-server-side-template-injection",
+      "tokens": 555
+    },
+    {
+      "skill": "csrf-cross-site-request-forgery",
+      "tokens": 542
+    },
+    {
+      "skill": "deserialization-insecure",
+      "tokens": 534
+    },
+    {
+      "skill": "saml-sso-assertion-attacks",
+      "tokens": 533
     },
     {
       "skill": "ssrf-server-side-request-forgery",
@@ -67,43 +67,107 @@
       "tokens": 508
     },
     {
+      "skill": "upload-insecure-files",
+      "tokens": 508
+    },
+    {
+      "skill": "api-recon-and-docs",
+      "tokens": 504
+    },
+    {
       "skill": "idor-broken-object-authorization",
       "tokens": 503
     },
     {
-      "skill": "ssti-server-side-template-injection",
-      "tokens": 503
+      "skill": "linux-privilege-escalation",
+      "tokens": 502
     },
     {
       "skill": "xss-cross-site-scripting",
       "tokens": 499
     },
     {
+      "skill": "race-condition",
+      "tokens": 498
+    },
+    {
       "skill": "api-authorization-and-bola",
       "tokens": 497
     },
     {
-      "skill": "csrf-cross-site-request-forgery",
-      "tokens": 490
+      "skill": "cmdi-command-injection",
+      "tokens": 495
     },
     {
-      "skill": "deserialization-insecure",
-      "tokens": 482
+      "skill": "arbitrary-write-to-rce",
+      "tokens": 489
     },
     {
-      "skill": "saml-sso-assertion-attacks",
+      "skill": "active-directory-certificate-services",
       "tokens": 481
+    },
+    {
+      "skill": "kernel-exploitation",
+      "tokens": 481
+    },
+    {
+      "skill": "authbypass-authentication-flaws",
+      "tokens": 477
+    },
+    {
+      "skill": "graphql-and-hidden-parameters",
+      "tokens": 474
     },
     {
       "skill": "stack-overflow-and-rop",
       "tokens": 474
     },
     {
-      "skill": "upload-insecure-files",
-      "tokens": 456
+      "skill": "windows-privilege-escalation",
+      "tokens": 468
     },
     {
-      "skill": "api-recon-and-docs",
+      "skill": "ios-pentesting-tricks",
+      "tokens": 464
+    },
+    {
+      "skill": "unauthorized-access-common-services",
+      "tokens": 463
+    },
+    {
+      "skill": "lattice-crypto-attacks",
+      "tokens": 462
+    },
+    {
+      "skill": "nosql-injection",
+      "tokens": 460
+    },
+    {
+      "skill": "windows-av-evasion",
+      "tokens": 460
+    },
+    {
+      "skill": "network-protocol-attacks",
+      "tokens": 458
+    },
+    {
+      "skill": "macos-process-injection",
+      "tokens": 457
+    },
+    {
+      "skill": "smart-contract-vulnerabilities",
+      "tokens": 457
+    },
+    {
+      "skill": "sandbox-escape-techniques",
+      "tokens": 455
+    },
+    {
+      "skill": "windows-lateral-movement",
+      "tokens": 453
+    },
+    {
+      "skill": "browser-exploitation-v8",
       "tokens": 452
     },
     {
@@ -111,318 +175,254 @@
       "tokens": 452
     },
     {
-      "skill": "linux-privilege-escalation",
-      "tokens": 450
+      "skill": "container-escape-techniques",
+      "tokens": 451
     },
     {
-      "skill": "race-condition",
-      "tokens": 446
+      "skill": "subdomain-takeover",
+      "tokens": 451
     },
     {
-      "skill": "cmdi-command-injection",
+      "skill": "websocket-security",
+      "tokens": 449
+    },
+    {
+      "skill": "xslt-injection",
+      "tokens": 448
+    },
+    {
+      "skill": "code-obfuscation-deobfuscation",
+      "tokens": 447
+    },
+    {
+      "skill": "email-header-injection",
+      "tokens": 445
+    },
+    {
+      "skill": "http2-specific-attacks",
+      "tokens": 444
+    },
+    {
+      "skill": "ntlm-relay-coercion",
       "tokens": 443
     },
     {
-      "skill": "arbitrary-write-to-rce",
-      "tokens": 437
+      "skill": "recon-and-methodology",
+      "tokens": 442
     },
     {
-      "skill": "active-directory-certificate-services",
-      "tokens": 429
+      "skill": "kubernetes-pentesting",
+      "tokens": 441
     },
     {
-      "skill": "kernel-exploitation",
-      "tokens": 429
+      "skill": "active-directory-kerberos-attacks",
+      "tokens": 440
     },
     {
-      "skill": "authbypass-authentication-flaws",
+      "skill": "macos-security-bypass",
+      "tokens": 439
+    },
+    {
+      "skill": "waf-bypass-techniques",
+      "tokens": 439
+    },
+    {
+      "skill": "anti-debugging-techniques",
+      "tokens": 438
+    },
+    {
+      "skill": "mobile-ssl-pinning-bypass",
+      "tokens": 438
+    },
+    {
+      "skill": "android-pentesting-tricks",
+      "tokens": 436
+    },
+    {
+      "skill": "classical-cipher-analysis",
+      "tokens": 436
+    },
+    {
+      "skill": "heap-exploitation",
+      "tokens": 436
+    },
+    {
+      "skill": "dangling-markup-injection",
+      "tokens": 435
+    },
+    {
+      "skill": "rsa-attack-techniques",
+      "tokens": 434
+    },
+    {
+      "skill": "api-auth-and-jwt-abuse",
+      "tokens": 431
+    },
+    {
+      "skill": "symbolic-execution-tools",
+      "tokens": 431
+    },
+    {
+      "skill": "request-smuggling",
+      "tokens": 430
+    },
+    {
+      "skill": "http-host-header-attacks",
+      "tokens": 428
+    },
+    {
+      "skill": "attack-surface-mapping",
+      "tokens": 427
+    },
+    {
+      "skill": "llm-prompt-injection",
       "tokens": 425
     },
     {
-      "skill": "graphql-and-hidden-parameters",
-      "tokens": 422
+      "skill": "hash-attack-techniques",
+      "tokens": 419
+    },
+    {
+      "skill": "recon-for-sec",
+      "tokens": 419
+    },
+    {
+      "skill": "tunneling-and-pivoting",
+      "tokens": 418
+    },
+    {
+      "skill": "ai-ml-security",
+      "tokens": 417
+    },
+    {
+      "skill": "reverse-shell-techniques",
+      "tokens": 417
     },
     {
       "skill": "traffic-analysis-pcap",
       "tokens": 417
     },
     {
-      "skill": "windows-privilege-escalation",
+      "skill": "type-juggling",
+      "tokens": 417
+    },
+    {
+      "skill": "format-string-exploitation",
       "tokens": 416
     },
     {
-      "skill": "ios-pentesting-tricks",
-      "tokens": 412
+      "skill": "binary-protection-bypass",
+      "tokens": 414
     },
     {
-      "skill": "unauthorized-access-common-services",
+      "skill": "linux-lateral-movement",
+      "tokens": 413
+    },
+    {
+      "skill": "active-directory-acl-abuse",
       "tokens": 411
     },
     {
-      "skill": "lattice-crypto-attacks",
+      "skill": "csp-bypass-advanced",
       "tokens": 410
     },
     {
-      "skill": "nosql-injection",
+      "skill": "prototype-pollution-advanced",
+      "tokens": 410
+    },
+    {
+      "skill": "cors-cross-origin-misconfiguration",
       "tokens": 408
-    },
-    {
-      "skill": "windows-av-evasion",
-      "tokens": 408
-    },
-    {
-      "skill": "network-protocol-attacks",
-      "tokens": 406
-    },
-    {
-      "skill": "macos-process-injection",
-      "tokens": 405
-    },
-    {
-      "skill": "smart-contract-vulnerabilities",
-      "tokens": 405
     },
     {
       "skill": "oauth-oidc-misconfiguration",
       "tokens": 404
     },
     {
-      "skill": "sandbox-escape-techniques",
+      "skill": "401-403-bypass-techniques",
       "tokens": 403
     },
     {
-      "skill": "windows-lateral-movement",
-      "tokens": 401
-    },
-    {
-      "skill": "browser-exploitation-v8",
-      "tokens": 400
-    },
-    {
-      "skill": "container-escape-techniques",
-      "tokens": 399
-    },
-    {
-      "skill": "subdomain-takeover",
-      "tokens": 399
-    },
-    {
-      "skill": "websocket-security",
-      "tokens": 397
-    },
-    {
-      "skill": "xslt-injection",
-      "tokens": 396
-    },
-    {
-      "skill": "code-obfuscation-deobfuscation",
-      "tokens": 395
-    },
-    {
-      "skill": "email-header-injection",
-      "tokens": 393
-    },
-    {
-      "skill": "http2-specific-attacks",
-      "tokens": 392
-    },
-    {
-      "skill": "ntlm-relay-coercion",
-      "tokens": 391
-    },
-    {
-      "skill": "recon-and-methodology",
-      "tokens": 390
-    },
-    {
-      "skill": "kubernetes-pentesting",
-      "tokens": 389
-    },
-    {
-      "skill": "active-directory-kerberos-attacks",
-      "tokens": 388
-    },
-    {
-      "skill": "macos-security-bypass",
-      "tokens": 387
-    },
-    {
-      "skill": "waf-bypass-techniques",
-      "tokens": 387
-    },
-    {
-      "skill": "anti-debugging-techniques",
-      "tokens": 386
-    },
-    {
-      "skill": "mobile-ssl-pinning-bypass",
-      "tokens": 386
-    },
-    {
-      "skill": "android-pentesting-tricks",
-      "tokens": 384
-    },
-    {
-      "skill": "classical-cipher-analysis",
-      "tokens": 384
-    },
-    {
-      "skill": "heap-exploitation",
-      "tokens": 384
-    },
-    {
-      "skill": "dangling-markup-injection",
-      "tokens": 383
-    },
-    {
-      "skill": "rsa-attack-techniques",
-      "tokens": 382
-    },
-    {
-      "skill": "api-auth-and-jwt-abuse",
-      "tokens": 379
-    },
-    {
-      "skill": "symbolic-execution-tools",
-      "tokens": 379
-    },
-    {
-      "skill": "request-smuggling",
-      "tokens": 378
-    },
-    {
-      "skill": "http-host-header-attacks",
-      "tokens": 376
-    },
-    {
-      "skill": "attack-surface-mapping",
-      "tokens": 375
-    },
-    {
-      "skill": "llm-prompt-injection",
-      "tokens": 373
-    },
-    {
-      "skill": "hash-attack-techniques",
-      "tokens": 367
-    },
-    {
-      "skill": "recon-for-sec",
-      "tokens": 367
-    },
-    {
-      "skill": "tunneling-and-pivoting",
-      "tokens": 366
-    },
-    {
-      "skill": "ai-ml-security",
-      "tokens": 365
-    },
-    {
-      "skill": "reverse-shell-techniques",
-      "tokens": 365
-    },
-    {
-      "skill": "type-juggling",
-      "tokens": 365
-    },
-    {
-      "skill": "format-string-exploitation",
-      "tokens": 364
-    },
-    {
-      "skill": "binary-protection-bypass",
-      "tokens": 362
-    },
-    {
-      "skill": "linux-lateral-movement",
-      "tokens": 361
-    },
-    {
-      "skill": "active-directory-acl-abuse",
-      "tokens": 359
-    },
-    {
-      "skill": "csp-bypass-advanced",
-      "tokens": 358
-    },
-    {
-      "skill": "prototype-pollution-advanced",
-      "tokens": 358
-    },
-    {
-      "skill": "cors-cross-origin-misconfiguration",
-      "tokens": 356
-    },
-    {
-      "skill": "401-403-bypass-techniques",
-      "tokens": 351
-    },
-    {
       "skill": "vm-and-bytecode-reverse",
-      "tokens": 347
+      "tokens": 399
     },
     {
       "skill": "jndi-injection",
-      "tokens": 346
+      "tokens": 398
     },
     {
       "skill": "defi-attack-patterns",
-      "tokens": 342
+      "tokens": 394
     },
     {
       "skill": "dns-rebinding-attacks",
-      "tokens": 342
+      "tokens": 394
     },
     {
       "skill": "open-redirect",
-      "tokens": 341
+      "tokens": 393
     },
     {
       "skill": "steganography-techniques",
-      "tokens": 340
+      "tokens": 392
     },
     {
       "skill": "linux-security-bypass",
-      "tokens": 337
+      "tokens": 389
     },
     {
       "skill": "memory-forensics-volatility",
-      "tokens": 336
+      "tokens": 388
     },
     {
       "skill": "web-cache-deception",
-      "tokens": 328
+      "tokens": 380
     },
     {
       "skill": "file-access-vuln",
-      "tokens": 327
+      "tokens": 379
     },
     {
       "skill": "prototype-pollution",
-      "tokens": 326
+      "tokens": 378
     },
     {
       "skill": "expression-language-injection",
-      "tokens": 317
+      "tokens": 369
     },
     {
       "skill": "dependency-confusion",
-      "tokens": 316
+      "tokens": 368
     },
     {
       "skill": "http-parameter-pollution",
-      "tokens": 297
+      "tokens": 349
     },
     {
       "skill": "business-logic-vuln",
-      "tokens": 279
+      "tokens": 331
+    },
+    {
+      "skill": "csv-formula-injection",
+      "tokens": 216
+    },
+    {
+      "skill": "insecure-source-code-management",
+      "tokens": 211
+    },
+    {
+      "skill": "clickjacking",
+      "tokens": 209
+    },
+    {
+      "skill": "crlf-injection",
+      "tokens": 202
     }
   ],
   "document_tokens": [
     {
       "path": "401-403-bypass-techniques/SKILL.md",
-      "tokens": 351
+      "tokens": 403
     },
     {
       "path": "401-403-bypass-techniques/references/01-evidence-threshold.md",
@@ -433,12 +433,20 @@
       "tokens": 1527
     },
     {
+      "path": "401-403-bypass-techniques/references/diagnostics.md",
+      "tokens": 269
+    },
+    {
+      "path": "401-403-bypass-techniques/references/worked-cases.md",
+      "tokens": 270
+    },
+    {
       "path": "active-directory-acl-abuse/BLOODHOUND_PATHS.md",
       "tokens": 2085
     },
     {
       "path": "active-directory-acl-abuse/SKILL.md",
-      "tokens": 359
+      "tokens": 411
     },
     {
       "path": "active-directory-acl-abuse/references/01-bloodhound-enumeration.md",
@@ -449,12 +457,20 @@
       "tokens": 1064
     },
     {
+      "path": "active-directory-acl-abuse/references/diagnostics.md",
+      "tokens": 273
+    },
+    {
+      "path": "active-directory-acl-abuse/references/worked-cases.md",
+      "tokens": 254
+    },
+    {
       "path": "active-directory-certificate-services/ADCS_ESC_MATRIX.md",
       "tokens": 2072
     },
     {
       "path": "active-directory-certificate-services/SKILL.md",
-      "tokens": 429
+      "tokens": 481
     },
     {
       "path": "active-directory-certificate-services/references/01-ad-cs-architecture-overview.md",
@@ -465,12 +481,20 @@
       "tokens": 922
     },
     {
+      "path": "active-directory-certificate-services/references/diagnostics.md",
+      "tokens": 273
+    },
+    {
+      "path": "active-directory-certificate-services/references/worked-cases.md",
+      "tokens": 236
+    },
+    {
       "path": "active-directory-kerberos-attacks/KERBEROS_ATTACK_CHAINS.md",
       "tokens": 2214
     },
     {
       "path": "active-directory-kerberos-attacks/SKILL.md",
-      "tokens": 388
+      "tokens": 440
     },
     {
       "path": "active-directory-kerberos-attacks/references/01-kerberos-authentication-primer.md",
@@ -481,8 +505,16 @@
       "tokens": 1260
     },
     {
+      "path": "active-directory-kerberos-attacks/references/diagnostics.md",
+      "tokens": 272
+    },
+    {
+      "path": "active-directory-kerberos-attacks/references/worked-cases.md",
+      "tokens": 245
+    },
+    {
       "path": "ai-ml-security/SKILL.md",
-      "tokens": 365
+      "tokens": 417
     },
     {
       "path": "ai-ml-security/references/01-model-supply-chain-attacks.md",
@@ -497,12 +529,20 @@
       "tokens": 714
     },
     {
+      "path": "ai-ml-security/references/diagnostics.md",
+      "tokens": 272
+    },
+    {
+      "path": "ai-ml-security/references/worked-cases.md",
+      "tokens": 265
+    },
+    {
       "path": "android-pentesting-tricks/FRIDA_SCRIPTS.md",
       "tokens": 3268
     },
     {
       "path": "android-pentesting-tricks/SKILL.md",
-      "tokens": 384
+      "tokens": 436
     },
     {
       "path": "android-pentesting-tricks/references/01-ssl-pinning-bypass.md",
@@ -513,12 +553,20 @@
       "tokens": 1460
     },
     {
+      "path": "android-pentesting-tricks/references/diagnostics.md",
+      "tokens": 277
+    },
+    {
+      "path": "android-pentesting-tricks/references/worked-cases.md",
+      "tokens": 228
+    },
+    {
       "path": "anti-debugging-techniques/ANTI_DEBUG_MATRIX.md",
       "tokens": 2585
     },
     {
       "path": "anti-debugging-techniques/SKILL.md",
-      "tokens": 386
+      "tokens": 438
     },
     {
       "path": "anti-debugging-techniques/references/01-linux-anti-debug-techniques.md",
@@ -533,28 +581,68 @@
       "tokens": 1060
     },
     {
+      "path": "anti-debugging-techniques/references/diagnostics.md",
+      "tokens": 271
+    },
+    {
+      "path": "anti-debugging-techniques/references/worked-cases.md",
+      "tokens": 247
+    },
+    {
       "path": "api-auth-and-jwt-abuse/SKILL.md",
-      "tokens": 379
+      "tokens": 431
     },
     {
       "path": "api-auth-and-jwt-abuse/references/api-identity-controls.md",
       "tokens": 298
     },
     {
+      "path": "api-auth-and-jwt-abuse/references/diagnostics.md",
+      "tokens": 277
+    },
+    {
+      "path": "api-auth-and-jwt-abuse/references/worked-cases.md",
+      "tokens": 287
+    },
+    {
       "path": "api-authorization-and-bola/SKILL.md",
       "tokens": 497
     },
     {
+      "path": "api-authorization-and-bola/references/diagnostics.md",
+      "tokens": 319
+    },
+    {
+      "path": "api-authorization-and-bola/references/worked-cases.md",
+      "tokens": 260
+    },
+    {
       "path": "api-recon-and-docs/SKILL.md",
-      "tokens": 452
+      "tokens": 504
+    },
+    {
+      "path": "api-recon-and-docs/references/diagnostics.md",
+      "tokens": 281
+    },
+    {
+      "path": "api-recon-and-docs/references/worked-cases.md",
+      "tokens": 284
     },
     {
       "path": "api-sec/SKILL.md",
-      "tokens": 684
+      "tokens": 736
+    },
+    {
+      "path": "api-sec/references/diagnostics.md",
+      "tokens": 310
+    },
+    {
+      "path": "api-sec/references/worked-cases.md",
+      "tokens": 243
     },
     {
       "path": "arbitrary-write-to-rce/SKILL.md",
-      "tokens": 437
+      "tokens": 489
     },
     {
       "path": "arbitrary-write-to-rce/references/01-target-selection-by-glibc-version.md",
@@ -569,8 +657,16 @@
       "tokens": 576
     },
     {
+      "path": "arbitrary-write-to-rce/references/diagnostics.md",
+      "tokens": 279
+    },
+    {
+      "path": "arbitrary-write-to-rce/references/worked-cases.md",
+      "tokens": 259
+    },
+    {
       "path": "attack-surface-mapping/SKILL.md",
-      "tokens": 375
+      "tokens": 427
     },
     {
       "path": "attack-surface-mapping/SURFACE_PATTERNS.md",
@@ -589,12 +685,28 @@
       "tokens": 376
     },
     {
+      "path": "attack-surface-mapping/references/diagnostics.md",
+      "tokens": 268
+    },
+    {
+      "path": "attack-surface-mapping/references/worked-cases.md",
+      "tokens": 263
+    },
+    {
       "path": "auth-sec/SKILL.md",
-      "tokens": 563
+      "tokens": 615
+    },
+    {
+      "path": "auth-sec/references/diagnostics.md",
+      "tokens": 303
+    },
+    {
+      "path": "auth-sec/references/worked-cases.md",
+      "tokens": 234
     },
     {
       "path": "authbypass-authentication-flaws/SKILL.md",
-      "tokens": 425
+      "tokens": 477
     },
     {
       "path": "authbypass-authentication-flaws/references/01-authorized-credential-test-planning.md",
@@ -609,12 +721,20 @@
       "tokens": 758
     },
     {
+      "path": "authbypass-authentication-flaws/references/diagnostics.md",
+      "tokens": 260
+    },
+    {
+      "path": "authbypass-authentication-flaws/references/worked-cases.md",
+      "tokens": 253
+    },
+    {
       "path": "binary-protection-bypass/PROTECTION_BYPASS_MATRIX.md",
       "tokens": 2225
     },
     {
       "path": "binary-protection-bypass/SKILL.md",
-      "tokens": 362
+      "tokens": 414
     },
     {
       "path": "binary-protection-bypass/references/01-protection-identification.md",
@@ -625,8 +745,16 @@
       "tokens": 1482
     },
     {
+      "path": "binary-protection-bypass/references/diagnostics.md",
+      "tokens": 272
+    },
+    {
+      "path": "binary-protection-bypass/references/worked-cases.md",
+      "tokens": 231
+    },
+    {
       "path": "browser-exploitation-v8/SKILL.md",
-      "tokens": 400
+      "tokens": 452
     },
     {
       "path": "browser-exploitation-v8/V8_EXPLOITATION_PATTERNS.md",
@@ -641,8 +769,24 @@
       "tokens": 1240
     },
     {
+      "path": "browser-exploitation-v8/references/diagnostics.md",
+      "tokens": 278
+    },
+    {
+      "path": "browser-exploitation-v8/references/worked-cases.md",
+      "tokens": 245
+    },
+    {
       "path": "business-logic-vuln/SKILL.md",
-      "tokens": 279
+      "tokens": 331
+    },
+    {
+      "path": "business-logic-vuln/references/diagnostics.md",
+      "tokens": 303
+    },
+    {
+      "path": "business-logic-vuln/references/worked-cases.md",
+      "tokens": 249
     },
     {
       "path": "business-logic-vulnerabilities/CHECKLIST.md",
@@ -690,7 +834,7 @@
     },
     {
       "path": "classical-cipher-analysis/SKILL.md",
-      "tokens": 384
+      "tokens": 436
     },
     {
       "path": "classical-cipher-analysis/references/01-cipher-identification-methodology.md",
@@ -709,12 +853,32 @@
       "tokens": 959
     },
     {
+      "path": "classical-cipher-analysis/references/diagnostics.md",
+      "tokens": 273
+    },
+    {
+      "path": "classical-cipher-analysis/references/worked-cases.md",
+      "tokens": 253
+    },
+    {
       "path": "clickjacking/SKILL.md",
-      "tokens": 1245
+      "tokens": 209
+    },
+    {
+      "path": "clickjacking/references/diagnostics.md",
+      "tokens": 260
+    },
+    {
+      "path": "clickjacking/references/legacy-playbook.md",
+      "tokens": 1250
+    },
+    {
+      "path": "clickjacking/references/worked-cases.md",
+      "tokens": 241
     },
     {
       "path": "cmdi-command-injection/SKILL.md",
-      "tokens": 443
+      "tokens": 495
     },
     {
       "path": "cmdi-command-injection/references/01-shell-metacharacters-injection-operators.md",
@@ -733,8 +897,16 @@
       "tokens": 1121
     },
     {
+      "path": "cmdi-command-injection/references/diagnostics.md",
+      "tokens": 264
+    },
+    {
+      "path": "cmdi-command-injection/references/worked-cases.md",
+      "tokens": 259
+    },
+    {
       "path": "code-obfuscation-deobfuscation/SKILL.md",
-      "tokens": 395
+      "tokens": 447
     },
     {
       "path": "code-obfuscation-deobfuscation/references/01-junk-code-opaque-predicates.md",
@@ -749,12 +921,20 @@
       "tokens": 257
     },
     {
+      "path": "code-obfuscation-deobfuscation/references/diagnostics.md",
+      "tokens": 267
+    },
+    {
+      "path": "code-obfuscation-deobfuscation/references/worked-cases.md",
+      "tokens": 263
+    },
+    {
       "path": "container-escape-techniques/DOCKER_ESCAPE_CHAINS.md",
       "tokens": 2757
     },
     {
       "path": "container-escape-techniques/SKILL.md",
-      "tokens": 399
+      "tokens": 451
     },
     {
       "path": "container-escape-techniques/references/01-am-i-in-a-container.md",
@@ -765,12 +945,20 @@
       "tokens": 957
     },
     {
+      "path": "container-escape-techniques/references/diagnostics.md",
+      "tokens": 270
+    },
+    {
+      "path": "container-escape-techniques/references/worked-cases.md",
+      "tokens": 245
+    },
+    {
       "path": "cors-cross-origin-misconfiguration/SCENARIOS.md",
       "tokens": 1231
     },
     {
       "path": "cors-cross-origin-misconfiguration/SKILL.md",
-      "tokens": 356
+      "tokens": 408
     },
     {
       "path": "cors-cross-origin-misconfiguration/references/01-when-to-load-this-skill.md",
@@ -781,12 +969,32 @@
       "tokens": 854
     },
     {
+      "path": "cors-cross-origin-misconfiguration/references/diagnostics.md",
+      "tokens": 280
+    },
+    {
+      "path": "cors-cross-origin-misconfiguration/references/worked-cases.md",
+      "tokens": 260
+    },
+    {
       "path": "crlf-injection/SKILL.md",
-      "tokens": 1448
+      "tokens": 202
+    },
+    {
+      "path": "crlf-injection/references/diagnostics.md",
+      "tokens": 273
+    },
+    {
+      "path": "crlf-injection/references/legacy-playbook.md",
+      "tokens": 1460
+    },
+    {
+      "path": "crlf-injection/references/worked-cases.md",
+      "tokens": 274
     },
     {
       "path": "csp-bypass-advanced/SKILL.md",
-      "tokens": 358
+      "tokens": 410
     },
     {
       "path": "csp-bypass-advanced/references/01-csp-directive-reference-matrix.md",
@@ -801,8 +1009,16 @@
       "tokens": 881
     },
     {
+      "path": "csp-bypass-advanced/references/diagnostics.md",
+      "tokens": 273
+    },
+    {
+      "path": "csp-bypass-advanced/references/worked-cases.md",
+      "tokens": 254
+    },
+    {
       "path": "csrf-cross-site-request-forgery/SKILL.md",
-      "tokens": 490
+      "tokens": 542
     },
     {
       "path": "csrf-cross-site-request-forgery/references/01-core-concept.md",
@@ -817,12 +1033,32 @@
       "tokens": 790
     },
     {
+      "path": "csrf-cross-site-request-forgery/references/diagnostics.md",
+      "tokens": 276
+    },
+    {
+      "path": "csrf-cross-site-request-forgery/references/worked-cases.md",
+      "tokens": 263
+    },
+    {
       "path": "csv-formula-injection/SKILL.md",
-      "tokens": 1130
+      "tokens": 216
+    },
+    {
+      "path": "csv-formula-injection/references/diagnostics.md",
+      "tokens": 283
+    },
+    {
+      "path": "csv-formula-injection/references/legacy-playbook.md",
+      "tokens": 1080
+    },
+    {
+      "path": "csv-formula-injection/references/worked-cases.md",
+      "tokens": 265
     },
     {
       "path": "dangling-markup-injection/SKILL.md",
-      "tokens": 383
+      "tokens": 435
     },
     {
       "path": "dangling-markup-injection/references/01-when-to-use-dangling-markup.md",
@@ -833,8 +1069,16 @@
       "tokens": 1592
     },
     {
+      "path": "dangling-markup-injection/references/diagnostics.md",
+      "tokens": 272
+    },
+    {
+      "path": "dangling-markup-injection/references/worked-cases.md",
+      "tokens": 246
+    },
+    {
       "path": "defi-attack-patterns/SKILL.md",
-      "tokens": 342
+      "tokens": 394
     },
     {
       "path": "defi-attack-patterns/references/01-flash-loan-attacks.md",
@@ -845,8 +1089,16 @@
       "tokens": 1615
     },
     {
+      "path": "defi-attack-patterns/references/diagnostics.md",
+      "tokens": 276
+    },
+    {
+      "path": "defi-attack-patterns/references/worked-cases.md",
+      "tokens": 254
+    },
+    {
       "path": "dependency-confusion/SKILL.md",
-      "tokens": 316
+      "tokens": 368
     },
     {
       "path": "dependency-confusion/references/01-quick-start.md",
@@ -857,12 +1109,20 @@
       "tokens": 565
     },
     {
+      "path": "dependency-confusion/references/diagnostics.md",
+      "tokens": 265
+    },
+    {
+      "path": "dependency-confusion/references/worked-cases.md",
+      "tokens": 264
+    },
+    {
       "path": "deserialization-insecure/JAVA_GADGET_CHAINS.md",
       "tokens": 5140
     },
     {
       "path": "deserialization-insecure/SKILL.md",
-      "tokens": 482
+      "tokens": 534
     },
     {
       "path": "deserialization-insecure/references/01-traffic-fingerprinting-is-it-deserialization.md",
@@ -881,8 +1141,16 @@
       "tokens": 1555
     },
     {
+      "path": "deserialization-insecure/references/diagnostics.md",
+      "tokens": 268
+    },
+    {
+      "path": "deserialization-insecure/references/worked-cases.md",
+      "tokens": 252
+    },
+    {
       "path": "dns-rebinding-attacks/SKILL.md",
-      "tokens": 342
+      "tokens": 394
     },
     {
       "path": "dns-rebinding-attacks/references/01-core-principle.md",
@@ -893,8 +1161,16 @@
       "tokens": 1414
     },
     {
+      "path": "dns-rebinding-attacks/references/diagnostics.md",
+      "tokens": 281
+    },
+    {
+      "path": "dns-rebinding-attacks/references/worked-cases.md",
+      "tokens": 262
+    },
+    {
       "path": "email-header-injection/SKILL.md",
-      "tokens": 393
+      "tokens": 445
     },
     {
       "path": "email-header-injection/references/01-smtp-header-injection-fundamentals.md",
@@ -909,8 +1185,16 @@
       "tokens": 195
     },
     {
+      "path": "email-header-injection/references/diagnostics.md",
+      "tokens": 263
+    },
+    {
+      "path": "email-header-injection/references/worked-cases.md",
+      "tokens": 256
+    },
+    {
       "path": "expression-language-injection/SKILL.md",
-      "tokens": 317
+      "tokens": 369
     },
     {
       "path": "expression-language-injection/references/01-detection-polyglot-probes.md",
@@ -921,12 +1205,28 @@
       "tokens": 502
     },
     {
+      "path": "expression-language-injection/references/diagnostics.md",
+      "tokens": 264
+    },
+    {
+      "path": "expression-language-injection/references/worked-cases.md",
+      "tokens": 236
+    },
+    {
       "path": "file-access-vuln/SKILL.md",
-      "tokens": 327
+      "tokens": 379
+    },
+    {
+      "path": "file-access-vuln/references/diagnostics.md",
+      "tokens": 312
+    },
+    {
+      "path": "file-access-vuln/references/worked-cases.md",
+      "tokens": 239
     },
     {
       "path": "format-string-exploitation/SKILL.md",
-      "tokens": 364
+      "tokens": 416
     },
     {
       "path": "format-string-exploitation/references/01-vulnerability-identification.md",
@@ -937,12 +1237,20 @@
       "tokens": 1473
     },
     {
+      "path": "format-string-exploitation/references/diagnostics.md",
+      "tokens": 281
+    },
+    {
+      "path": "format-string-exploitation/references/worked-cases.md",
+      "tokens": 239
+    },
+    {
       "path": "ghost-bits-cast-attack/PAYLOAD_COOKBOOK.md",
       "tokens": 7704
     },
     {
       "path": "ghost-bits-cast-attack/SKILL.md",
-      "tokens": 604
+      "tokens": 656
     },
     {
       "path": "ghost-bits-cast-attack/references/01-one-minute-mental-model.md",
@@ -969,8 +1277,24 @@
       "tokens": 1634
     },
     {
+      "path": "ghost-bits-cast-attack/references/diagnostics.md",
+      "tokens": 279
+    },
+    {
+      "path": "ghost-bits-cast-attack/references/worked-cases.md",
+      "tokens": 262
+    },
+    {
       "path": "graphql-and-hidden-parameters/SKILL.md",
-      "tokens": 422
+      "tokens": 474
+    },
+    {
+      "path": "graphql-and-hidden-parameters/references/diagnostics.md",
+      "tokens": 278
+    },
+    {
+      "path": "graphql-and-hidden-parameters/references/worked-cases.md",
+      "tokens": 263
     },
     {
       "path": "hack/BLUE_TEAM.md",
@@ -990,7 +1314,7 @@
     },
     {
       "path": "hack/ROUTING.md",
-      "tokens": 1054
+      "tokens": 1126
     },
     {
       "path": "hack/SKILL.md",
@@ -998,7 +1322,7 @@
     },
     {
       "path": "hack/SOLVING.md",
-      "tokens": 716
+      "tokens": 715
     },
     {
       "path": "hack/SOURCE_LEAK.md",
@@ -1009,8 +1333,28 @@
       "tokens": 2026
     },
     {
+      "path": "hack/references/chain-contracts.md",
+      "tokens": 485
+    },
+    {
+      "path": "hack/references/evidence-state.md",
+      "tokens": 574
+    },
+    {
+      "path": "hack/references/minimization.md",
+      "tokens": 483
+    },
+    {
+      "path": "hack/references/refutation.md",
+      "tokens": 445
+    },
+    {
+      "path": "hack/references/staged-progress.md",
+      "tokens": 347
+    },
+    {
       "path": "hash-attack-techniques/SKILL.md",
-      "tokens": 367
+      "tokens": 419
     },
     {
       "path": "hash-attack-techniques/references/01-length-extension-attack.md",
@@ -1025,6 +1369,14 @@
       "tokens": 749
     },
     {
+      "path": "hash-attack-techniques/references/diagnostics.md",
+      "tokens": 283
+    },
+    {
+      "path": "hash-attack-techniques/references/worked-cases.md",
+      "tokens": 304
+    },
+    {
       "path": "heap-exploitation/HOUSE_OF_TECHNIQUES.md",
       "tokens": 2582
     },
@@ -1034,7 +1386,7 @@
     },
     {
       "path": "heap-exploitation/SKILL.md",
-      "tokens": 384
+      "tokens": 436
     },
     {
       "path": "heap-exploitation/references/01-ptmalloc2-structure-quick-reference.md",
@@ -1045,8 +1397,16 @@
       "tokens": 853
     },
     {
+      "path": "heap-exploitation/references/diagnostics.md",
+      "tokens": 262
+    },
+    {
+      "path": "heap-exploitation/references/worked-cases.md",
+      "tokens": 263
+    },
+    {
       "path": "http-host-header-attacks/SKILL.md",
-      "tokens": 376
+      "tokens": 428
     },
     {
       "path": "http-host-header-attacks/references/01-attack-surface.md",
@@ -1057,16 +1417,32 @@
       "tokens": 1156
     },
     {
+      "path": "http-host-header-attacks/references/diagnostics.md",
+      "tokens": 278
+    },
+    {
+      "path": "http-host-header-attacks/references/worked-cases.md",
+      "tokens": 296
+    },
+    {
       "path": "http-parameter-pollution/SKILL.md",
-      "tokens": 297
+      "tokens": 349
     },
     {
       "path": "http-parameter-pollution/references/01-quick-start.md",
       "tokens": 1728
     },
     {
+      "path": "http-parameter-pollution/references/diagnostics.md",
+      "tokens": 263
+    },
+    {
+      "path": "http-parameter-pollution/references/worked-cases.md",
+      "tokens": 240
+    },
+    {
       "path": "http2-specific-attacks/SKILL.md",
-      "tokens": 392
+      "tokens": 444
     },
     {
       "path": "http2-specific-attacks/references/01-http-2-attack-surface-overview.md",
@@ -1075,6 +1451,14 @@
     {
       "path": "http2-specific-attacks/references/02-stream-multiplexing-abuse.md",
       "tokens": 1561
+    },
+    {
+      "path": "http2-specific-attacks/references/diagnostics.md",
+      "tokens": 268
+    },
+    {
+      "path": "http2-specific-attacks/references/worked-cases.md",
+      "tokens": 247
     },
     {
       "path": "idor-broken-object-authorization/SKILL.md",
@@ -1102,11 +1486,31 @@
     },
     {
       "path": "injection-checking/SKILL.md",
-      "tokens": 597
+      "tokens": 649
+    },
+    {
+      "path": "injection-checking/references/diagnostics.md",
+      "tokens": 291
+    },
+    {
+      "path": "injection-checking/references/worked-cases.md",
+      "tokens": 247
     },
     {
       "path": "insecure-source-code-management/SKILL.md",
-      "tokens": 1388
+      "tokens": 211
+    },
+    {
+      "path": "insecure-source-code-management/references/diagnostics.md",
+      "tokens": 267
+    },
+    {
+      "path": "insecure-source-code-management/references/legacy-playbook.md",
+      "tokens": 1356
+    },
+    {
+      "path": "insecure-source-code-management/references/worked-cases.md",
+      "tokens": 251
     },
     {
       "path": "ios-pentesting-tricks/IOS_RUNTIME_TRICKS.md",
@@ -1114,7 +1518,7 @@
     },
     {
       "path": "ios-pentesting-tricks/SKILL.md",
-      "tokens": 412
+      "tokens": 464
     },
     {
       "path": "ios-pentesting-tricks/references/01-jailbreak-vs-non-jailbreak-testing.md",
@@ -1129,8 +1533,16 @@
       "tokens": 529
     },
     {
+      "path": "ios-pentesting-tricks/references/diagnostics.md",
+      "tokens": 275
+    },
+    {
+      "path": "ios-pentesting-tricks/references/worked-cases.md",
+      "tokens": 240
+    },
+    {
       "path": "jndi-injection/SKILL.md",
-      "tokens": 346
+      "tokens": 398
     },
     {
       "path": "jndi-injection/references/01-core-mechanism.md",
@@ -1139,6 +1551,14 @@
     {
       "path": "jndi-injection/references/02-other-jndi-sinks-beyond-log4j.md",
       "tokens": 545
+    },
+    {
+      "path": "jndi-injection/references/diagnostics.md",
+      "tokens": 261
+    },
+    {
+      "path": "jndi-injection/references/worked-cases.md",
+      "tokens": 240
     },
     {
       "path": "jwt-oauth-token-attacks/SKILL.md",
@@ -1190,7 +1610,7 @@
     },
     {
       "path": "kernel-exploitation/SKILL.md",
-      "tokens": 429
+      "tokens": 481
     },
     {
       "path": "kernel-exploitation/references/01-exploitation-model.md",
@@ -1201,8 +1621,16 @@
       "tokens": 1412
     },
     {
+      "path": "kernel-exploitation/references/diagnostics.md",
+      "tokens": 279
+    },
+    {
+      "path": "kernel-exploitation/references/worked-cases.md",
+      "tokens": 236
+    },
+    {
       "path": "kubernetes-pentesting/SKILL.md",
-      "tokens": 389
+      "tokens": 441
     },
     {
       "path": "kubernetes-pentesting/references/01-k8s-api-server-access.md",
@@ -1213,8 +1641,16 @@
       "tokens": 1751
     },
     {
+      "path": "kubernetes-pentesting/references/diagnostics.md",
+      "tokens": 268
+    },
+    {
+      "path": "kubernetes-pentesting/references/worked-cases.md",
+      "tokens": 243
+    },
+    {
       "path": "lattice-crypto-attacks/SKILL.md",
-      "tokens": 410
+      "tokens": 462
     },
     {
       "path": "lattice-crypto-attacks/references/01-lattice-fundamentals.md",
@@ -1229,8 +1665,16 @@
       "tokens": 1532
     },
     {
+      "path": "lattice-crypto-attacks/references/diagnostics.md",
+      "tokens": 271
+    },
+    {
+      "path": "lattice-crypto-attacks/references/worked-cases.md",
+      "tokens": 267
+    },
+    {
       "path": "linux-lateral-movement/SKILL.md",
-      "tokens": 361
+      "tokens": 413
     },
     {
       "path": "linux-lateral-movement/references/01-ssh-agent-hijacking.md",
@@ -1241,12 +1685,20 @@
       "tokens": 1579
     },
     {
+      "path": "linux-lateral-movement/references/diagnostics.md",
+      "tokens": 268
+    },
+    {
+      "path": "linux-lateral-movement/references/worked-cases.md",
+      "tokens": 230
+    },
+    {
       "path": "linux-privilege-escalation/KERNEL_EXPLOITS_CHECKLIST.md",
       "tokens": 3034
     },
     {
       "path": "linux-privilege-escalation/SKILL.md",
-      "tokens": 450
+      "tokens": 502
     },
     {
       "path": "linux-privilege-escalation/SUID_CAPABILITIES_TRICKS.md",
@@ -1261,8 +1713,16 @@
       "tokens": 1283
     },
     {
+      "path": "linux-privilege-escalation/references/diagnostics.md",
+      "tokens": 277
+    },
+    {
+      "path": "linux-privilege-escalation/references/worked-cases.md",
+      "tokens": 241
+    },
+    {
       "path": "linux-security-bypass/SKILL.md",
-      "tokens": 337
+      "tokens": 389
     },
     {
       "path": "linux-security-bypass/references/01-restricted-bash-rbash-bypass.md",
@@ -1273,12 +1733,20 @@
       "tokens": 1459
     },
     {
+      "path": "linux-security-bypass/references/diagnostics.md",
+      "tokens": 272
+    },
+    {
+      "path": "linux-security-bypass/references/worked-cases.md",
+      "tokens": 258
+    },
+    {
       "path": "llm-prompt-injection/JAILBREAK_PATTERNS.md",
       "tokens": 2346
     },
     {
       "path": "llm-prompt-injection/SKILL.md",
-      "tokens": 373
+      "tokens": 425
     },
     {
       "path": "llm-prompt-injection/references/01-direct-prompt-injection.md",
@@ -1289,12 +1757,20 @@
       "tokens": 1549
     },
     {
+      "path": "llm-prompt-injection/references/diagnostics.md",
+      "tokens": 274
+    },
+    {
+      "path": "llm-prompt-injection/references/worked-cases.md",
+      "tokens": 243
+    },
+    {
       "path": "macos-process-injection/DYLIB_XPC_TECHNIQUES.md",
       "tokens": 3008
     },
     {
       "path": "macos-process-injection/SKILL.md",
-      "tokens": 405
+      "tokens": 457
     },
     {
       "path": "macos-process-injection/references/01-dyld-insert-libraries-injection.md",
@@ -1305,8 +1781,16 @@
       "tokens": 1675
     },
     {
+      "path": "macos-process-injection/references/diagnostics.md",
+      "tokens": 279
+    },
+    {
+      "path": "macos-process-injection/references/worked-cases.md",
+      "tokens": 224
+    },
+    {
       "path": "macos-security-bypass/SKILL.md",
-      "tokens": 387
+      "tokens": 439
     },
     {
       "path": "macos-security-bypass/TCC_BYPASS_MATRIX.md",
@@ -1321,8 +1805,16 @@
       "tokens": 1623
     },
     {
+      "path": "macos-security-bypass/references/diagnostics.md",
+      "tokens": 274
+    },
+    {
+      "path": "macos-security-bypass/references/worked-cases.md",
+      "tokens": 237
+    },
+    {
       "path": "memory-forensics-volatility/SKILL.md",
-      "tokens": 336
+      "tokens": 388
     },
     {
       "path": "memory-forensics-volatility/VOLATILITY_CHEATSHEET.md",
@@ -1337,8 +1829,16 @@
       "tokens": 1094
     },
     {
+      "path": "memory-forensics-volatility/references/diagnostics.md",
+      "tokens": 276
+    },
+    {
+      "path": "memory-forensics-volatility/references/worked-cases.md",
+      "tokens": 258
+    },
+    {
       "path": "mobile-ssl-pinning-bypass/SKILL.md",
-      "tokens": 386
+      "tokens": 438
     },
     {
       "path": "mobile-ssl-pinning-bypass/references/01-ssl-pinning-types.md",
@@ -1357,12 +1857,20 @@
       "tokens": 1127
     },
     {
+      "path": "mobile-ssl-pinning-bypass/references/diagnostics.md",
+      "tokens": 279
+    },
+    {
+      "path": "mobile-ssl-pinning-bypass/references/worked-cases.md",
+      "tokens": 243
+    },
+    {
       "path": "network-protocol-attacks/NAME_RESOLUTION_POISONING.md",
       "tokens": 1873
     },
     {
       "path": "network-protocol-attacks/SKILL.md",
-      "tokens": 406
+      "tokens": 458
     },
     {
       "path": "network-protocol-attacks/references/01-arp-spoofing.md",
@@ -1373,8 +1881,16 @@
       "tokens": 1031
     },
     {
+      "path": "network-protocol-attacks/references/diagnostics.md",
+      "tokens": 271
+    },
+    {
+      "path": "network-protocol-attacks/references/worked-cases.md",
+      "tokens": 228
+    },
+    {
       "path": "nosql-injection/SKILL.md",
-      "tokens": 408
+      "tokens": 460
     },
     {
       "path": "nosql-injection/references/01-core-concept-operator-injection.md",
@@ -1385,12 +1901,20 @@
       "tokens": 649
     },
     {
+      "path": "nosql-injection/references/diagnostics.md",
+      "tokens": 267
+    },
+    {
+      "path": "nosql-injection/references/worked-cases.md",
+      "tokens": 246
+    },
+    {
       "path": "ntlm-relay-coercion/COERCION_METHODS.md",
       "tokens": 2190
     },
     {
       "path": "ntlm-relay-coercion/SKILL.md",
-      "tokens": 391
+      "tokens": 443
     },
     {
       "path": "ntlm-relay-coercion/references/01-ntlm-relay-fundamentals.md",
@@ -1399,6 +1923,14 @@
     {
       "path": "ntlm-relay-coercion/references/02-cross-protocol-relay.md",
       "tokens": 823
+    },
+    {
+      "path": "ntlm-relay-coercion/references/diagnostics.md",
+      "tokens": 275
+    },
+    {
+      "path": "ntlm-relay-coercion/references/worked-cases.md",
+      "tokens": 226
     },
     {
       "path": "oauth-oidc-misconfiguration/SKILL.md",
@@ -1430,7 +1962,7 @@
     },
     {
       "path": "open-redirect/SKILL.md",
-      "tokens": 341
+      "tokens": 393
     },
     {
       "path": "open-redirect/references/01-core-concept.md",
@@ -1441,8 +1973,16 @@
       "tokens": 1117
     },
     {
+      "path": "open-redirect/references/diagnostics.md",
+      "tokens": 263
+    },
+    {
+      "path": "open-redirect/references/worked-cases.md",
+      "tokens": 241
+    },
+    {
       "path": "path-traversal-lfi/SKILL.md",
-      "tokens": 597
+      "tokens": 649
     },
     {
       "path": "path-traversal-lfi/references/01-core-concept.md",
@@ -1461,8 +2001,16 @@
       "tokens": 1822
     },
     {
+      "path": "path-traversal-lfi/references/diagnostics.md",
+      "tokens": 279
+    },
+    {
+      "path": "path-traversal-lfi/references/worked-cases.md",
+      "tokens": 262
+    },
+    {
       "path": "prototype-pollution/SKILL.md",
-      "tokens": 326
+      "tokens": 378
     },
     {
       "path": "prototype-pollution/references/01-quick-start.md",
@@ -1473,12 +2021,20 @@
       "tokens": 110
     },
     {
+      "path": "prototype-pollution/references/diagnostics.md",
+      "tokens": 300
+    },
+    {
+      "path": "prototype-pollution/references/worked-cases.md",
+      "tokens": 246
+    },
+    {
       "path": "prototype-pollution-advanced/KNOWN_GADGETS.md",
       "tokens": 2621
     },
     {
       "path": "prototype-pollution-advanced/SKILL.md",
-      "tokens": 358
+      "tokens": 410
     },
     {
       "path": "prototype-pollution-advanced/references/01-server-side-pp-rce.md",
@@ -1489,8 +2045,16 @@
       "tokens": 1268
     },
     {
+      "path": "prototype-pollution-advanced/references/diagnostics.md",
+      "tokens": 267
+    },
+    {
+      "path": "prototype-pollution-advanced/references/worked-cases.md",
+      "tokens": 250
+    },
+    {
       "path": "race-condition/SKILL.md",
-      "tokens": 446
+      "tokens": 498
     },
     {
       "path": "race-condition/references/01-quick-start-what-to-test-first.md",
@@ -1509,8 +2073,16 @@
       "tokens": 904
     },
     {
+      "path": "race-condition/references/diagnostics.md",
+      "tokens": 271
+    },
+    {
+      "path": "race-condition/references/worked-cases.md",
+      "tokens": 256
+    },
+    {
       "path": "recon-and-methodology/SKILL.md",
-      "tokens": 390
+      "tokens": 442
     },
     {
       "path": "recon-and-methodology/references/01-recon-hierarchy.md",
@@ -1521,8 +2093,24 @@
       "tokens": 1757
     },
     {
+      "path": "recon-and-methodology/references/diagnostics.md",
+      "tokens": 272
+    },
+    {
+      "path": "recon-and-methodology/references/worked-cases.md",
+      "tokens": 241
+    },
+    {
       "path": "recon-for-sec/SKILL.md",
-      "tokens": 367
+      "tokens": 419
+    },
+    {
+      "path": "recon-for-sec/references/diagnostics.md",
+      "tokens": 295
+    },
+    {
+      "path": "recon-for-sec/references/worked-cases.md",
+      "tokens": 230
     },
     {
       "path": "request-smuggling/H2_SMUGGLING_VARIANTS.md",
@@ -1530,7 +2118,7 @@
     },
     {
       "path": "request-smuggling/SKILL.md",
-      "tokens": 378
+      "tokens": 430
     },
     {
       "path": "request-smuggling/references/01-quick-start.md",
@@ -1541,12 +2129,20 @@
       "tokens": 1575
     },
     {
+      "path": "request-smuggling/references/diagnostics.md",
+      "tokens": 272
+    },
+    {
+      "path": "request-smuggling/references/worked-cases.md",
+      "tokens": 234
+    },
+    {
       "path": "reverse-shell-techniques/SHELL_CHEATSHEET.md",
       "tokens": 2118
     },
     {
       "path": "reverse-shell-techniques/SKILL.md",
-      "tokens": 365
+      "tokens": 417
     },
     {
       "path": "reverse-shell-techniques/references/01-reverse-vs-bind-shell-decision.md",
@@ -1557,12 +2153,20 @@
       "tokens": 1080
     },
     {
+      "path": "reverse-shell-techniques/references/diagnostics.md",
+      "tokens": 274
+    },
+    {
+      "path": "reverse-shell-techniques/references/worked-cases.md",
+      "tokens": 234
+    },
+    {
       "path": "rsa-attack-techniques/RSA_ATTACK_CATALOG.md",
       "tokens": 3611
     },
     {
       "path": "rsa-attack-techniques/SKILL.md",
-      "tokens": 382
+      "tokens": 434
     },
     {
       "path": "rsa-attack-techniques/references/01-factorization-attacks.md",
@@ -1577,8 +2181,24 @@
       "tokens": 415
     },
     {
+      "path": "rsa-attack-techniques/references/diagnostics.md",
+      "tokens": 274
+    },
+    {
+      "path": "rsa-attack-techniques/references/worked-cases.md",
+      "tokens": 296
+    },
+    {
       "path": "saml-sso-assertion-attacks/SKILL.md",
-      "tokens": 481
+      "tokens": 533
+    },
+    {
+      "path": "saml-sso-assertion-attacks/references/diagnostics.md",
+      "tokens": 277
+    },
+    {
+      "path": "saml-sso-assertion-attacks/references/worked-cases.md",
+      "tokens": 273
     },
     {
       "path": "sandbox-escape-techniques/PYTHON_SANDBOX_ESCAPE.md",
@@ -1590,7 +2210,7 @@
     },
     {
       "path": "sandbox-escape-techniques/SKILL.md",
-      "tokens": 403
+      "tokens": 455
     },
     {
       "path": "sandbox-escape-techniques/references/01-sandbox-type-identification.md",
@@ -1601,8 +2221,16 @@
       "tokens": 710
     },
     {
+      "path": "sandbox-escape-techniques/references/diagnostics.md",
+      "tokens": 261
+    },
+    {
+      "path": "sandbox-escape-techniques/references/worked-cases.md",
+      "tokens": 223
+    },
+    {
       "path": "smart-contract-vulnerabilities/SKILL.md",
-      "tokens": 405
+      "tokens": 457
     },
     {
       "path": "smart-contract-vulnerabilities/SOLIDITY_VULN_PATTERNS.md",
@@ -1615,6 +2243,14 @@
     {
       "path": "smart-contract-vulnerabilities/references/02-signature-replay.md",
       "tokens": 1322
+    },
+    {
+      "path": "smart-contract-vulnerabilities/references/diagnostics.md",
+      "tokens": 270
+    },
+    {
+      "path": "smart-contract-vulnerabilities/references/worked-cases.md",
+      "tokens": 257
     },
     {
       "path": "sqli-sql-injection/SCENARIOS.md",
@@ -1690,7 +2326,7 @@
     },
     {
       "path": "ssti-server-side-template-injection/SKILL.md",
-      "tokens": 503
+      "tokens": 555
     },
     {
       "path": "ssti-server-side-template-injection/references/01-detection-polyglot-probe-sequence.md",
@@ -1699,6 +2335,14 @@
     {
       "path": "ssti-server-side-template-injection/references/02-freemarker-java-rce.md",
       "tokens": 1521
+    },
+    {
+      "path": "ssti-server-side-template-injection/references/diagnostics.md",
+      "tokens": 281
+    },
+    {
+      "path": "ssti-server-side-template-injection/references/worked-cases.md",
+      "tokens": 249
     },
     {
       "path": "stack-overflow-and-rop/ROP_ADVANCED_TECHNIQUES.md",
@@ -1726,7 +2370,7 @@
     },
     {
       "path": "steganography-techniques/SKILL.md",
-      "tokens": 340
+      "tokens": 392
     },
     {
       "path": "steganography-techniques/STEGO_TOOLS_GUIDE.md",
@@ -1741,8 +2385,16 @@
       "tokens": 1474
     },
     {
+      "path": "steganography-techniques/references/diagnostics.md",
+      "tokens": 264
+    },
+    {
+      "path": "steganography-techniques/references/worked-cases.md",
+      "tokens": 271
+    },
+    {
       "path": "subdomain-takeover/SKILL.md",
-      "tokens": 399
+      "tokens": 451
     },
     {
       "path": "subdomain-takeover/references/01-core-concept.md",
@@ -1753,12 +2405,20 @@
       "tokens": 1073
     },
     {
+      "path": "subdomain-takeover/references/diagnostics.md",
+      "tokens": 276
+    },
+    {
+      "path": "subdomain-takeover/references/worked-cases.md",
+      "tokens": 246
+    },
+    {
       "path": "symbolic-execution-tools/ANGR_COOKBOOK.md",
       "tokens": 3073
     },
     {
       "path": "symbolic-execution-tools/SKILL.md",
-      "tokens": 379
+      "tokens": 431
     },
     {
       "path": "symbolic-execution-tools/references/01-angr-core-concepts.md",
@@ -1767,6 +2427,14 @@
     {
       "path": "symbolic-execution-tools/references/02-unicorn-engine-code-emulation.md",
       "tokens": 1727
+    },
+    {
+      "path": "symbolic-execution-tools/references/diagnostics.md",
+      "tokens": 270
+    },
+    {
+      "path": "symbolic-execution-tools/references/worked-cases.md",
+      "tokens": 267
     },
     {
       "path": "symmetric-cipher-attacks/BLOCK_CIPHER_ATTACKS.md",
@@ -1822,7 +2490,7 @@
     },
     {
       "path": "tunneling-and-pivoting/SKILL.md",
-      "tokens": 366
+      "tokens": 418
     },
     {
       "path": "tunneling-and-pivoting/references/01-ssh-tunneling.md",
@@ -1833,8 +2501,16 @@
       "tokens": 1244
     },
     {
+      "path": "tunneling-and-pivoting/references/diagnostics.md",
+      "tokens": 276
+    },
+    {
+      "path": "tunneling-and-pivoting/references/worked-cases.md",
+      "tokens": 268
+    },
+    {
       "path": "type-juggling/SKILL.md",
-      "tokens": 365
+      "tokens": 417
     },
     {
       "path": "type-juggling/references/01-quick-start.md",
@@ -1845,12 +2521,20 @@
       "tokens": 1559
     },
     {
+      "path": "type-juggling/references/diagnostics.md",
+      "tokens": 276
+    },
+    {
+      "path": "type-juggling/references/worked-cases.md",
+      "tokens": 248
+    },
+    {
       "path": "unauthorized-access-common-services/PORT_SERVICE_MATRIX.md",
       "tokens": 2431
     },
     {
       "path": "unauthorized-access-common-services/SKILL.md",
-      "tokens": 411
+      "tokens": 463
     },
     {
       "path": "unauthorized-access-common-services/references/01-discovery-port-scanning.md",
@@ -1861,12 +2545,20 @@
       "tokens": 1018
     },
     {
+      "path": "unauthorized-access-common-services/references/diagnostics.md",
+      "tokens": 262
+    },
+    {
+      "path": "unauthorized-access-common-services/references/worked-cases.md",
+      "tokens": 225
+    },
+    {
       "path": "upload-insecure-files/SCENARIOS.md",
       "tokens": 1167
     },
     {
       "path": "upload-insecure-files/SKILL.md",
-      "tokens": 456
+      "tokens": 508
     },
     {
       "path": "upload-insecure-files/references/01-core-model.md",
@@ -1881,8 +2573,16 @@
       "tokens": 1453
     },
     {
+      "path": "upload-insecure-files/references/diagnostics.md",
+      "tokens": 265
+    },
+    {
+      "path": "upload-insecure-files/references/worked-cases.md",
+      "tokens": 244
+    },
+    {
       "path": "vm-and-bytecode-reverse/SKILL.md",
-      "tokens": 347
+      "tokens": 399
     },
     {
       "path": "vm-and-bytecode-reverse/references/01-custom-vm-identification.md",
@@ -1897,8 +2597,16 @@
       "tokens": 1071
     },
     {
+      "path": "vm-and-bytecode-reverse/references/diagnostics.md",
+      "tokens": 281
+    },
+    {
+      "path": "vm-and-bytecode-reverse/references/worked-cases.md",
+      "tokens": 249
+    },
+    {
       "path": "waf-bypass-techniques/SKILL.md",
-      "tokens": 387
+      "tokens": 439
     },
     {
       "path": "waf-bypass-techniques/WAF_PRODUCT_MATRIX.md",
@@ -1906,7 +2614,7 @@
     },
     {
       "path": "waf-bypass-techniques/references/01-phase-0-identify-the-waf.md",
-      "tokens": 670
+      "tokens": 625
     },
     {
       "path": "waf-bypass-techniques/references/02-generic-bypass-categories.md",
@@ -1917,20 +2625,36 @@
       "tokens": 776
     },
     {
+      "path": "waf-bypass-techniques/references/diagnostics.md",
+      "tokens": 269
+    },
+    {
+      "path": "waf-bypass-techniques/references/worked-cases.md",
+      "tokens": 239
+    },
+    {
       "path": "web-cache-deception/CACHE_POISONING_TECHNIQUES.md",
       "tokens": 4864
     },
     {
       "path": "web-cache-deception/SKILL.md",
-      "tokens": 328
+      "tokens": 380
     },
     {
       "path": "web-cache-deception/references/01-core-concepts.md",
       "tokens": 1611
     },
     {
+      "path": "web-cache-deception/references/diagnostics.md",
+      "tokens": 266
+    },
+    {
+      "path": "web-cache-deception/references/worked-cases.md",
+      "tokens": 255
+    },
+    {
       "path": "websocket-security/SKILL.md",
-      "tokens": 397
+      "tokens": 449
     },
     {
       "path": "websocket-security/references/01-quick-start.md",
@@ -1945,12 +2669,20 @@
       "tokens": 484
     },
     {
+      "path": "websocket-security/references/diagnostics.md",
+      "tokens": 248
+    },
+    {
+      "path": "websocket-security/references/worked-cases.md",
+      "tokens": 246
+    },
+    {
       "path": "windows-av-evasion/AMSI_BYPASS_TECHNIQUES.md",
       "tokens": 2577
     },
     {
       "path": "windows-av-evasion/SKILL.md",
-      "tokens": 408
+      "tokens": 460
     },
     {
       "path": "windows-av-evasion/references/01-amsi-bypass-overview.md",
@@ -1961,12 +2693,20 @@
       "tokens": 1494
     },
     {
+      "path": "windows-av-evasion/references/diagnostics.md",
+      "tokens": 278
+    },
+    {
+      "path": "windows-av-evasion/references/worked-cases.md",
+      "tokens": 240
+    },
+    {
       "path": "windows-lateral-movement/CREDENTIAL_DUMPING.md",
       "tokens": 2528
     },
     {
       "path": "windows-lateral-movement/SKILL.md",
-      "tokens": 401
+      "tokens": 453
     },
     {
       "path": "windows-lateral-movement/references/01-remote-execution-methods-comparison.md",
@@ -1977,8 +2717,16 @@
       "tokens": 1344
     },
     {
+      "path": "windows-lateral-movement/references/diagnostics.md",
+      "tokens": 268
+    },
+    {
+      "path": "windows-lateral-movement/references/worked-cases.md",
+      "tokens": 232
+    },
+    {
       "path": "windows-privilege-escalation/SKILL.md",
-      "tokens": 416
+      "tokens": 468
     },
     {
       "path": "windows-privilege-escalation/TOKEN_POTATO_TRICKS.md",
@@ -1997,8 +2745,16 @@
       "tokens": 1104
     },
     {
+      "path": "windows-privilege-escalation/references/diagnostics.md",
+      "tokens": 268
+    },
+    {
+      "path": "windows-privilege-escalation/references/worked-cases.md",
+      "tokens": 242
+    },
+    {
       "path": "xslt-injection/SKILL.md",
-      "tokens": 396
+      "tokens": 448
     },
     {
       "path": "xslt-injection/references/01-quick-start.md",
@@ -2007,6 +2763,14 @@
     {
       "path": "xslt-injection/references/02-rce-via-java-saxon-xalan-extensions.md",
       "tokens": 1002
+    },
+    {
+      "path": "xslt-injection/references/diagnostics.md",
+      "tokens": 265
+    },
+    {
+      "path": "xslt-injection/references/worked-cases.md",
+      "tokens": 237
     },
     {
       "path": "xss-cross-site-scripting/ADVANCED_XSS_TRICKS.md",
@@ -2046,7 +2810,7 @@
     },
     {
       "path": "xxe-xml-external-entity/SKILL.md",
-      "tokens": 537
+      "tokens": 589
     },
     {
       "path": "xxe-xml-external-entity/references/01-classic-xxe-payload.md",
@@ -2059,6 +2823,14 @@
     {
       "path": "xxe-xml-external-entity/references/03-xxe-in-non-obvious-formats.md",
       "tokens": 1430
+    },
+    {
+      "path": "xxe-xml-external-entity/references/diagnostics.md",
+      "tokens": 281
+    },
+    {
+      "path": "xxe-xml-external-entity/references/worked-cases.md",
+      "tokens": 240
     }
   ]
 }

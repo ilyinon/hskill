@@ -1,0 +1,9 @@
+{
+  "policy": "both XML and later stylesheet stages must deny external resources",
+  "xml_stage_attempt": "https://outside.example.invalid/x",
+  "later_transform_resource": "https://outside.example.invalid/doc",
+  "resources": {
+    "https://outside.example.invalid/doc": "OWNED-EXTERNAL-MARKER"
+  },
+  "pipeline": "early XML stage denies external entities; caller then permits a user stylesheet document reference through transform_document"
+}

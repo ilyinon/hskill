@@ -1,0 +1,8 @@
+{
+  "contract": "one low-half write, no other primitive; requested abstract marker only",
+  "word_bits": 32,
+  "write_bits": 16,
+  "initial": 305419896,
+  "requested": 2882338969,
+  "control_target": 305397913
+}

@@ -1,0 +1,7 @@
+{
+  "contract": "complete HMAC-SHA256 verifier, not SHA256(key||message); RFC4231 test case2 for an independent implementation control",
+  "synthetic_key": "Jefe",
+  "message": "what do ya want for nothing?",
+  "sha256_tag": "5bdcc146bf60754e6a042426089575c75a003f089d2739839dec58b964ec3843",
+  "modified_message": "what do ya want for nothing? changed"
+}

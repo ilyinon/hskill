@@ -1,0 +1,15 @@
+{
+  "identity": "team-r service account",
+  "namespace": "r",
+  "rbac_review": {
+    "create_pods": true
+  },
+  "requested_pod": {
+    "host_resource_requested": true
+  },
+  "admission_result": null,
+  "persisted_pod_snapshot": null,
+  "workload_execution_trace": null,
+  "host_marker": null,
+  "policy": "node resource access would require admission, actual workload and host-side effect; no other path supplied"
+}

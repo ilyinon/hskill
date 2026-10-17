@@ -48,3 +48,7 @@ After confirming this is an injection-class issue, use it to decide whether it i
 ## Related Categories
 
 - [file-access-vuln](../file-access-vuln/SKILL.md)
+
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.

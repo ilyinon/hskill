@@ -1,0 +1,669 @@
+{
+  "schema_version": 1,
+  "coverage": "Decision-support material for all topic/router entries except the shared hack entry. Material presence is not demonstrated effectiveness or production validation.",
+  "case_basis": "Worked cases explicitly label supplied synthetic evidence. Only named offline arithmetic/models are executed by tests; other traces are teaching contracts, not live product runs.",
+  "topics": [
+    {
+      "topic": "401-403-bypass-techniques",
+      "diagnostics": "401-403-bypass-techniques/references/diagnostics.md",
+      "worked_case": "401-403-bypass-techniques/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "active-directory-acl-abuse",
+      "diagnostics": "active-directory-acl-abuse/references/diagnostics.md",
+      "worked_case": "active-directory-acl-abuse/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "active-directory-certificate-services",
+      "diagnostics": "active-directory-certificate-services/references/diagnostics.md",
+      "worked_case": "active-directory-certificate-services/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "active-directory-kerberos-attacks",
+      "diagnostics": "active-directory-kerberos-attacks/references/diagnostics.md",
+      "worked_case": "active-directory-kerberos-attacks/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "ai-ml-security",
+      "diagnostics": "ai-ml-security/references/diagnostics.md",
+      "worked_case": "ai-ml-security/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_membership_accuracy_against_majority_baseline"
+      ]
+    },
+    {
+      "topic": "android-pentesting-tricks",
+      "diagnostics": "android-pentesting-tricks/references/diagnostics.md",
+      "worked_case": "android-pentesting-tricks/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "anti-debugging-techniques",
+      "diagnostics": "anti-debugging-techniques/references/diagnostics.md",
+      "worked_case": "anti-debugging-techniques/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "api-auth-and-jwt-abuse",
+      "diagnostics": "api-auth-and-jwt-abuse/references/diagnostics.md",
+      "worked_case": "api-auth-and-jwt-abuse/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "api-authorization-and-bola",
+      "diagnostics": "api-authorization-and-bola/references/diagnostics.md",
+      "worked_case": "api-authorization-and-bola/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "api-recon-and-docs",
+      "diagnostics": "api-recon-and-docs/references/diagnostics.md",
+      "worked_case": "api-recon-and-docs/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "api-sec",
+      "diagnostics": "api-sec/references/diagnostics.md",
+      "worked_case": "api-sec/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "arbitrary-write-to-rce",
+      "diagnostics": "arbitrary-write-to-rce/references/diagnostics.md",
+      "worked_case": "arbitrary-write-to-rce/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_partial_write_preserves_upper_bits"
+      ]
+    },
+    {
+      "topic": "attack-surface-mapping",
+      "diagnostics": "attack-surface-mapping/references/diagnostics.md",
+      "worked_case": "attack-surface-mapping/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "auth-sec",
+      "diagnostics": "auth-sec/references/diagnostics.md",
+      "worked_case": "auth-sec/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "authbypass-authentication-flaws",
+      "diagnostics": "authbypass-authentication-flaws/references/diagnostics.md",
+      "worked_case": "authbypass-authentication-flaws/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "binary-protection-bypass",
+      "diagnostics": "binary-protection-bypass/references/diagnostics.md",
+      "worked_case": "binary-protection-bypass/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "browser-exploitation-v8",
+      "diagnostics": "browser-exploitation-v8/references/diagnostics.md",
+      "worked_case": "browser-exploitation-v8/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "business-logic-vuln",
+      "diagnostics": "business-logic-vuln/references/diagnostics.md",
+      "worked_case": "business-logic-vuln/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "business-logic-vulnerabilities",
+      "diagnostics": "business-logic-vulnerabilities/references/diagnostics.md",
+      "worked_case": "business-logic-vulnerabilities/references/worked-cases.md",
+      "offline_tests": [
+        "test_solving_examples.SolvingExamples.test_request_idempotency_and_business_uniqueness"
+      ]
+    },
+    {
+      "topic": "classical-cipher-analysis",
+      "diagnostics": "classical-cipher-analysis/references/diagnostics.md",
+      "worked_case": "classical-cipher-analysis/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_rotation_and_independent_checksum"
+      ]
+    },
+    {
+      "topic": "clickjacking",
+      "diagnostics": "clickjacking/references/diagnostics.md",
+      "worked_case": "clickjacking/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "cmdi-command-injection",
+      "diagnostics": "cmdi-command-injection/references/diagnostics.md",
+      "worked_case": "cmdi-command-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "code-obfuscation-deobfuscation",
+      "diagnostics": "code-obfuscation-deobfuscation/references/diagnostics.md",
+      "worked_case": "code-obfuscation-deobfuscation/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_unsigned_predicate_matches_every_byte"
+      ]
+    },
+    {
+      "topic": "container-escape-techniques",
+      "diagnostics": "container-escape-techniques/references/diagnostics.md",
+      "worked_case": "container-escape-techniques/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "cors-cross-origin-misconfiguration",
+      "diagnostics": "cors-cross-origin-misconfiguration/references/diagnostics.md",
+      "worked_case": "cors-cross-origin-misconfiguration/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "crlf-injection",
+      "diagnostics": "crlf-injection/references/diagnostics.md",
+      "worked_case": "crlf-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "csp-bypass-advanced",
+      "diagnostics": "csp-bypass-advanced/references/diagnostics.md",
+      "worked_case": "csp-bypass-advanced/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "csrf-cross-site-request-forgery",
+      "diagnostics": "csrf-cross-site-request-forgery/references/diagnostics.md",
+      "worked_case": "csrf-cross-site-request-forgery/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "csv-formula-injection",
+      "diagnostics": "csv-formula-injection/references/diagnostics.md",
+      "worked_case": "csv-formula-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "dangling-markup-injection",
+      "diagnostics": "dangling-markup-injection/references/diagnostics.md",
+      "worked_case": "dangling-markup-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "defi-attack-patterns",
+      "diagnostics": "defi-attack-patterns/references/diagnostics.md",
+      "worked_case": "defi-attack-patterns/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_settled_net_balance_without_double_count"
+      ]
+    },
+    {
+      "topic": "dependency-confusion",
+      "diagnostics": "dependency-confusion/references/diagnostics.md",
+      "worked_case": "dependency-confusion/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "deserialization-insecure",
+      "diagnostics": "deserialization-insecure/references/diagnostics.md",
+      "worked_case": "deserialization-insecure/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "dns-rebinding-attacks",
+      "diagnostics": "dns-rebinding-attacks/references/diagnostics.md",
+      "worked_case": "dns-rebinding-attacks/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "email-header-injection",
+      "diagnostics": "email-header-injection/references/diagnostics.md",
+      "worked_case": "email-header-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "expression-language-injection",
+      "diagnostics": "expression-language-injection/references/diagnostics.md",
+      "worked_case": "expression-language-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "file-access-vuln",
+      "diagnostics": "file-access-vuln/references/diagnostics.md",
+      "worked_case": "file-access-vuln/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "format-string-exploitation",
+      "diagnostics": "format-string-exploitation/references/diagnostics.md",
+      "worked_case": "format-string-exploitation/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "ghost-bits-cast-attack",
+      "diagnostics": "ghost-bits-cast-attack/references/diagnostics.md",
+      "worked_case": "ghost-bits-cast-attack/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_charset_encoding_is_not_low_byte_narrowing"
+      ]
+    },
+    {
+      "topic": "graphql-and-hidden-parameters",
+      "diagnostics": "graphql-and-hidden-parameters/references/diagnostics.md",
+      "worked_case": "graphql-and-hidden-parameters/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "hash-attack-techniques",
+      "diagnostics": "hash-attack-techniques/references/diagnostics.md",
+      "worked_case": "hash-attack-techniques/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_hmac_rfc_vector_and_changed_message"
+      ]
+    },
+    {
+      "topic": "heap-exploitation",
+      "diagnostics": "heap-exploitation/references/diagnostics.md",
+      "worked_case": "heap-exploitation/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "http-host-header-attacks",
+      "diagnostics": "http-host-header-attacks/references/diagnostics.md",
+      "worked_case": "http-host-header-attacks/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "http-parameter-pollution",
+      "diagnostics": "http-parameter-pollution/references/diagnostics.md",
+      "worked_case": "http-parameter-pollution/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "http2-specific-attacks",
+      "diagnostics": "http2-specific-attacks/references/diagnostics.md",
+      "worked_case": "http2-specific-attacks/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "idor-broken-object-authorization",
+      "diagnostics": "idor-broken-object-authorization/references/diagnostics.md",
+      "worked_case": "idor-broken-object-authorization/references/worked-cases.md",
+      "offline_tests": [
+        "test_solving_examples.SolvingExamples.test_authorized_parent_does_not_authorize_foreign_child"
+      ]
+    },
+    {
+      "topic": "injection-checking",
+      "diagnostics": "injection-checking/references/diagnostics.md",
+      "worked_case": "injection-checking/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "insecure-source-code-management",
+      "diagnostics": "insecure-source-code-management/references/diagnostics.md",
+      "worked_case": "insecure-source-code-management/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "ios-pentesting-tricks",
+      "diagnostics": "ios-pentesting-tricks/references/diagnostics.md",
+      "worked_case": "ios-pentesting-tricks/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "jndi-injection",
+      "diagnostics": "jndi-injection/references/diagnostics.md",
+      "worked_case": "jndi-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "jwt-oauth-token-attacks",
+      "diagnostics": "jwt-oauth-token-attacks/references/diagnostics.md",
+      "worked_case": "jwt-oauth-token-attacks/references/worked-cases.md",
+      "offline_tests": [
+        "test_solving_examples.SolvingExamples.test_valid_signature_is_not_recipient_authorization"
+      ]
+    },
+    {
+      "topic": "kernel-exploitation",
+      "diagnostics": "kernel-exploitation/references/diagnostics.md",
+      "worked_case": "kernel-exploitation/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "kubernetes-pentesting",
+      "diagnostics": "kubernetes-pentesting/references/diagnostics.md",
+      "worked_case": "kubernetes-pentesting/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "lattice-crypto-attacks",
+      "diagnostics": "lattice-crypto-attacks/references/diagnostics.md",
+      "worked_case": "lattice-crypto-attacks/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_candidates_against_original_algebra"
+      ]
+    },
+    {
+      "topic": "linux-lateral-movement",
+      "diagnostics": "linux-lateral-movement/references/diagnostics.md",
+      "worked_case": "linux-lateral-movement/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "linux-privilege-escalation",
+      "diagnostics": "linux-privilege-escalation/references/diagnostics.md",
+      "worked_case": "linux-privilege-escalation/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "linux-security-bypass",
+      "diagnostics": "linux-security-bypass/references/diagnostics.md",
+      "worked_case": "linux-security-bypass/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "llm-prompt-injection",
+      "diagnostics": "llm-prompt-injection/references/diagnostics.md",
+      "worked_case": "llm-prompt-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "macos-process-injection",
+      "diagnostics": "macos-process-injection/references/diagnostics.md",
+      "worked_case": "macos-process-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "macos-security-bypass",
+      "diagnostics": "macos-security-bypass/references/diagnostics.md",
+      "worked_case": "macos-security-bypass/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "memory-forensics-volatility",
+      "diagnostics": "memory-forensics-volatility/references/diagnostics.md",
+      "worked_case": "memory-forensics-volatility/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_process_instance_lifetime_and_ambiguity"
+      ]
+    },
+    {
+      "topic": "mobile-ssl-pinning-bypass",
+      "diagnostics": "mobile-ssl-pinning-bypass/references/diagnostics.md",
+      "worked_case": "mobile-ssl-pinning-bypass/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "network-protocol-attacks",
+      "diagnostics": "network-protocol-attacks/references/diagnostics.md",
+      "worked_case": "network-protocol-attacks/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "nosql-injection",
+      "diagnostics": "nosql-injection/references/diagnostics.md",
+      "worked_case": "nosql-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "ntlm-relay-coercion",
+      "diagnostics": "ntlm-relay-coercion/references/diagnostics.md",
+      "worked_case": "ntlm-relay-coercion/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "oauth-oidc-misconfiguration",
+      "diagnostics": "oauth-oidc-misconfiguration/references/diagnostics.md",
+      "worked_case": "oauth-oidc-misconfiguration/references/worked-cases.md",
+      "offline_tests": [
+        "test_solving_examples.SolvingExamples.test_provider_subject_pair_preserves_local_identity"
+      ]
+    },
+    {
+      "topic": "open-redirect",
+      "diagnostics": "open-redirect/references/diagnostics.md",
+      "worked_case": "open-redirect/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "path-traversal-lfi",
+      "diagnostics": "path-traversal-lfi/references/diagnostics.md",
+      "worked_case": "path-traversal-lfi/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_canonical_path_components_not_text_prefix"
+      ]
+    },
+    {
+      "topic": "prototype-pollution",
+      "diagnostics": "prototype-pollution/references/diagnostics.md",
+      "worked_case": "prototype-pollution/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "prototype-pollution-advanced",
+      "diagnostics": "prototype-pollution-advanced/references/diagnostics.md",
+      "worked_case": "prototype-pollution-advanced/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "race-condition",
+      "diagnostics": "race-condition/references/diagnostics.md",
+      "worked_case": "race-condition/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_interleaving_and_atomic_consumption"
+      ]
+    },
+    {
+      "topic": "recon-and-methodology",
+      "diagnostics": "recon-and-methodology/references/diagnostics.md",
+      "worked_case": "recon-and-methodology/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "recon-for-sec",
+      "diagnostics": "recon-for-sec/references/diagnostics.md",
+      "worked_case": "recon-for-sec/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "request-smuggling",
+      "diagnostics": "request-smuggling/references/diagnostics.md",
+      "worked_case": "request-smuggling/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "reverse-shell-techniques",
+      "diagnostics": "reverse-shell-techniques/references/diagnostics.md",
+      "worked_case": "reverse-shell-techniques/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "rsa-attack-techniques",
+      "diagnostics": "rsa-attack-techniques/references/diagnostics.md",
+      "worked_case": "rsa-attack-techniques/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_raw_rsa_shared_factor_and_original_equation"
+      ]
+    },
+    {
+      "topic": "saml-sso-assertion-attacks",
+      "diagnostics": "saml-sso-assertion-attacks/references/diagnostics.md",
+      "worked_case": "saml-sso-assertion-attacks/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "sandbox-escape-techniques",
+      "diagnostics": "sandbox-escape-techniques/references/diagnostics.md",
+      "worked_case": "sandbox-escape-techniques/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "smart-contract-vulnerabilities",
+      "diagnostics": "smart-contract-vulnerabilities/references/diagnostics.md",
+      "worked_case": "smart-contract-vulnerabilities/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "sqli-sql-injection",
+      "diagnostics": "sqli-sql-injection/references/diagnostics.md",
+      "worked_case": "sqli-sql-injection/references/worked-cases.md",
+      "offline_tests": [
+        "test_solving_examples.SolvingExamples.test_bound_value_and_raw_sort_are_separate"
+      ]
+    },
+    {
+      "topic": "ssrf-server-side-request-forgery",
+      "diagnostics": "ssrf-server-side-request-forgery/references/diagnostics.md",
+      "worked_case": "ssrf-server-side-request-forgery/references/worked-cases.md",
+      "offline_tests": [
+        "test_solving_examples.SolvingExamples.test_redirect_policy_at_each_hop"
+      ]
+    },
+    {
+      "topic": "ssti-server-side-template-injection",
+      "diagnostics": "ssti-server-side-template-injection/references/diagnostics.md",
+      "worked_case": "ssti-server-side-template-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "stack-overflow-and-rop",
+      "diagnostics": "stack-overflow-and-rop/references/diagnostics.md",
+      "worked_case": "stack-overflow-and-rop/references/worked-cases.md",
+      "offline_tests": [
+        "test_solving_examples.SolvingExamples.test_stack_contract_uses_actual_initial_position"
+      ]
+    },
+    {
+      "topic": "steganography-techniques",
+      "diagnostics": "steganography-techniques/references/diagnostics.md",
+      "worked_case": "steganography-techniques/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_lsb_recovery_and_corruption_control"
+      ]
+    },
+    {
+      "topic": "subdomain-takeover",
+      "diagnostics": "subdomain-takeover/references/diagnostics.md",
+      "worked_case": "subdomain-takeover/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "symbolic-execution-tools",
+      "diagnostics": "symbolic-execution-tools/references/diagnostics.md",
+      "worked_case": "symbolic-execution-tools/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_original_finite_word_equation"
+      ]
+    },
+    {
+      "topic": "symmetric-cipher-attacks",
+      "diagnostics": "symmetric-cipher-attacks/references/diagnostics.md",
+      "worked_case": "symmetric-cipher-attacks/references/worked-cases.md",
+      "offline_tests": [
+        "test_solving_examples.SolvingExamples.test_mt_state_index_and_withheld_continuation"
+      ]
+    },
+    {
+      "topic": "traffic-analysis-pcap",
+      "diagnostics": "traffic-analysis-pcap/references/diagnostics.md",
+      "worked_case": "traffic-analysis-pcap/references/worked-cases.md",
+      "offline_tests": [
+        "test_solving_examples.SolvingExamples.test_tcp_sequence_reassembly_and_missing_bytes"
+      ]
+    },
+    {
+      "topic": "tunneling-and-pivoting",
+      "diagnostics": "tunneling-and-pivoting/references/diagnostics.md",
+      "worked_case": "tunneling-and-pivoting/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "type-juggling",
+      "diagnostics": "type-juggling/references/diagnostics.md",
+      "worked_case": "type-juggling/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "unauthorized-access-common-services",
+      "diagnostics": "unauthorized-access-common-services/references/diagnostics.md",
+      "worked_case": "unauthorized-access-common-services/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "upload-insecure-files",
+      "diagnostics": "upload-insecure-files/references/diagnostics.md",
+      "worked_case": "upload-insecure-files/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "vm-and-bytecode-reverse",
+      "diagnostics": "vm-and-bytecode-reverse/references/diagnostics.md",
+      "worked_case": "vm-and-bytecode-reverse/references/worked-cases.md",
+      "offline_tests": [
+        "test_extended_solving.ExtendedSolving.test_vm_operand_byte_order_against_trace"
+      ]
+    },
+    {
+      "topic": "waf-bypass-techniques",
+      "diagnostics": "waf-bypass-techniques/references/diagnostics.md",
+      "worked_case": "waf-bypass-techniques/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "web-cache-deception",
+      "diagnostics": "web-cache-deception/references/diagnostics.md",
+      "worked_case": "web-cache-deception/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "websocket-security",
+      "diagnostics": "websocket-security/references/diagnostics.md",
+      "worked_case": "websocket-security/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "windows-av-evasion",
+      "diagnostics": "windows-av-evasion/references/diagnostics.md",
+      "worked_case": "windows-av-evasion/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "windows-lateral-movement",
+      "diagnostics": "windows-lateral-movement/references/diagnostics.md",
+      "worked_case": "windows-lateral-movement/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "windows-privilege-escalation",
+      "diagnostics": "windows-privilege-escalation/references/diagnostics.md",
+      "worked_case": "windows-privilege-escalation/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "xslt-injection",
+      "diagnostics": "xslt-injection/references/diagnostics.md",
+      "worked_case": "xslt-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "xss-cross-site-scripting",
+      "diagnostics": "xss-cross-site-scripting/references/diagnostics.md",
+      "worked_case": "xss-cross-site-scripting/references/worked-cases.md",
+      "offline_tests": [
+        "test_solving_examples.SolvingExamples.test_alternate_html_text_sink_and_fix"
+      ]
+    },
+    {
+      "topic": "xxe-xml-external-entity",
+      "diagnostics": "xxe-xml-external-entity/references/diagnostics.md",
+      "worked_case": "xxe-xml-external-entity/references/worked-cases.md",
+      "offline_tests": []
+    }
+  ]
+}

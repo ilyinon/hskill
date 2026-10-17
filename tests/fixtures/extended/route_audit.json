@@ -1,0 +1,19 @@
+{
+  "session": {
+    "user": "test-a",
+    "tenant": "A"
+  },
+  "records": {
+    "i-a": {
+      "owner": "A",
+      "body": "A-OWNED"
+    },
+    "i-b": {
+      "owner": "B",
+      "body": "B-OWNED"
+    }
+  },
+  "policy": "invoices private to owning tenant",
+  "authentication": "supplied valid session; no signature or login flaw alleged",
+  "scope": "provided source/owned data only"
+}

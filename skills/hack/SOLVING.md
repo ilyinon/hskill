@@ -1,61 +1,67 @@
 # Choosing the next useful action
 
-Use the relevant section when a task stalls, a result is ambiguous, or several
-capabilities must be combined. Topic diagnostics supply the concrete branches;
-this document does not require another full workflow before ordinary work.
+Use the relevant section when a task stalls, evidence is ambiguous, or capabilities
+must be combined. Topic diagnostics supply concrete branches; ordinary work does
+not require another full workflow.
 
 ## Define what completes this task
 
 | Requested task | Completion evidence |
 |---|---|
-| Code audit | Actual source path, required policy, missing/effective control, and bounded impact; no production proof is inherently required. |
-| Fix/debug | The failure mechanism is addressed, the legitimate case still works, and a regression control exercises the failed assumption. |
-| Authorized lab/puzzle | The requested recovered value, prediction, marker, or local effect passes an independent check under the supplied construction. |
-| Capture/artifact analysis | Recovered bytes/events are tied to format/stream locations, with explicit gaps and attribution limits. |
+| Code audit | Actual source path, required policy, missing/effective control, and bounded impact. |
+| Fix/debug | Addressed failure mechanism, working legitimate case, and a regression control for the failed assumption. |
+| Authorized lab/puzzle | Requested value, prediction, marker, or local effect independently checked under the supplied construction. |
+| Capture/artifact analysis | Recovered bytes/events tied to format/stream locations, with explicit gaps and attribution limits. |
 
-Keep this criterion tied to the user's request. An interesting intermediate is
-useful progress; a requested end result still needs its remaining prerequisites.
-A sufficient requested proof can complete a task without additional impact.
+Tie completion to the user's request. An intermediate still needs its remaining
+prerequisites; sufficient source evidence can complete an audit without production
+execution. A requested proof need not expand into additional impact.
 
-## Choose a check that distinguishes explanations
+## Choose a discriminating check
 
-Record only the facts needed now, with source/packet/request locations. Keep
-assumptions and unknowns separate. For the leading explanations, identify which
-small permitted check would produce different expected outcomes. Prefer a check
-that resolves a prerequisite or the earliest uncertain edge over another payload
-testing the same assumption. Use a known-good baseline so a broken tool or wrong
-format does not masquerade as a negative result.
+Record necessary facts with source/packet/request locations; separate assumptions
+and unknowns. Choose a small permitted check whose predicted outcomes distinguish
+the leading explanations. Resolve a prerequisite or earliest uncertain edge before
+repeating payloads testing the same assumption. Use a known-good baseline so wrong
+format or a broken tool cannot masquerade as a negative.
 
-## Interpret a failed attempt before retrying
+For changing inputs or context resets, keep a compact
+[evidence state](references/evidence-state.md). For a consequential conclusion
+with a plausible competing explanation, use a targeted
+[refutation pass](references/refutation.md).
 
-| Failure type | What it supports | Useful next action |
+## Interpret failure before retrying
+
+| Failure type | What it supports | Next action |
 |---|---|---|
-| Setup/tool failure before the intended operation | The operation was not tested | Correct syntax/version/representation or use an available equivalent inspection method. |
-| Technique prerequisite absent | That technique is inapplicable under the observed conditions | Select a method whose prerequisites fit; keep unrelated boundaries open. |
-| Valid controlled negative | The tested path/capability failed under those conditions | Update that hypothesis and choose another supported explanation or conclude within scope. |
-| Missing/noisy evidence | The outcome remains unknown | Obtain the smallest missing fact if possible, otherwise state the limit. |
+| Setup/tool failure before the operation | Operation untested | Correct syntax/version/representation or use equivalent inspection. |
+| Missing technique prerequisite | Technique inapplicable under observed conditions | Choose a compatible method; keep unrelated boundaries open. |
+| Valid controlled negative | Tested path failed under those conditions | Update the hypothesis or conclude within scope. |
+| Missing/noisy evidence | Outcome unknown | Obtain the smallest missing fact or state the limit. |
 
-Change one causal dimension at a time. Retry when a new hypothesis predicts a
-different informative outcome. Repeated equivalent failures do not justify an
-unbounded search; a single malformed attempt does not establish class-wide safety.
+Change one causal dimension at a time. Retry when a new hypothesis predicts an
+informative outcome. Equivalent failures do not justify unbounded search; one
+malformed attempt does not establish class-wide safety.
 
-## Combine intermediate capabilities toward the goal
+## Join capabilities toward the goal
 
-For a multi-step task, keep a compact chain of `current capability → required
-condition → next effect`, with evidence or an unknown marker on each edge. Select
-the earliest unresolved edge that matters to the requested goal. Do not silently
-promote readable bytes into accepted identity, a recovered word list into a
-prediction, or a correct control transfer into a working process effect.
+Keep a compact `capability → required condition → next effect` chain, with evidence
+or an unknown on each edge. Select the earliest unresolved edge needed by the goal.
+Readable bytes are not automatically accepted identity; a word list is not a
+prediction; control transfer is not a working process effect.
 
-If an edge requires unavailable access, a different target, or an unapproved
-action, preserve the partial result and its limit. Reuse existing authorization;
-only genuinely missing blockers need clarification. A fix should preserve valid
-behavior as well as reject the violating case.
+Check [edge contracts](references/chain-contracts.md) when individually proven
+steps may not compose. Use [staged progress](references/staged-progress.md) for
+long tasks with delayed evidence or failed tools. If an edge needs unavailable
+access or an unapproved action, retain the partial result and limit; reuse existing
+authorization and clarify only genuine blockers.
 
-## Use worked cases as mechanisms, not templates to copy
+A fix must preserve valid behavior. When a working proof's cause or repair is
+unclear, [minimize the reproducer](references/minimization.md) with its control.
 
-Read a case matching the unresolved mechanism. Extract why its first attempt was
-uninformative, which observation changed the approach, and how the result was
-independently checked. Re-establish its prerequisites in the current task. The
-included synthetic examples verify their supplied models; they do not certify
-every library, browser, runtime, or production configuration.
+## Transfer mechanisms from worked cases
+
+Read a case matching the unresolved mechanism. Extract why the first attempt was
+uninformative, what observation changed the approach, and how the result was
+independently checked. Re-establish prerequisites instead of copying the answer.
+Synthetic examples verify supplied models, not every runtime or configuration.

@@ -1,0 +1,9 @@
+{
+  "contract": "membership classifier predicts nonmember for every supplied item",
+  "members": 50,
+  "nonmembers": 950,
+  "true_positive": 0,
+  "false_positive": 0,
+  "true_negative": 950,
+  "false_negative": 50
+}

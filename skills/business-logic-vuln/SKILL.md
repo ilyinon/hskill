@@ -31,3 +31,7 @@ This is the routing entry point for business-logic and state-machine issues.
 - [api-sec](../api-sec/SKILL.md)
 - [auth-sec](../auth-sec/SKILL.md)
 - [file-access-vuln](../file-access-vuln/SKILL.md)
+
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.

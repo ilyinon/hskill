@@ -18,6 +18,10 @@ A victim browser performs a forbidden state change under realistic session condi
 
 A crafted request from curl/Burp or a missing token alone does not prove browser feasibility; self-only effects and CORS reads are separate issues.
 
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.
+
 ## References
 
 Choose the reference matching the current step; do not preload the catalog. Original section numbers are retained below. Select engine, version, and prerequisites before using examples; version/vendor tables are candidates to verify.

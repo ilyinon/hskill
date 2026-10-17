@@ -51,3 +51,7 @@ Look for:
 - If hidden fields affect privilege: [api authorization and bola](../api-authorization-and-bola/SKILL.md)
 - If GraphQL batching changes auth or rate behavior: [api auth and jwt abuse](../api-auth-and-jwt-abuse/SKILL.md)
 - If endpoint discovery is incomplete: [api recon and docs](../api-recon-and-docs/SKILL.md)
+
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.

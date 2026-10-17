@@ -1,0 +1,23 @@
+{
+  "contract": "one low bit per sample; groups of8 are MSB-first",
+  "samples": [
+    100,
+    101,
+    100,
+    100,
+    101,
+    101,
+    101,
+    101,
+    100,
+    101,
+    100,
+    100,
+    101,
+    100,
+    101,
+    101
+  ],
+  "payload_bytes": 2,
+  "independent_byte_sum": 154
+}

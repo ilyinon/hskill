@@ -22,6 +22,7 @@ Run from the repository root with Python 3.9 or later:
 ```sh
 python3 scripts/check_skills.py
 python3 scripts/eval_skills.py validate
+python3 scripts/staged_eval.py validate
 python3 -m unittest discover -s tests -v
 ```
 
@@ -36,23 +37,39 @@ Token counts cover file text only, not total model usage.
 `tests/test_eval_fixtures.py` checks reviewed offline source models and binary
 artifact structure. `tests/test_solving_examples.py` checks the ten self-contained
 worked models, including the failed approach and independent controls. These
-tests do not validate every exploit or version table.
+tests do not validate every exploit or version table. `test_extended_solving.py`
+checks 15 additional inert arithmetic/state contracts from canonical per-topic
+JSON data; it does not run product runtimes or skill payload catalogs.
 
 Use the blind preparation and grading workflow in [tests/EVALUATION.md](tests/EVALUATION.md)
-after changing routing or evidence rules. Its 28 cases include real local
+after changing routing or evidence rules. Its 44 cases include real local
 artifacts; expected outcomes stay outside the evaluating agent's context.
 Preserve answers, read logs, input/rubric digests, settings, and grading reasons.
-The ten `solve-*` transfer cases change values or preconditions from the worked
-cases. Keep those differences meaningful: include working defenses and valid
+The ten `solve-*` and sixteen `extend-*` transfer cases change values or
+preconditions from the worked cases. Keep those differences meaningful: include working defenses and valid
 alternatives so copying an example's fix cannot pass. Grade task completion,
 not just vulnerability classification.
+
+For tasks with delayed evidence, use the three staged cases described in
+[tests/EVALUATION.md](tests/EVALUATION.md). Keep final-answer grading separate
+from runner bookkeeping. Add meaningful alternative explanations and legitimate
+controls; a model must be able to refute the tempting hypothesis. Unknown inputs
+in a finite recording are untested, not controlled negatives. Preserve original
+sources and invalidate dependent conclusions when relevant conditions change.
+Keep the five shared complex-task references behind conditional `SOLVING.md`
+links rather than copying them into every specialist entry.
 
 For diagnostic references, connect prerequisites and observed failures to the
 smallest distinguishing check. Separate setup errors, unmet preconditions,
 controlled negative results, and inconclusive evidence. Link intermediate
 capabilities to the requested result. Worked cases should show a real first
 failure, why the revised approach follows, and a control independent of the
-claimed success. Do not turn the case's fix into a universal rule.
+claimed success. Do not turn the case's fix into a universal rule. Mark supplied
+teaching traces as supplied, rather than implying a browser, kernel, provider or
+other product was executed. Keep real test pointers next to executed models and
+update `skills/hack/solving_coverage.json` when adding a topic or named check.
+Topic routers should teach the next boundary decision without duplicating all
+of their specialist references.
 
 For overlapping subjects, choose a canonical home for the technique and link to
 it from adjacent workflows. API credential/proxy handling belongs in

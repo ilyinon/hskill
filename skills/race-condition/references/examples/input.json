@@ -1,0 +1,40 @@
+{
+  "contract": "teaching single-use voucher; each check reads current used flag; grant commits one credit10 then used=true; distinct operations",
+  "credit": 10,
+  "events": [
+    [
+      "A",
+      "check"
+    ],
+    [
+      "B",
+      "check"
+    ],
+    [
+      "A",
+      "grant"
+    ],
+    [
+      "B",
+      "grant"
+    ]
+  ],
+  "sequential_control": [
+    [
+      "A",
+      "check"
+    ],
+    [
+      "A",
+      "grant"
+    ],
+    [
+      "B",
+      "check"
+    ],
+    [
+      "B",
+      "grant"
+    ]
+  ]
+}

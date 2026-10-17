@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "construction": "Synthetic finite recordings plus a reviewed fresh-ledger model; not a product simulator.",
+  "cases": [
+    {
+      "id": "release-export",
+      "budget": 12,
+      "request": "Recover the exact current r17 export bytes and their SHA-256 for member mira in tenant north. Explain any joining assumptions that do not hold. The offline task authorizes only the supplied member session and the finite runner actions. Preserve the bytes in your answer; a proposed method is insufficient.",
+      "initial": {
+        "context.json": "{\n  \"principal\": \"mira\",\n  \"role\": \"member\",\n  \"tenant\": \"north\",\n  \"session\": \"mira-s1\",\n  \"environment\": \"training\"\n}\n",
+        "old-link.json": "{\n  \"object\": \"r17\",\n  \"revision\": 2,\n  \"session\": \"preview-link\",\n  \"issuer\": \"preview\",\n  \"format\": \"legacy-v1\"\n}\n",
+        "last-attempt.txt": "Client setup failed before any request: --raw is unsupported by client 2. No server result was observed.\n"
+      },
+      "actions": {
+        "inspect-client": {
+          "kind": "recording",
+          "help": "arguments {}. Inspect the installed client schema.",
+          "variants": [
+            {
+              "when": {},
+              "outcome": "observation",
+              "result": {
+                "client": 2,
+                "request_format": "json-v2",
+                "export_fields": [
+                  "format",
+                  "session",
+                  "object",
+                  "revision"
+                ],
+                "continuation_fields": [
+                  "cursor",
+                  "session"
+                ]
+              },
+              "evidence": "client-contract"
+            }
+          ]
+        },
+        "inspect-current": {
+          "kind": "recording",
+          "help": "arguments {}. Read the current object and consumer manifest.",
+          "variants": [
+            {
+              "when": {},
+              "outcome": "observation",
+              "result": {
+                "object": "r17",
+                "revision": 3,
+                "tenant": "north",
+                "environment": "training",
+                "accepted_issuer": "training-member",
+                "session_principal": {
+                  "mira-s1": "mira"
+                },
+                "output_encoding": "hex-per-chunk"
+              },
+              "evidence": "current-contract"
+            }
+          ]
+        },
+        "export": {
+          "kind": "recording",
+          "help": "arguments {format, session, object, revision}. Request one supplied snapshot.",
+          "variants": [
+            {
+              "when": {
+                "format": "legacy-v1",
+                "session": "preview-link",
+                "object": "r17",
+                "revision": 2
+              },
+              "outcome": "tool-error",
+              "result": "Client v2 cannot serialize legacy-v1. No server request ran."
+            },
+            {
+              "when": {
+                "format": "json-v2",
+                "session": "preview-link",
+                "object": "r17",
+                "revision": 3
+              },
+              "outcome": "controlled-negative",
+              "result": {
+                "status": 401,
+                "reason": "preview issuer does not satisfy training-member consumer"
+              },
+              "evidence": "preview-rejected"
+            },
+            {
+              "when": {
+                "format": "json-v2",
+                "session": "mira-s1",
+                "object": "r17",
+                "revision": 2
+              },
+              "outcome": "controlled-negative",
+              "result": {
+                "status": 409,
+                "reason": "requested revision 2 is retired; current is 3"
+              },
+              "evidence": "old-revision-rejected"
+            },
+            {
+              "when": {
+                "format": "json-v2",
+                "session": "mira-s1",
+                "object": "r17",
+                "revision": 3
+              },
+              "outcome": "partial",
+              "result": {
+                "status": 206,
+                "principal": "mira",
+                "tenant": "north",
+                "environment": "training",
+                "object": "r17",
+                "revision": 3,
+                "sequence": 0,
+                "hex": "6e6f7274683a723137",
+                "cursor": "r17-part-1",
+                "complete": false
+              },
+              "evidence": "export-head"
+            }
+          ]
+        },
+        "continue": {
+          "kind": "recording",
+          "help": "arguments {cursor, session}. Fetch the missing continuation in the same session.",
+          "variants": [
+            {
+              "when": {
+                "cursor": "r17-part-1",
+                "session": "mira-s1"
+              },
+              "outcome": "observation",
+              "result": {
+                "status": 200,
+                "principal": "mira",
+                "tenant": "north",
+                "object": "r17",
+                "revision": 3,
+                "sequence": 1,
+                "hex": "3a72333a76696f6c65742d32380a",
+                "complete": true
+              },
+              "evidence": "export-tail"
+            }
+          ],
+          "requires": [
+            "export-head"
+          ]
+        }
+      }
+    },
+    {
+      "id": "changing-build",
+      "budget": 10,
+      "request": "Recover the code bytes for the active build after checking the supplied service. Keep a compact claim/dependency checkpoint and resume from it before your final answer. State which earlier evidence survives a build change and which conclusions need rechecking. All operations are finite offline recordings; do not contact a service.",
+      "initial": {
+        "build-7.json": "{\n  \"build\": 7,\n  \"encoding\": \"hex\",\n  \"xor_key\": 33,\n  \"payload\": \"424e45441c101615132b\",\n  \"captured_at\": \"t0\"\n}\n",
+        "client.txt": "fetch accepts {build, format}; inspect-build accepts {}; tail accepts {build, cursor}. The supplied build-7 observation was valid at t0. The task requires the active build, not a historical decode.\n",
+        "last-attempt.txt": "Capture helper rejected --hex-output before reading input. Its failure did not show an empty payload.\n"
+      },
+      "actions": {
+        "inspect-build": {
+          "kind": "recording",
+          "help": "arguments {}. Inspect the service contract at the current stage.",
+          "variants": [
+            {
+              "when": {},
+              "outcome": "observation",
+              "result": {
+                "build": 8,
+                "encoding": "base64-per-chunk",
+                "xor_key": 90,
+                "word": "byte",
+                "active_since": "t1",
+                "note": "Decode each chunk separately, concatenate bytes in sequence, then XOR each byte."
+              },
+              "after": [
+                "build-rotated"
+              ],
+              "publish": {
+                "build-8.json": "{\n  \"build\": 8,\n  \"encoding\": \"base64-per-chunk\",\n  \"xor_key\": 90,\n  \"word\": \"byte\",\n  \"active_since\": \"t1\",\n  \"note\": \"Decode each chunk separately, concatenate bytes in sequence, then XOR each byte.\"\n}\n"
+              },
+              "evidence": "contract-8"
+            },
+            {
+              "when": {},
+              "outcome": "observation",
+              "result": {
+                "build": 7,
+                "encoding": "hex",
+                "xor_key": 33,
+                "payload": "424e45441c101615132b",
+                "captured_at": "t0"
+              },
+              "before": [
+                "build-rotated"
+              ],
+              "evidence": "contract-7"
+            }
+          ]
+        },
+        "fetch": {
+          "kind": "recording",
+          "help": "arguments {build, format}. Fetch a payload from the requested active build.",
+          "variants": [
+            {
+              "when": {
+                "build": 7,
+                "format": "hex"
+              },
+              "outcome": "unknown",
+              "result": {
+                "event": "build changed between t0 and t1",
+                "active_build": 8,
+                "requested_build": 7,
+                "payload_returned": false,
+                "meaning": "old evidence remains historical; no active-build decode was tested"
+              },
+              "evidence": "build-rotated"
+            },
+            {
+              "when": {
+                "build": 8,
+                "format": "base64-per-chunk"
+              },
+              "outcome": "partial",
+              "result": {
+                "build": 8,
+                "sequence": 0,
+                "data": "OTU+P2c=",
+                "complete": false,
+                "cursor": "build8-tail"
+              },
+              "after": [
+                "contract-8"
+              ],
+              "evidence": "head-8"
+            }
+          ]
+        },
+        "tail": {
+          "kind": "recording",
+          "help": "arguments {build, cursor}. Fetch the missing chunk.",
+          "variants": [
+            {
+              "when": {
+                "build": 8,
+                "cursor": "build8-tail"
+              },
+              "outcome": "observation",
+              "result": {
+                "build": 8,
+                "sequence": 1,
+                "data": "bG5oa1A=",
+                "complete": true
+              },
+              "evidence": "tail-8"
+            }
+          ],
+          "requires": [
+            "head-8"
+          ]
+        }
+      }
+    },
+    {
+      "id": "callback-reproducer",
+      "budget": 14,
+      "request": "Determine whether this refund trace violates the supplied policy. Produce a smaller causal reproducer with controls and concrete ledger results, then challenge your explanation against the strongest plausible alternative. Propose a specific repair and check that legitimate partial operations still work. Use only this fresh-ledger offline model; no payment system is contacted.",
+      "initial": {
+        "policy.txt": "Order total: 100. Server-authorized partial operations p1=30 and p2=20 may both complete. A given operation may credit once. Transport retries may have new delivery IDs. Logs and transport errors do not credit. Each replay starts with zero credited.\n",
+        "events.json": "[\n  {\n    \"type\": \"log\",\n    \"message\": \"delivery started\"\n  },\n  {\n    \"type\": \"transport-error\",\n    \"delivery\": \"d0\"\n  },\n  {\n    \"type\": \"complete\",\n    \"operation\": \"p1\",\n    \"delivery\": \"d1\",\n    \"amount\": 30\n  },\n  {\n    \"type\": \"complete\",\n    \"operation\": \"p1\",\n    \"delivery\": \"d1\",\n    \"amount\": 30\n  },\n  {\n    \"type\": \"log\",\n    \"message\": \"retry scheduled\"\n  },\n  {\n    \"type\": \"complete\",\n    \"operation\": \"p1\",\n    \"delivery\": \"d2\",\n    \"amount\": 30\n  },\n  {\n    \"type\": \"complete\",\n    \"operation\": \"p2\",\n    \"delivery\": \"d3\",\n    \"amount\": 20\n  }\n]\n",
+        "last-attempt.txt": "Replay tool rejected an object where an events array was required. No ledger trial ran.\n"
+      },
+      "actions": {
+        "inspect-runtime": {
+          "kind": "recording",
+          "help": "arguments {}. Inspect the actual model implementation and reset contract.",
+          "variants": [
+            {
+              "when": {},
+              "outcome": "observation",
+              "result": {
+                "build": "callback-lab-1",
+                "observed_source": [
+                  "for complete event:",
+                  "  if delivery in seen_deliveries: skip",
+                  "  credit(amount); remember(delivery)"
+                ],
+                "candidate_policies": {
+                  "by-operation": "Skip completed operation IDs, credit each authorized partial operation once.",
+                  "one-callback": "Credit only the first completed callback for the order."
+                },
+                "reset": "fresh ledger on every replay"
+              },
+              "evidence": "runtime"
+            }
+          ]
+        },
+        "replay": {
+          "kind": "callback",
+          "help": "arguments {policy, events}. policy is observed, by-operation, or one-callback. events is an array, at most 32 records; complete events require operation, delivery and amount. Non-complete types: log, transport-error. Exact authorized operations are p1=30 and p2=20. Trials start at zero credit.",
+          "operations": {
+            "p1": 30,
+            "p2": 20
+          },
+          "requires": [
+            "runtime"
+          ]
+        }
+      }
+    }
+  ]
+}

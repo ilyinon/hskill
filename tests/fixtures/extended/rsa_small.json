@@ -1,0 +1,12 @@
+{
+  "contract": "tiny raw unpadded textbook RSA, no external service",
+  "n": 91,
+  "e": 5,
+  "ciphertext": 75,
+  "related_modulus": 119,
+  "message_domain": "0<=m<n",
+  "independent_record": {
+    "modulus": 4,
+    "residue": 1
+  }
+}

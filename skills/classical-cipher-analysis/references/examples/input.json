@@ -1,0 +1,6 @@
+{
+  "contract": "one constant uppercase A..Z rotation modulo26",
+  "ciphertext": "KHOOR",
+  "plaintext_length": 5,
+  "independent_plaintext_byte_sum": 372
+}

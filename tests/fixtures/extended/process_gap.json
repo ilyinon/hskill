@@ -1,0 +1,31 @@
+{
+  "time_basis": "same trusted clock for all records",
+  "processes": [
+    {
+      "object": "Q1",
+      "pid": 83,
+      "name": "old",
+      "alive": [
+        100,
+        170
+      ]
+    },
+    {
+      "object": "Q2",
+      "pid": 83,
+      "name": "new-browser",
+      "alive": [
+        190,
+        260
+      ]
+    }
+  ],
+  "interval_semantics": "half-open [start,end)",
+  "connection": {
+    "pid": 83,
+    "opened": 180,
+    "owner_object": null
+  },
+  "inventory": "only these recovered process records are available; acquisition may omit other evidence",
+  "claim_under_review": "the connection belongs to new-browser/Q2"
+}

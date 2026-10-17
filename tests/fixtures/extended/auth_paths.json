@@ -1,0 +1,17 @@
+{
+  "target": "owned test service",
+  "relay_trace": {
+    "target_reached": true,
+    "binding_check": "rejected",
+    "session_created": false
+  },
+  "direct_owned_credential_trace": {
+    "authentication": "accepted",
+    "principal": "test-operator",
+    "operation": "read owned status",
+    "authorization": "allowed",
+    "returned_marker": "STATUS-OWNED"
+  },
+  "scope": "supplied offline logs only; no remote execution or privileged mutation",
+  "policy": "direct owned status read permitted; relayed unbound authentication denied"
+}

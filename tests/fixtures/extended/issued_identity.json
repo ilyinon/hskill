@@ -1,0 +1,17 @@
+{
+  "scope": "two owned synthetic accounts; no provider or CA operation",
+  "requester": "test-a",
+  "policy": "test-a may not access private test-b service data",
+  "certificate": {
+    "display_name": "test-a",
+    "trusted_mapped_identity": "test-b",
+    "signature_status": "already validated under the supplied trust premise"
+  },
+  "service_trace": {
+    "certificate_accepted": true,
+    "effective_principal": "test-b",
+    "operation": "private-read",
+    "returned_marker": "B-OWNED"
+  },
+  "other_authentication_path": null
+}

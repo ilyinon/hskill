@@ -1,0 +1,9 @@
+{
+  "contract": "tiny raw unpadded textbook RSA; no key, oracle or service outside this data",
+  "n": 55,
+  "e": 3,
+  "ciphertext": 23,
+  "second_modulus": 85,
+  "record_modulus": 5,
+  "record_residue": 2
+}

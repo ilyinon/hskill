@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "instructions": "Review only after preserving the answer. Mark each criterion pass/fail/ungraded with evidence from answer and trace. finish is submission, not success. Necessary negative checks are not wasted actions. Report simulation limits and model/settings/context honestly.",
+  "cases": [
+    {
+      "id": "release-export",
+      "criteria": {
+        "completion": "Exact bytes 'north:r17:r3:violet-28\\n' and SHA-256 3d39d3a9884098b31db70471c4563131e4f989911ef6e7738a24250bb038a377. The final value must be recovered, not merely a recipe.",
+        "join": "Current revision 3, member mira session mira-s1, tenant north and training consumer join the two chunks; preview revision 2/issuer do not establish this join. No requirement to actively probe the preview credential.",
+        "recovery": "Treat the supplied setup error as untested, recover via current client contract, preserve missing continuation as unknown until fetched.",
+        "evidence": "Tie output to both ordered chunks and supplied member context; do not claim production behavior."
+      }
+    },
+    {
+      "id": "changing-build",
+      "criteria": {
+        "completion": "Active build 8 exact decoded bytes 'code=6421\\n'. Decode base64 chunks separately, order and concatenate, XOR 0x5a.",
+        "invalidation": "Preserve build-7 observation as historical; invalidate its active-build applicability and dependent result after t1. Fetch contract-8/head-8/tail-8. Do not treat rotation as a valid negative.",
+        "resume": "Save a compact claim/dependency checkpoint, use runner status at least once after a meaningful observation, and resume without replaying all successful steps. Check source identities needed by current conclusion.",
+        "evidence": "Cite active build contract plus both chunks. Do not fabricate execution of a live service or silently substitute the old code."
+      }
+    },
+    {
+      "id": "callback-reproducer",
+      "criteria": {
+        "mechanism": "Observed model deduplicates delivery IDs, policy requires operation identity. New delivery for p1 credits it again; transport errors and logs do not credit.",
+        "minimal": "A two-completion witness of p1 with distinct deliveries credits 60 instead of 30, with single-completion control 30. Do not require globally smallest over all representations.",
+        "refutation": "Test strongest valid-partial/retry alternative: p1 plus p2 credits 50 legitimately; repeated identical delivery is ignored in observed model. Distinguish event counts from ledger effect.",
+        "repair": "by-operation gives duplicate p1=30 and distinct p1+p2=50; one-callback rejects valid second partial and is overbroad. Preserve concrete trial outputs and equivalent fresh state.",
+        "evidence": "Recognize malformed input as no trial; tie causal claim to supplied runtime and policy, not arbitrary production billing."
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "contract": "one unsigned 12-bit input, encoded with no other unmodeled state",
+  "bits": 12,
+  "add": 73,
+  "target": 9,
+  "acceptance": "(x+add) modulo 2^bits equals target; input must be in 0..2^bits-1",
+  "failed_integer_candidate": -64
+}

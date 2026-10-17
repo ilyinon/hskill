@@ -24,6 +24,7 @@ jobs:
           python-version: "3.9"
       - run: python scripts/check_skills.py --strict
       - run: python scripts/eval_skills.py validate
+      - run: python scripts/staged_eval.py validate
       - run: python -m unittest discover -s tests -v
 
   full:
@@ -48,4 +49,5 @@ jobs:
           --baseline tests/token_baseline.json
           --summary "$GITHUB_STEP_SUMMARY"
       - run: python scripts/eval_skills.py validate
+      - run: python scripts/staged_eval.py validate
       - run: python -m unittest discover -s tests -v

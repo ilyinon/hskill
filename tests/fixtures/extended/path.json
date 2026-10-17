@@ -1,0 +1,9 @@
+{
+  "policy": "only root /srv/data and its descendants may be read",
+  "candidate": "/srv/database/owned.txt",
+  "files": {
+    "/srv/database/owned.txt": "OTHER-OWNED",
+    "/srv/data/inside.txt": "INSIDE-OWNED"
+  },
+  "principal": "unchanged owned test caller"
+}

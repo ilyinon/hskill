@@ -1,0 +1,14 @@
+{
+  "contract": "original modular equation and independent record, not an implemented lattice solver",
+  "modulus": 11,
+  "power": 2,
+  "residue": 5,
+  "upper_bound_exclusive": 6,
+  "record_modulus": 3,
+  "record_residue": 1,
+  "candidates": [
+    2,
+    4,
+    7
+  ]
+}

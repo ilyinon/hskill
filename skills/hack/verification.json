@@ -476,6 +476,98 @@
         "test_solving_examples.SolvingExamples.test_tcp_sequence_reassembly_and_missing_bytes"
       ],
       "limitations": "Bounded classic-PCAP Ethernet/IPv4/TCP decoder: reorder, exact duplicate, gap, overlap, and header-length controls. No network or process attribution; excludes wrap, fragmentation, TLS, and connection reuse."
+    },
+    {
+      "id": "java-narrowing-versus-charset",
+      "reference": "ghost-bits-cast-attack/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://docs.oracle.com/javase/specs/jls/se25/html/jls-5.html#jls-5.1.3",
+        "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html#getBytes(java.nio.charset.Charset)"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "named inert arithmetic/reference-vector test only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "named inert arithmetic/reference-vector test only"
+        }
+      ],
+      "tests": [
+        "test_extended_solving.ExtendedSolving.test_charset_encoding_is_not_low_byte_narrowing"
+      ],
+      "limitations": "The executed check is Python arithmetic/UTF-8 byte encoding under the supplied conversion contract, not a Java service, WAF, vendor component or CVE reproduction."
+    },
+    {
+      "id": "framing-policy-prerequisites",
+      "reference": "clickjacking/references/legacy-playbook.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Policy/ancestor semantics source-reviewed only. No browser, authenticated UI interaction or state-changing action was executed. Absence of frame-ancestors alone does not establish the complete effective frame policy."
+    },
+    {
+      "id": "php-comparison-type-contract",
+      "reference": "type-juggling/references/worked-cases.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://www.php.net/manual/en/language.operators.comparison.php"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Strict versus loose comparison source-reviewed; no PHP runtime or application authentication flow was executed. Major version, operand types and actual error handling still matter."
+    },
+    {
+      "id": "object-assign-setter-contract",
+      "reference": "prototype-pollution/references/worked-cases.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Getter/setter invocation semantics source-reviewed. The case is a supplied synthetic trace, not Node/browser execution, global prototype pollution or gadget validation."
+    },
+    {
+      "id": "hmac-sha256-reference-vector",
+      "reference": "hash-attack-techniques/references/worked-cases.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc4231.html#section-4.3"
+      ],
+      "sources_reviewed_on": "2026-10-17",
+      "validated_on": "2026-10-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "named inert arithmetic/reference-vector test only"
+        },
+        {
+          "component": "CPython",
+          "version": "3.14.7",
+          "configuration": "named inert arithmetic/reference-vector test only"
+        }
+      ],
+      "tests": [
+        "test_extended_solving.ExtendedSolving.test_hmac_rfc_vector_and_changed_message"
+      ],
+      "limitations": "Only RFC4231 test case2 HMAC-SHA256 arithmetic and a changed-message control were executed. No production verifier, timing oracle, secret recovery or general implementation certification."
     }
   ]
 }

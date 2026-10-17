@@ -1,0 +1,14 @@
+{
+  "policy": "reset link origin must equal configured app origin",
+  "case": "OWNED-INERT",
+  "requests": [
+    {
+      "Host": "app.example.invalid"
+    },
+    {
+      "Host": "app.example.invalid",
+      "X-Forwarded-Host": "other.example.invalid"
+    }
+  ],
+  "caller": "untrusted direct peer; header is not consumed by another supplied path"
+}

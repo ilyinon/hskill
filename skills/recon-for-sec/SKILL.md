@@ -29,3 +29,7 @@ This is the starting router for new targets and unknown attack surfaces.
 1. Confirm in-scope assets and target type
 2. Draw the surface from the application: [attack-surface-mapping](../attack-surface-mapping/SKILL.md)
 3. Route the inventory to [api-sec](../api-sec/SKILL.md), [auth-sec](../auth-sec/SKILL.md), [injection-checking](../injection-checking/SKILL.md), or [business-logic-vuln](../business-logic-vuln/SKILL.md)
+
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.

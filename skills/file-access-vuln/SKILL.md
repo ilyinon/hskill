@@ -31,3 +31,7 @@ This is the routing entry point for filesystem paths, download endpoints, upload
 
 - [injection-checking](../injection-checking/SKILL.md)
 - [business-logic-vuln](../business-logic-vuln/SKILL.md)
+
+## Solving decisions
+
+For unclear prerequisites or failed attempts, use [diagnostics](./references/diagnostics.md). Read the [worked case](./references/worked-cases.md) when a change of approach needs an example; recheck its assumptions.

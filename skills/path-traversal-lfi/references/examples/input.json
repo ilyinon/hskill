@@ -1,0 +1,7 @@
+{
+  "contract": "canonical POSIX teaching paths, no symlinks/races; root itself or descendants allowed",
+  "root": "/srv/export",
+  "candidate": "/srv/export-old/owned.txt",
+  "inside_control": "/srv/export/inside.txt",
+  "outside_marker": "OUTSIDE-OWNED"
+}

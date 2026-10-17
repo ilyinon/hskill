@@ -1,0 +1,20 @@
+{
+  "pairs": [
+    [
+      "item",
+      "a7"
+    ],
+    [
+      "item",
+      "b9"
+    ]
+  ],
+  "allowed": [
+    "a7"
+  ],
+  "records": {
+    "a7": "A-OWNED",
+    "b9": "B-OWNED"
+  },
+  "policy": "caller may read only a7; no other parsing/binding path exists in this model"
+}
