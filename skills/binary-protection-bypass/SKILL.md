@@ -11,6 +11,7 @@ description: >-
 - Inspect the actual binary, loader, architecture, and enabled mitigations
 - Match the available read/write/control-flow primitive to those protections
 - Validate the chosen path against the exact runtime and memory layout.
+- Keep disassembly and dumps in files and interrogate them with scripts; load only function-level slices into the conversation ([context budget](../hack/references/context-budget.md)).
 
 ## Evidence and limits
 

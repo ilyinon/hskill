@@ -26,6 +26,7 @@ Use this as the shared entry point. Read only the branch needed for the current 
 | SOC triage, detection, or incident response | Relevant section of [blue-team workflow](./BLUE_TEAM.md) |
 | JWT signature, signing key, or token claims | [JWT validation](../jwt-oauth-token-attacks/SKILL.md) |
 | OAuth/OIDC callback, PKCE, or account binding | [OAuth/OIDC](../oauth-oidc-misconfiguration/SKILL.md) |
+| ELF binary, firmware, or pwn task | [Stack overflow/ROP](../stack-overflow-and-rop/SKILL.md) or [protection bypass](../binary-protection-bypass/SKILL.md) as applicable; keep disassembly out of the conversation per [context budget](./references/context-budget.md) |
 | Specific technical question or artifact | Matching topic directly; use [routing](./ROUTING.md) only when the topic is unclear |
 | Broad assessment coverage | [Test matrix](./TEST_MATRIX.md), limited to observed surfaces and requested coverage |
 | Requested report or finding ready to preserve | Relevant template in [evidence/report](./EVIDENCE_REPORT.md) |
@@ -41,5 +42,7 @@ For broad web/API work, prioritize authentication, object/tenant permissions, an
 Follow a partial chain when it can change the conclusion within scope and budget. A setup/tool error or an unmet prerequisite is not a valid negative result. Stop or change approach when the hypothesis is disproved, evidence repeats without reducing uncertainty, the permitted proof is sufficient, or a scope/action limit is reached. Record untested work as not covered; N/A requires an applicability reason.
 
 Maintain a compact working record only when task size warrants it: scope, known facts, hypotheses, checks already tried, evidence locations, and next action. Reuse it after context compaction. Match the final answer to the user's requested deliverable.
+
+Keep bulk tool output (disassembly, dumps, logs, pcaps, large responses) in files and extract answers from it locally; load only decision-changing slices into the conversation. See [context budget](./references/context-budget.md).
 
 When stuck, use topic diagnostics or the relevant part of [solving decisions](./SOLVING.md).

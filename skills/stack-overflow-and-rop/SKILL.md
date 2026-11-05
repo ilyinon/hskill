@@ -11,6 +11,7 @@ description: >-
 - Identify architecture/ABI, overflow offset, actual control, leaks, and enabled protections
 - Select a chain from available gadgets and exact runtime structures
 - Validate argument setup, stack alignment, and the intended local effect.
+- Keep disassembly and dumps in files and interrogate them with scripts; load only function-level slices into the conversation ([context budget](../hack/references/context-budget.md)).
 
 ## Evidence and limits
 
