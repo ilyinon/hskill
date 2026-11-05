@@ -16,7 +16,7 @@ Read when choosing a technique, interpreting a failed attempt, or deciding the n
 | Crash before the intended return | Wrong offset, canary, truncated transport, or corrupted saved state | Locate the first divergent state in the supplied trace; do not debug later gadgets yet. |
 | Correct target and argument, failure at entry | Alignment, hidden target constraints, invalid mapping, or a different ABI | Compute the actual target-entry stack state; compare against the known contract. |
 | A tutorial adds a ret gadget | Useful alignment adjustment in that example | Count from this task's stack position. An extra ret can break a chain that is already aligned. |
-| Local success, remote failure | Different binary/libc/loader, transport limits, ASLR state, or a false local effect | Compare artifacts and inputs before changing the chain; unknown addresses remain unknown. |
+| Local success, remote failure | Different binary/libc/loader, transport limits, ASLR state, or a false local effect | Compare artifacts and inputs before changing the chain; unknown addresses remain unknown. If the leak fired remotely but no effect follows, identify the remote libc first ([remote libc identification](./01-stack-layout-fundamentals.md#remote-libc-identification)) and recompute offsets against it. |
 | Helper/tool errors | Parsing/version/syntax problem | Restore a working inspection baseline; an offline tool failure does not disprove the primitive. |
 
 ## Close the requested task

@@ -96,6 +96,26 @@ leak = u64(io.recvline().strip().ljust(8, b'\x00'))
 libc_base = leak - libc.symbols['puts']
 ```
 
+### Remote libc identification
+
+Never assume the remote libc equals your local libc. A chain verified against
+the local replica fires at wrong addresses on a host with a different glibc
+build, and the failure is silent — payload delivered, no shell, no output.
+
+Loop for a remote target without a supplied libc:
+
+1. Leak one resolved libc address remotely (any entry from the table above).
+2. Identify the version by the low 12 bits of the leak: query a libc database
+   (`libc.rip`, `libc-database` — `find`/`dump` by symbol offset, e.g.
+   `puts = 0x<leak & 0xfff>` plus a second symbol to disambiguate).
+3. Fetch the matching libc (download or use the database copy) and recompute
+   all offsets (`system`, `/bin/sh`, gadgets) against **that** file — not the
+   local one.
+4. Rebuild the chain and reshoot. Verify each iteration changes one thing.
+
+If a leaked value matches no known libc, prefer leaking a second symbol before
+trusting offsets; identical low bits across builds are common.
+
 ### one_gadget — Single Gadget RCE
 
 ```bash
