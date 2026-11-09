@@ -29,11 +29,21 @@ Then interrogate the files, not the terminal:
 
 - `rg -n 'call|jmp' work/bin/target.asm | rg 'main|auth|flag'` — find the
   interesting functions and their callers/xrefs by name or address.
-- Extract one function at a time with awk by its start label, read only that:
+- Extract a symbol-delimited function slice; do not stop at an early `ret`:
 
 ```sh
-awk '/^0000.*<check_auth>:/{f=1} f{print} f&&/ret/{exit}' work/bin/target.asm
+awk '
+  /^[[:space:]]*[[:xdigit:]]+[[:space:]]+<[^>]+>:/ {
+    if (found) exit
+    found = ($0 ~ /<check_auth>:/)
+  }
+  found
+' work/bin/target.asm
 ```
+
+This bounds one symbol, not its full control-flow graph. Inspect referenced
+cold blocks, tail-call targets, and stripped/aliased labels separately; an
+empty slice is inconclusive.
 
 - Decode structures, tables, and packed data with a short Python script over
   the file; record the decoded result, not the hex.

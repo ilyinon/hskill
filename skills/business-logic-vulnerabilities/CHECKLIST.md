@@ -186,7 +186,7 @@
 | 低权限会话不能访问禁止的管理员功能 | 有效 admin Cookie 代表管理员，替换会话后成功不证明越权 | 保持普通账号 A 的 Cookie，访问其无权使用的功能，并与授权基线比较 |
 | `/admin/*` 路径 Filter 用 `request.getServletPath()` 而非 `getRequestURI()` | `getRequestURI` 不规范化路径，分号截断后判定失效 | 试 `/admin/;/login` 是否绕过 |
 | 路径中 `..//` 不能截断 Filter | `/FilterDemo/../../index.jsp` 截断绕过登录检查的经典 Servlet 缺陷 | 提交 `/admin/../../home`、`/admin/..%2F..%2F` 看响应 |
-| 后台 URL 不暴露 / 不可枚举 | 后台入口直接命中（如 `main.php`）即未授权访问 | 试常见路径 `admin.php`、`/admin`、`/manage` |
+| 管理入口及其保护功能由服务端鉴权 | 发现 URL 或返回登录页不证明越权 | 以 `admin.php`、`/admin`、`/manage` 为线索；保持同一未登录 / 低权限身份，对照授权基线与预期拒绝，确认受保护数据或操作效果 |
 | Spring Security 配置 antMatchers 覆盖完全 | `.antMatchers("/system/menu/**").hasRole("admin")` 仅匹配前缀，漏写接口路径即未授权 | grep `@PreAuthorize`、`@RequestMapping`，对照配置 |
 | 所有"管理员可见数据"接口检查请求来源用户角色 | 防垂直越权 | 用 user token 调 admin API |
 | 第三方 / 内部接口必须鉴权 | `/api/internal/*` 漏出来即未授权 | nmap / dirsearch 探内部接口 |
