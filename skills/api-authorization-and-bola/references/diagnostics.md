@@ -29,4 +29,4 @@ For nested object checks, use the canonical [IDOR diagnostics](../../idor-broken
 
 ## Verify authorization in application code
 
-Trace the authenticated principal through the controller and service into the object lookup. Scope both collection and single-object access to the authorized tenant or owner. Check nested resources against the same relationship. Use a request DTO with explicit writable fields. For regression tests, keep the principal fixed and compare an allowed object with a denied one, and assert that denied updates leave the stored record unchanged.
+Trace the authenticated principal through the controller and service into the object lookup. Scope both collection and single-object access to the authorized tenant or owner. Check nested resources against the same relationship. Use a request DTO with explicit writable fields. For regression tests, keep the principal fixed and compare an allowed object with a denied one, and assert that denied updates leave the stored record unchanged. Include response-field filtering and the batch path if they use different authorization logic.

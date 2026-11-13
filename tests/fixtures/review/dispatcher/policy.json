@@ -1,0 +1,14 @@
+{
+  "principal": "editor-7",
+  "allowed_actions": {
+    "read_note": [
+      "n-03"
+    ],
+    "update_note": [
+      "n-03"
+    ]
+  },
+  "protected_notes": [
+    "n-81"
+  ]
+}

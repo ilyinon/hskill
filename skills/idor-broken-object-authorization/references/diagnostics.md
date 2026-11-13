@@ -24,3 +24,7 @@ A valid denied object disproves that request path, not every action or child. A 
 ## Close the requested task
 
 Track `fixed subject → authorized parent → selected child → returned/changed protected state`. Find which edge loses the relationship. For a finding, preserve ownership and allowed/breaking/owner controls. For a fix, constrain the actual selected object and its parent relationship before response or mutation. Avoid inferring write, bulk, or production impact from one read.
+
+## Verify ownership at the data access layer
+
+Check object lookups and writes use an authenticated subject and resource policy together. Include child records, downloads, and bulk operations that use separate paths. In application tests, keep the session fixed and compare an authorized object with another tenant's object while checking the latter's stored state is unchanged.

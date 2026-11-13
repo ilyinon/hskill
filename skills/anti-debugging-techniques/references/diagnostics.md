@@ -24,3 +24,7 @@ A debugger/plugin failure before program execution is setup failure. Timing diff
 Track `controlled environment -> detector input -> exact branch -> preserved analysis behavior`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Preserve behavior during static analysis
+
+Record the sample hash, architecture, and the first conditional branch that differs between the supplied traces. Compare return status, inputs, timing, and effects before attributing a difference to debugger detection. For an untrusted sample, use static inspection or a supplied trace and label any inferred branch as unobserved.

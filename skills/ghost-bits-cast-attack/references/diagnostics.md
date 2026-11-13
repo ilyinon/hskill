@@ -24,3 +24,7 @@ A WAF acceptance is not downstream control. A patched version or CVE label alone
 Track `validated representation -> actual conversion -> downstream bytes -> parser interpretation -> bounded effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Validate the sink representation
+
+Choose the intended character encoding explicitly and reject conversions that cannot represent input losslessly when the protocol requires that. Validate the resulting bytes at the final consumer. Use an offline conversion test with ASCII, a multibyte character, and an unrepresentable value to catch divergence between validator and consumer.

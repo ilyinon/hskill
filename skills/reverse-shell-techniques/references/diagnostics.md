@@ -24,3 +24,7 @@ A wrong address, blocked egress or protocol mismatch is a connection/setup failu
 Track `permitted local execution -> compatible connection path -> authenticated owned endpoint -> requested bounded session/effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Correlate existing telemetry for incident response
+
+Join outbound connection records with process ancestry and execution time on the same host. Distinguish an approved remote administration client from an unexpected interpreter or service child. Preserve metadata for the destination, parent, and effective identity. Verify egress controls with approved benign test traffic.

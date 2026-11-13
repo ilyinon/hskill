@@ -26,3 +26,7 @@ result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
 
 For a confirmed source plus consumer, use [advanced diagnostics](../../prototype-pollution-advanced/references/diagnostics.md).
+
+## Verify that state changes stay local
+
+Use explicit schema fields when applying untrusted options. Build fresh configuration objects and keep inherited values outside authorization or defaults logic. In an in-process test, compare the intended object's own properties with unrelated objects before and after a rejected input. Keep advanced merge-specific advice in the companion reference.

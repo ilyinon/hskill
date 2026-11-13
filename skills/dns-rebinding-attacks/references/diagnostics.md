@@ -24,3 +24,7 @@ A DNS timeout is setup/evidence failure, not rebinding success. A changed DNS re
 Track `controlled name -> validation resolution -> use-time peer -> destination/origin policy -> protected response/action`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify destination policy at the connection boundary
+
+Review the resolver and transport as one path. Validate the address actually selected for the connection, apply the same policy on redirects, and scope egress to needed destinations. With a fake resolver and recording transport, check that an approved address works and that a denied address never reaches the transport.

@@ -55,9 +55,9 @@ class AnalysisFixtures(unittest.TestCase):
     def test_analysis_cases_export_requests_and_artifacts_without_rubrics(self):
         cases = [
             case for case in eval_skills.read_manifest()["cases"]
-            if case["id"].startswith(("osint-", "forensics-"))
+            if case["id"].startswith(("osint-", "forensics-", "review-"))
         ]
-        self.assertEqual(len(cases), 6)
+        self.assertGreaterEqual(len(cases), 9)
         with TemporaryDirectory() as temporary:
             output = Path(temporary) / "blind"
             prepared = eval_skills.prepare(output, [case["id"] for case in cases])

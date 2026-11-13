@@ -24,3 +24,7 @@ A checksec/parser error leaves the label unknown. A crash at an address is not a
 Track `exact artifact -> runtime protection -> available primitive -> relevant mapping/target -> bounded observed effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify hardening on the final build artifact
+
+Check the delivered ELF, Mach-O, or PE and its build configuration. Record which hardening properties are observable statically and which require runtime evidence. Compare debug and release artifacts when they differ. A compiler flag in the build script cannot prove the corresponding property survived linking or packaging.

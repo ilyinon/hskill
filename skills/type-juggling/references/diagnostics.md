@@ -24,3 +24,7 @@ A TypeError is not a bypass when the actual path fails closed. A magic numeric s
 Track `input type -> validation/cast -> exact comparison/error path -> protected success capability`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify strict types before comparison
+
+Validate decoded scalar types at the request boundary and use an appropriate strict or constant-time comparison at the consumer. Add table-driven application tests for a valid value, missing value, unexpected type, and normal invalid value. Ensure invalid input follows the expected denial path without an internal error.

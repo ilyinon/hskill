@@ -22,3 +22,7 @@ Read when choosing a technique, interpreting a failed attempt, or deciding the n
 ## Close the requested task
 
 Track `observations → construction assumptions → recovered intermediate → installed state/plaintext → independent withheld check`. A recovered word list is not a prediction, and a prediction is not a seed. For a bounded lab, verify future outputs or a plaintext invariant before declaring completion. If an integrity gate removes the required oracle, change the hypothesis rather than varying the same unauthenticated modification. Never generalize a CPython MT result to a cryptographic RNG.
+
+## Verify the encryption interface in source
+
+Check the approved mode, nonce generation and reuse policy, associated data, and tag handling. Prefer a maintained authenticated-encryption API where the protocol permits. Use a synthetic round-trip and verify that altered ciphertext or associated data is rejected before plaintext is passed onward.

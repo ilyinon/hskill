@@ -24,3 +24,7 @@ A dumper failure does not prove absence of exposure; a catch-all page is not rep
 Track `path candidate -> authentic artifact bytes -> bounded recovery -> sensitive content classification -> scoped report`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify the published artifact manifest
+
+Compare the deployed archive or image with an explicit list of allowed public paths. Deny repository metadata and build intermediates at packaging and serving boundaries. Test the built artifact and a normal served asset. If a secret was included, record affected versions and rotate it without including the value in the report.

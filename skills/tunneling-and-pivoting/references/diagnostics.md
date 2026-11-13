@@ -24,3 +24,7 @@ A listener bind error is setup failure. A TCP tunnel does not automatically carr
 Track `controlled client -> correct local/remote bind -> forwarding transport -> destination socket -> owned service response`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review approved tunnels and port forwards
+
+Map the configured bind interface, destination, authenticated principal, and intended service. Compare endpoint configuration with connection telemetry from both sides. Restrict listening interfaces and allowed destinations. Verify an approved connection and confirm a policy-denied endpoint is absent from the resulting connection log.

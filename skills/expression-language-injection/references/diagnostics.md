@@ -24,3 +24,7 @@ A syntax error for a different EL dialect is not a negative for the actual evalu
 Track `input -> expression source/data binding -> evaluator context -> permitted semantic effect -> requested finding/fix`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Keep user data outside the evaluator
+
+Review the final expression API and the types it accepts. Use fixed expressions with explicitly bound values, or remove dynamic evaluation where it is unnecessary. In tests with a fake evaluator, confirm that varying a user value leaves the expression unchanged and cannot select a different evaluator or context.

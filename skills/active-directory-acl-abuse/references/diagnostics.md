@@ -24,3 +24,7 @@ A directory tool failure is not a permission denial. A permission on one object 
 Track `current principal/groups -> effective scoped ACE -> target operation -> resulting capability`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review delegated permissions offline
+
+Compare exported security descriptors with the intended delegation. Account for inherited ACEs, group membership, the protected object's type, and scope. Verify the remediation with an effective-access report for a legitimate delegate and an account outside that delegation. Keep domain-wide replication rights separate from object-level permissions.

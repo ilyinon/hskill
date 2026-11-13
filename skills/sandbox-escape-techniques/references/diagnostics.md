@@ -24,3 +24,7 @@ A syntax/import failure is not proof of OS containment. Conversely, executing pe
 Track `initial sandbox capability -> language/process operation -> next policy gate -> prohibited resource/effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify isolation outside the language runtime
+
+Use a separate low-privilege process with explicit filesystem, process, and network grants for untrusted code. Verify applied policies at the host boundary. A harmless allowed operation and a policy-denied operation should produce independently observable results in the harness. Keep language restrictions as a separate control.

@@ -57,7 +57,9 @@
       "topic": "api-authorization-and-bola",
       "diagnostics": "api-authorization-and-bola/references/diagnostics.md",
       "worked_case": "api-authorization-and-bola/references/worked-cases.md",
-      "offline_tests": []
+      "offline_tests": [
+        "test_review_fixtures.ReviewFixtures.test_batch_preserves_object_scope_but_exposes_extra_field"
+      ]
     },
     {
       "topic": "api-recon-and-docs",
@@ -371,7 +373,9 @@
       "topic": "llm-prompt-injection",
       "diagnostics": "llm-prompt-injection/references/diagnostics.md",
       "worked_case": "llm-prompt-injection/references/worked-cases.md",
-      "offline_tests": []
+      "offline_tests": [
+        "test_review_fixtures.ReviewFixtures.test_denied_tool_proposal_has_no_dispatch_or_commit"
+      ]
     },
     {
       "topic": "macos-process-injection",
@@ -449,7 +453,8 @@
       "diagnostics": "osint-web-archives/references/diagnostics.md",
       "worked_case": "osint-web-archives/references/worked-cases.md",
       "offline_tests": [
-        "test_analysis_fixtures.AnalysisFixtures.test_archive_has_distinct_dates_and_a_non_image_replay"
+        "test_analysis_fixtures.AnalysisFixtures.test_archive_has_distinct_dates_and_a_non_image_replay",
+        "test_review_fixtures.ReviewFixtures.test_conflicting_archive_versions_have_no_same_day_image"
       ]
     },
     {

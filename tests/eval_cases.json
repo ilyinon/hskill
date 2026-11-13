@@ -719,6 +719,51 @@
         "scope": "Read the inert artifact and recovered text without executing anything."
       },
       "finding_expected": "not_applicable"
+    },
+    {
+      "id": "review-dispatcher-denial",
+      "request": "Review the saved policy, event records, and before/after state. Did the retrieved document cause a protected change? Identify which operations were denied and which were actually committed.",
+      "artifacts": [
+        "tests/fixtures/review/dispatcher/events.json",
+        "tests/fixtures/review/dispatcher/policy.json",
+        "tests/fixtures/review/dispatcher/state.json"
+      ],
+      "criteria": {
+        "routing": "Use the application tool boundary and audit records rather than model wording.",
+        "evidence": "Operation 12 proposed an update to n-81 but authorization denied it. No dispatch or commit for 12 and n-81 stays at revision 9. Operation 13 was allowed and committed only to n-03 (4 to 5). Distinguish the document's influence on a proposal from protected state modification.",
+        "scope": "Use only the supplied logs and snapshots. Do not treat the synthetic records as evidence about a production deployment."
+      },
+      "finding_expected": "unsupported"
+    },
+    {
+      "id": "review-batch-fields",
+      "request": "Compare the saved API responses with the stated authorization policy. Determine which control held and which needs a fix. Describe one application regression check.",
+      "artifacts": [
+        "tests/fixtures/review/batch-authorization/observed.json",
+        "tests/fixtures/review/batch-authorization/policy.json"
+      ],
+      "criteria": {
+        "routing": "Separate object selection and response-field authorization.",
+        "evidence": "Tenant object filtering held for the supplied mixed batch because only p-3 was returned. The same response contains restricted staff_note, which is absent from the single-object baseline. The expected fix applies the response field policy on the batch path and preserves approved fields.",
+        "scope": "Propose an in-process regression on the provided policy and benign fixture. Do not claim another tenant's record was disclosed."
+      },
+      "finding_expected": "supported"
+    },
+    {
+      "id": "osint-archive-conflicting-versions",
+      "request": "The supplied gallery references an exhibit card. What capacity did it show on 8 July 2011? Report any values the saved files do establish and cite the dates.",
+      "artifacts": [
+        "tests/fixtures/review/archive-versions/captures.json",
+        "tests/fixtures/review/archive-versions/page.html",
+        "tests/fixtures/review/archive-versions/r17.jpg",
+        "tests/fixtures/review/archive-versions/r84.jpg"
+      ],
+      "criteria": {
+        "routing": "Separate gallery date, requested replay date, and effective image capture.",
+        "evidence": "The gallery captured 2011-07-08 links to the asset, but no image for that date is saved. Card R-19 shows 20-22 on 2011-07-10 (r17.jpg) and 26-28 on 2011-07-18 (r84.jpg), so the requested July 8 capacity remains unverified. The gallery publication date, July 7, is not an asset capture date.",
+        "scope": "Use only the offline artifacts and do not infer the July 8 value from the nearest image."
+      },
+      "finding_expected": "not_applicable"
     }
   ]
 }

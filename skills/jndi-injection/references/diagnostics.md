@@ -24,3 +24,7 @@ A class-not-found or blocked remote factory leaves execution unproved. A tool ca
 Track `controlled name -> attributable lookup -> permitted object reconstruction -> bounded effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify naming lookups are confined
+
+Remove dynamic lookup names from untrusted inputs. If naming services are required, keep approved names in configuration and use least-privilege access. Verify supported library versions and defaults in vendor guidance. In an in-process test, record which names reach a stub provider and assert invalid input causes no lookup.

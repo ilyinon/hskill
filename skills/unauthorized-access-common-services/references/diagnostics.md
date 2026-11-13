@@ -24,3 +24,7 @@ A client protocol mismatch is not a valid negative. An allowed liveness command 
 Track `network reachability -> protocol identity -> effective authentication/ACL -> specific protected capability`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify effective service exposure
+
+Compare listening addresses, transport settings, and enabled features with the approved deployment configuration. Verify authentication and network policy for each service instance. Treat banners and health endpoints as reachability evidence. Use configuration inspection or a service-owned integration test to verify privileged operations require the expected identity.

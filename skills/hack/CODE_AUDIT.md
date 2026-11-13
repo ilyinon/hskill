@@ -14,7 +14,16 @@ Use with the shared scope/evidence rules in `SKILL.md`. The core is taint paths 
 
 Large repos: sink-driven first. Few entries and many dangerous points: also sink-driven. Object-level IDOR: missing-control-driven first.
 
-After the path is real, load the matching deep topic skill for the sink class (SQLi, SSTI, deserialization, SSRF, and so on).
+Once the path is established, use the matching topic's diagnostics for code review and fix verification. Open additional references only when they explain a control or behavior relevant to the review.
+
+## Review a proposed fix
+
+Trace the affected data or permission decision through the changed path and its callers.
+Identify which layer now enforces the invariant. Verify a normal allowed operation,
+a denied operation that reaches the same decision, and any alternate caller that
+could skip it. Assert the observable outcome at the enforcing layer, such as no
+write, no connector call, or no protected field in a response. State which tests
+ran and which deployment conditions would still need verification.
 
 ## Dual track plus missing controls
 

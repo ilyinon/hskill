@@ -1,0 +1,21 @@
+{
+  "page": {
+    "effective_capture_utc": "2011-07-08T08:00:00Z",
+    "saved_body": "page.html"
+  },
+  "asset": {
+    "original": "https://west-pier.example.invalid/photos/display.jpg",
+    "requested_date": "2011-07-08",
+    "on_requested_date": "no_saved_image",
+    "captures": [
+      {
+        "effective_capture_utc": "2011-07-10T08:00:00Z",
+        "saved_body": "r17.jpg"
+      },
+      {
+        "effective_capture_utc": "2011-07-18T08:00:00Z",
+        "saved_body": "r84.jpg"
+      }
+    ]
+  }
+}

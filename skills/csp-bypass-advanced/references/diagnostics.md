@@ -24,3 +24,7 @@ A failed test harness does not test CSP. A report-only policy does not replace a
 Track `injection/sink -> all enforced policies -> permitted load/execution -> observed bounded effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review enforcement on the delivered page
+
+Collect enforcing and report-only policies separately from the actual response. Review nonce generation, required sources, and any policy differences across proxies or routes. Use a browser policy test with a benign permitted script and an unapproved inert resource. Compare resulting events with reports from the same page.

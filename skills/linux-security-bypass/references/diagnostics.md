@@ -24,3 +24,7 @@ A helper syntax error did not exercise the control. Do not delete logs or disabl
 Track `principal/context -> requested operation -> identified enforcement gate -> permitted alternative or bounded denial`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Compare configured and effective controls
+
+Read the applied service sandbox, filesystem flags, and mandatory access-control profile. Correlate a denied operation with the exact error and policy log before attributing it to one control. For a fix, test the required service operation and a denied action independently so a policy change does not silently remove needed isolation.

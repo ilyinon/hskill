@@ -26,3 +26,7 @@ result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
 
 Use [IDOR](../../idor-broken-object-authorization/SKILL.md), [path diagnostics](../../path-traversal-lfi/references/diagnostics.md), or [upload diagnostics](../../upload-insecure-files/references/diagnostics.md) for the observed stage.
+
+## Separate authorization from path handling
+
+Review upload acceptance, stored-object authorization, file opening, and preview execution as separate controls. Use the storage identity from the application as the join key. For a protected file, require ownership at download even if the resolved path stays inside an approved directory.

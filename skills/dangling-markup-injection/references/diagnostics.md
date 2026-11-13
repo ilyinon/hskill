@@ -24,3 +24,7 @@ A CSP-blocked request does not show transmission. Parsed markup alone is not a d
 Track `HTML insertion -> parser state -> captured following bytes -> permitted outbound request -> protected marker crossing`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify that text cannot alter document structure
+
+Use context-specific encoding or a text-only sink for plain user data. Review the rendered DOM in a controlled test with inert input containing markup characters. Assert the expected text and element structure, and use a recording resource loader when the fix should prevent unintended requests.

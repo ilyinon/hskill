@@ -24,3 +24,7 @@ A timeout is unknown reachability, not absence. An old banner cannot establish a
 Track `in-scope seed -> attributed surface -> reachability/configuration -> prioritized boundary -> explicit coverage record`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Maintain provenance for defensive inventory
+
+Record discovery source, environment, observation time, owner, and verification status for each asset. Compare the observed inventory with deployment and DNS configuration before assigning ownership. Keep unknown or out-of-scope dependencies in a separate list and deduplicate by application and environment where evidence supports it.

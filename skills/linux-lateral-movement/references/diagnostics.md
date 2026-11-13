@@ -24,3 +24,7 @@ A stale socket or refused connection is a setup/prerequisite failure, not eviden
 Track `current principal -> usable credential/agent -> target authentication -> destination restrictions -> actual capability`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review administrative trust between hosts
+
+Map which principals and managed agents are permitted to access each host. Inspect SSH trust, agent forwarding, service accounts, and lateral authentication logs under the same account and time basis. Remove unused paths and validate approved administration still works. A successful login does not alone establish unauthorized privilege.

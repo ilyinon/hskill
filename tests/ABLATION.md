@@ -35,7 +35,7 @@ Do not provide the host manifest, source repository, tests, sibling workers or
 expected answers. Snapshot separation is not a hostile-filesystem sandbox; use
 restricted workers when stronger isolation is needed.
 
-The 53 static cases include three `reason-*` transfer tasks with values outside
+The 56 static cases include three `reason-*` transfer tasks with values outside
 the instructional examples: backward artifact construction, a calibrated ledger
 model, and argument-contract recovery. Their rubrics remain host-only. They are
 withheld from runtime instructions, not claimed to be unknown to model training.

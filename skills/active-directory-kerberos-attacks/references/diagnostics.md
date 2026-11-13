@@ -24,3 +24,7 @@ A clock, cache-format or SPN error can break setup without testing the proposed 
 Track `credential/key prerequisite -> correct ticket -> intended service acceptance -> mapped identity -> permitted action`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review service identity and authentication records
+
+Inventory service accounts with SPNs and separate managed service identities from privileged users. Check ownership, supported encryption, rotation policy, and which resource permits the service identity. When reviewing event logs, separate ticket issuance from a service logon and from resource authorization. Compare against a known legitimate service event.

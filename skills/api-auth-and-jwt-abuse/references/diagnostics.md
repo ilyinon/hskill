@@ -24,3 +24,7 @@ A token-parser error needs a known-good credential baseline. A correctly ignored
 Track `wire credential/header -> trusted extraction -> principal/scopes -> protected operation`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify identity at the proxy boundary
+
+Derive the principal from the verified credential. At the trusted ingress, discard client-supplied identity metadata before setting trusted values. Use a request-dispatch test to check that changed incoming metadata leaves the principal unchanged and that a missing or invalid credential never reaches a privileged handler.

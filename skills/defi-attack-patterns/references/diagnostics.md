@@ -24,3 +24,7 @@ A reverted local transaction does not establish a committed economic effect. Fla
 Track `permitted capital/state -> reachable market/oracle change -> consuming action -> repayment/cost settlement -> net invariant result`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review accounting with a closed model
+
+Use the supplied source or a pure state model with fixed units, fee rules, and conservation checks. Reconcile opening and closing balances across all involved accounts. Separate a temporary balance change from a durable gain and require an independent accounting check before claiming a loss.

@@ -26,3 +26,7 @@ result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
 
 Use [XSS context diagnostics](../../xss-cross-site-scripting/references/diagnostics.md) for the final parser question.
+
+## Locate the final interpreter in source
+
+Trace a user value through the application until it reaches a template, database, command, or browser sink. Record the API and the representation at that call. Route remediation to the matching specialist and use an in-process test at the sink with ordinary text as the positive control.

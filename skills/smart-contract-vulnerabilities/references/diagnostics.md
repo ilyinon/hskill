@@ -24,3 +24,7 @@ A pattern match or reverted transaction is not a committed exploit. Arithmetic, 
 Track `caller entitlement -> state update/call order -> callback state -> committed transfer/state -> invariant`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify invariants in local contract tests
+
+Pin source revision and compiler settings. State the balance, role, or state transition invariant explicitly. Test allowed calls and rejected transitions against a local state snapshot. Compare balances and emitted events before and after the call, including when a revert is expected.

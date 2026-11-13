@@ -24,3 +24,7 @@ A local loader error did not establish cross-process execution. A debug/instrume
 Track `controlled launch/input -> actual loader/IPC context -> signing/peer policy -> attributed process effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review signed release and helper boundaries
+
+Inspect the delivered app and embedded helpers for the expected signatures, hardened runtime, entitlements, and library validation. Separate Debug settings from Release settings. Check that approved plugins still load and review denial telemetry for unexpected libraries or helpers in the deployment's diagnostic records. [Apple Hardened Runtime](https://developer.apple.com/documentation/security/hardened-runtime)

@@ -24,3 +24,7 @@ Wrong OTP format or an expired transaction does not isolate MFA enforcement. A d
 Track `credentials -> pending identity -> required factor -> session assurance -> protected capability`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify complete authentication state
+
+Model anonymous, pending, fully authenticated, and expired sessions explicitly. Check protected handlers require the fully authenticated state and that reset or second-factor transitions expire and consume their pending record. Include a normal login and a direct handler call with a pending session in the application test.

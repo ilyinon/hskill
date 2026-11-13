@@ -24,3 +24,7 @@ A permission-tool error is a setup gap. Admin/debug access or a historical CVE d
 Track `process identity -> applicable policy/grant -> protected operation -> observed allowed or denied effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review which identity holds each permission
+
+Record the responsible application, helper, signing identity, entitlement, and managed privacy policy. Compare the intended control with the effective release build and audit records. Verify supported use through a permitted test and check that unrelated helpers do not inherit access by configuration.

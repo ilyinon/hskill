@@ -24,3 +24,7 @@ A captured challenge/response is not a successful relay or recovered password. A
 Track `originating authentication -> relay transport -> target binding checks -> accepted identity -> authorized capability`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review the receiving service's binding policy
+
+Inventory where NTLM is still accepted and whether the receiving service requires signing, channel binding, or extended protection as applicable. Record effective settings and approved exceptions by service. Use authentication telemetry and a supported administrative validation to confirm expected clients continue to work after hardening.

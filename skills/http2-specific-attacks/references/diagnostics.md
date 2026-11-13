@@ -24,3 +24,7 @@ A local H2 tool/ALPN failure did not test the server parser. A protocol error wi
 Track `H2 stream -> frontend validation/translation -> backend message boundary -> controlled follow-up effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review the protocol boundary defensively
+
+Identify where HTTP/2 is terminated and whether the origin receives a translated HTTP/1.1 request. Compare the configured header and message-length validation at each hop. Verify in a local decoder or configuration test that invalid messages never reach the origin adapter. [RFC 9113](https://www.rfc-editor.org/rfc/rfc9113.html)

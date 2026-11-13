@@ -24,3 +24,7 @@ A solver/tool exception did not disprove satisfiability. Overpermissive hooks an
 Track `original input contract -> faithful model -> candidate -> original predicate/trace -> requested recovered value`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Check solver models on inert inputs
+
+For a supplied pure function or educational model, state the input domain and environment assumptions. Validate one solver result with an independent concrete evaluation and include an input the predicate must reject. Report unsupported instructions or bounded search limits where they affect the conclusion.

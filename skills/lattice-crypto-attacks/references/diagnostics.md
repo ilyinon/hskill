@@ -24,3 +24,7 @@ A Sage/solver error is setup failure. A mathematically valid residue outside the
 Track `original equations/bounds -> faithful lattice/model -> decoded candidate -> original constraints -> independent validation`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Check the model on supplied synthetic data
+
+Write the integer equations, bounds, and sample assumptions explicitly. Validate any candidate against every supplied equation and, where possible, a held-out sample. Report candidates or an unresolved model when the evidence is ambiguous. Keep offline educational analysis separate from claims about a deployed key or system.

@@ -24,3 +24,7 @@ A rejected header setter is a control for that path, not universal parser safety
 Track `input representation -> transformations -> emitted bytes -> parsed field/record -> separately supported impact`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify header construction at the response sink
+
+Use structured header APIs and keep untrusted data out of raw header serialization. Review validation after the last decoding or text conversion. In an in-process response test, assert the exact header count and values for benign input and check that invalid values are rejected before serialization.

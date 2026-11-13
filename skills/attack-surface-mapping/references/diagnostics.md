@@ -24,3 +24,7 @@ A crawler failure or unauthenticated shell is a coverage limit. An empty tenant-
 Track `authorized app -> observed role/workflow -> endpoint and object edges -> unresolved boundary -> specialist handoff`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Mark how each asset entered the inventory
+
+Distinguish a route found in owned source, a path named in docs, a deployed route, and an external dependency. Record environment, commit or observation date, and the evidence supporting each label. Use a config diff to track added and removed entry points without treating a stale reference as an active endpoint.

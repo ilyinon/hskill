@@ -24,3 +24,7 @@ A model-loader error did not test an inference attack. A metric on the wrong pop
 Track `precise hypothesis -> controlled data/model interface -> baseline-adjusted signal -> independent validation -> bounded impact`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Separate integrity from behavioral evaluation
+
+Verify model artifact digests and provenance before any load, and prefer data-only weights where the framework supports them. For privacy claims, use independent examples with known membership, report class balance and error rates, and compare against a simple baseline. For a safety or quality claim, hold the dataset and model configuration fixed across the comparison.

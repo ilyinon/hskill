@@ -24,3 +24,7 @@ A duplicate-key error is not a bypass. Product names do not establish first/last
 Track `raw duplicate fields -> validator selection -> application binding -> protected object/action`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Define a single binding rule for each field
+
+For scalar fields that affect authorization or routing, enforce one accepted value across the edge and handler. For intentional lists, preserve the same ordered representation in validation and use. Verify ordinary, missing, and duplicate fields in a local parser contract and assert the handler receives the expected structured value.

@@ -24,3 +24,7 @@ A failed request before issuance does not test certificate mapping. Issuance alo
 Track `enrollment right -> issuance requirements -> certificate -> trusted identity mapping -> accepted capability`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review CA and template policy together
+
+Inventory which templates each CA publishes and who can enroll or modify them. Review requester-controlled subject fields, approval requirements, and intended usages alongside certificate mapping policy. Verify approved enrollment and denial from an unapproved group using configuration records or a controlled policy check. [Microsoft AD CS guidance](https://learn.microsoft.com/windows-server/identity/ad-cs/secure-delegate-audit-certification-authority)

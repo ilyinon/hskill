@@ -24,3 +24,7 @@ A proxy listener alone does not establish client routing. A local instrumentatio
 Track `app connection -> transport/proxy path -> TLS trust/pinning gate -> attributed request/response`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify transport trust in the release build
+
+Review the actual certificate validation configuration and any pinning policy in the signed release. Test approved and untrusted certificates in an isolated service using the app's own test harness. Confirm development trust overrides are absent from release builds and verify the team's intended certificate rotation plan.

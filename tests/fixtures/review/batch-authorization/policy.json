@@ -1,0 +1,16 @@
+{
+  "principal": "viewer-a",
+  "tenant": "a",
+  "object_policy": "The viewer may read records in their own tenant.",
+  "response_fields": [
+    "id",
+    "display_name"
+  ],
+  "restricted_fields": [
+    "staff_note"
+  ],
+  "record_tenants": {
+    "p-3": "a",
+    "p-9": "b"
+  }
+}

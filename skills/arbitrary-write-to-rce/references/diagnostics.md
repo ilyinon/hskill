@@ -24,3 +24,7 @@ A write fault is not execution; a low-byte change is not a full-width pointer re
 Track `write primitive -> exact final target bytes -> reachable consumer/trigger -> bounded observed effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Prevent unsafe privileged writes
+
+Review the write's bounds, destination ownership, and lifetime at the actual sink. Prefer constrained interfaces that carry the destination length and prevent writes after release. Use memory-safety instrumentation or a unit test with a guarded buffer to verify valid writes and rejection of out-of-range or stale destinations.

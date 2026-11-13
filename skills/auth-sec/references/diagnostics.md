@@ -26,3 +26,7 @@ result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
 
 Recovery details belong in [authentication](../../authbypass-authentication-flaws/SKILL.md); token trust and object permissions have their own branches.
+
+## Report separate identity decisions
+
+In a defensive review, show where the session is established, where permissions are enforced, and where browser or federation policy applies. Use separate evidence for each decision. This makes a correct session with a missing object check distinguishable from a failure to establish the session.

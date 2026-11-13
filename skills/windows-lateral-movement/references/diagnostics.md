@@ -24,3 +24,7 @@ A credential accepted by one service is not universal remote execution. Signing/
 Track `usable credential -> service reachability -> authentication -> method/action permission -> attributed destination effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review administrative pathways and logon evidence
+
+Inventory which managed identities may use remote administration and from which hosts. Review permissions and effective firewall rules for the approved channels. Correlate source, destination, logon type, and service or process event before claiming that a remote action ran.

@@ -24,3 +24,7 @@ A parser error for an unrelated dialect is not class-wide disproof. A variable v
 Track `input -> source/data position -> compilation/rendering -> observed evaluation -> separately supported capability`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify that inputs stay in the data model
+
+Keep template sources under application control and bind user values through the renderer's data context. Limit any separate user-authored template feature to its required capabilities. In a renderer test, verify ordinary text containing template delimiters is handled as text and does not change rendering control flow.

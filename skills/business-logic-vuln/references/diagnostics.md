@@ -26,3 +26,7 @@ result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
 
 Use [business-logic diagnostics](../../business-logic-vulnerabilities/references/diagnostics.md); use [race-condition](../../race-condition/SKILL.md) when an interleaving matters.
+
+## Document the rule before choosing a specialty
+
+Write the intended transition in terms of actor, object, before state, after state, and invariant. Record a legitimate operation that looks similar so the review can distinguish a fix from an overly broad denial. Route arithmetic and state issues to the business-logic specialist and atomicity issues to concurrency.

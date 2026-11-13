@@ -24,3 +24,7 @@ A malformed JSON error did not test database operators. A Mongo-style operator i
 Track `wire representation -> decoded type -> query predicate -> selected protected data/action`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify the structured query boundary
+
+Validate required field types before constructing a query. Build predicates in application code and bind permitted values without merging user objects into query operators. In a repository-layer test, check the exact query for ordinary input and verify invalid structured input never reaches the driver. [OWASP NoSQL guidance](https://cheatsheetseries.owasp.org/cheatsheets/NoSQL_Security_Cheat_Sheet.html)

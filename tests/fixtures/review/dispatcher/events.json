@@ -1,0 +1,43 @@
+[
+  {
+    "op": "12",
+    "stage": "proposed",
+    "action": "update_note",
+    "resource": "n-81",
+    "input_origin": "retrieved_document"
+  },
+  {
+    "op": "13",
+    "stage": "proposed",
+    "action": "update_note",
+    "resource": "n-03",
+    "input_origin": "user"
+  },
+  {
+    "op": "12",
+    "stage": "authorization",
+    "decision": "denied"
+  },
+  {
+    "op": "13",
+    "stage": "authorization",
+    "decision": "allowed"
+  },
+  {
+    "op": "13",
+    "stage": "dispatch",
+    "action": "update_note",
+    "resource": "n-03"
+  },
+  {
+    "op": "13",
+    "stage": "commit",
+    "resource": "n-03",
+    "revision": 5
+  },
+  {
+    "op": "12",
+    "stage": "assistant_summary",
+    "status": "reported_updated"
+  }
+]

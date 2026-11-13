@@ -24,3 +24,7 @@ A query validation error does not test resolver authorization. A field in a sche
 Track `fixed principal -> query field -> parent resolver -> selected nested object -> returned protected data`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify permission checks at the resolver
+
+Review authorization at each protected resolver and at the data-loading layer. Check both a direct object lookup and retrieval through a permitted parent. With an in-process test, assert that denied fields return no protected values and that the legitimate query still returns the intended fields. [OWASP GraphQL guidance](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)

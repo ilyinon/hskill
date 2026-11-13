@@ -24,3 +24,7 @@ A version-string match or enumeration error is not a working local path. Fix the
 Track `low-privilege principal -> controlled resource -> actual privileged consumer -> bounded permission effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify the privileged consumer's ownership boundary
+
+Review effective service identity, executable paths, file ownership, parent directory permissions, and delegated privileges together. Prefer root-owned configuration and narrowly scoped capabilities. Validate the expected service action and a denial for an unprivileged account using owned source, policy reports, or controlled tests.

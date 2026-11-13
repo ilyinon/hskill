@@ -13,7 +13,8 @@ Read this only when the task does not already identify its technical topic. Sele
 | Upload, preview, filename, download | [Upload workflow](../upload-insecure-files/SKILL.md); file path/include: [traversal](../path-traversal-lfi/SKILL.md) |
 | Money, quota, approval, one-time action | [Business logic](../business-logic-vulnerabilities/SKILL.md); concurrency: [race](../race-condition/SKILL.md) |
 | GraphQL or real-time API | [GraphQL](../graphql-and-hidden-parameters/SKILL.md) or [WebSocket](../websocket-security/SKILL.md) |
-| Browser origin, request, or cache boundary | [Auth/browser routing](../auth-sec/SKILL.md); framing: [smuggling](../request-smuggling/SKILL.md); caching: [cache attacks](../web-cache-deception/SKILL.md) |
+| Browser origin, embedding, or cache boundary | [Auth/browser routing](../auth-sec/SKILL.md); page embedding: [clickjacking](../clickjacking/SKILL.md); cache policy: [web caching](../web-cache-deception/SKILL.md) |
+| HTTP message framing and proxy translation in owned source or configuration | [HTTP/1.1 framing policy](../request-smuggling/references/diagnostics.md#verify-framing-policy-at-each-hop); [HTTP/2 boundary review](../http2-specific-attacks/references/diagnostics.md#review-the-protocol-boundary-defensively) |
 | Exposed service or middleware | [Service playbook](../unauthorized-access-common-services/SKILL.md), only the identified service section |
 | Active Directory / Windows | [Kerberos](../active-directory-kerberos-attacks/SKILL.md), [ACL](../active-directory-acl-abuse/SKILL.md), [AD CS](../active-directory-certificate-services/SKILL.md); local host: [Windows privilege](../windows-privilege-escalation/SKILL.md) |
 | Linux / macOS / container / Kubernetes | [Linux privilege](../linux-privilege-escalation/SKILL.md), [macOS controls](../macos-security-bypass/SKILL.md), [container](../container-escape-techniques/SKILL.md), [Kubernetes](../kubernetes-pentesting/SKILL.md) |

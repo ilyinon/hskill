@@ -24,3 +24,7 @@ A named privilege or old compatibility row is a candidate. A service restart/set
 Track `starting token -> controlled file/configuration -> actual privileged consumer -> observed identity/capability`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify ownership of files used by services
+
+Review each privileged service's configured identity, executable path, working directory, and effective permissions on files and parent directories. Verify the service still starts after correcting ACLs. Confirm an ordinary user cannot modify the relevant path using an effective-access report rather than replacing a privileged executable.

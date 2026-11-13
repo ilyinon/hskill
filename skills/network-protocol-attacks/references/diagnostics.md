@@ -24,3 +24,7 @@ A packet-generator error did not exercise the network. A broadcast or response c
 Track `network position -> controlled protocol message -> receiving peer acceptance -> changed mapping/route -> bounded traffic effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Validate segmentation from passive evidence
+
+Use an authorized configuration export or saved capture to identify the segment and endpoint roles. Compare observed service reachability and authentication requirements with the intended policy. Verify an allowed management path and an explicit deny at the enforcing device. A broadcast in a capture identifies a protocol event and does not prove compromise.

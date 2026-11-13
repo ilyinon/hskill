@@ -24,3 +24,7 @@ An import error did not test formula handling. A warning or blocked external fun
 Track `user value -> export encoding -> importer cell typing -> evaluated or literal cell -> bounded consequence`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify spreadsheet export as consumed
+
+Choose a format that can represent untrusted input explicitly as text, such as typed XLSX cells when appropriate. If CSV is required, test the target spreadsheet import path with harmless formula-like and ordinary values. Check the resulting cell type and displayed value because CSV quoting by itself only protects the field boundaries. [OWASP CSV Injection](https://cheatsheetseries.owasp.org/cheatsheets/CSV_Injection_Cheat_Sheet.html)

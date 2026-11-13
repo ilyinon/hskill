@@ -22,3 +22,7 @@ Read when choosing a technique, interpreting a failed attempt, or deciding the n
 ## Close the requested task
 
 Track `input delivery → exact overwrite → first control transfer → argument/register state → target contract → requested local effect`. Fix the earliest unproved edge. A synthetic stack calculation proves only the supplied model; a working process chain requires an independently observed bounded effect in the authorized lab. Do not infer executable code from a crash or require a shell when the task asks for a marker/static correction. The worked fixture explicitly supplies its stack contract.
+
+## Verify the bounds fix at the original call site
+
+Trace source length through parsing, allocation, and the final write. Prefer APIs that carry destination size and check limits before copying. Run existing sanitizer-backed unit tests for empty input, exact capacity, and one byte beyond it. Record the first invalid access and check that normal input still produces the expected output.

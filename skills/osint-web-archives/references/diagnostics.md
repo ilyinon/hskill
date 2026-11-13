@@ -35,3 +35,5 @@ If Wayback lacks a capture of the observed URL, check the exact URL in a suitabl
 ## Keep the dates separate
 
 For each relevant asset, record the original URL, the requested replay date, the effective capture date after redirects, and whether the saved body decodes. Record any printed publication date separately. A later image capture establishes when the archive captured those bytes. To link it to an earlier gallery, check the gallery's actual asset reference and corroborate the printed identifier or compare with a dated copy. When a filename could have been reused, say what the earlier HTML establishes and what the later image establishes. Cite the replay that supplied the evidence.
+
+If the same URL has conflicting versions, associate each visible identifier and value with its own capture. A later copy can answer what was printed on that copy. An answer about the earlier date needs earlier evidence or independent corroboration. Keep the historical value unresolved if the earlier image is missing and the supplied versions disagree.

@@ -24,3 +24,7 @@ A mail API rejection is not delivery. SPF/DKIM/DMARC verdicts concern distinct a
 Track `user field -> serializer -> parsed headers and envelope recipients -> accepted delivery -> scoped impact`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify structured message and envelope fields
+
+Pass subject, sender, and recipients through the mail library's structured interfaces. Test a valid message with a stub mail transport, then verify invalid header values are rejected before send. Assert both the SMTP envelope recipients and the serialized message headers because they can differ.

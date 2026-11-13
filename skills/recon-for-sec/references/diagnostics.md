@@ -26,3 +26,7 @@ result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
 
 Known object questions can use [IDOR](../../idor-broken-object-authorization/SKILL.md) directly; unknown apps use [surface mapping](../../attack-surface-mapping/SKILL.md).
+
+## Choose the input that answers the task
+
+For a known question about one component, start from its owned source, configuration, or saved artifact. For an unknown surface, start from the asset inventory and track verification status. Preserve the provenance of each handoff so a candidate hostname or path is not treated as a confirmed deployment.

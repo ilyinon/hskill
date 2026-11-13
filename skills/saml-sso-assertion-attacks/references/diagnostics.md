@@ -24,3 +24,7 @@ XML parse rejection did not test signature/identity binding. A valid signature o
 Track `validated document/signature -> exact assertion -> issuer/profile checks -> local account -> protected capability`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify that the consumed assertion is trusted
+
+Use a maintained SAML verifier and pin trusted issuer configuration. Ensure the application consumes the exact assertion whose signature and conditions were verified. Test a valid assertion from a synthetic issuer, then change audience, expiry, or request correlation one at a time. Check that a rejected assertion creates no local session.

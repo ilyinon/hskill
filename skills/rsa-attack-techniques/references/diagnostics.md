@@ -24,3 +24,7 @@ A nonperfect integer root disproves only the no-wrap root route for that input. 
 Track `RSA parameters/construction -> applicable relation -> factors/plaintext -> original modular and format checks`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify the configured cryptographic contract
+
+Review key origin and the library modes used for encryption and signatures. Check that the application uses its approved padding and key-size policy and separates keys by purpose when required. Use a public test vector and a deliberately invalid encoding to verify the library rejects invalid data through the actual application path.

@@ -24,3 +24,7 @@ A timeout alone is inconclusive. If the frontend rejects before forwarding, the 
 Track `raw bytes -> frontend message boundary -> forwarded backend bytes -> backend boundary -> controlled follow-up association`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify framing policy at each hop
+
+Align message validation between the edge and origin and prefer rejecting ambiguous framing before forwarding. In an offline parser or adapter test, check that a valid request is forwarded once and a rejected message sends no bytes to the next hop. Verify the connection is not reused after a framing error. [RFC 9112](https://www.rfc-editor.org/rfc/rfc9112.html#section-6.3)

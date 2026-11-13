@@ -24,3 +24,7 @@ An unavailable DNS query is unknown state, not a takeover. A stale record can ju
 Track `DNS record -> exact provider resource -> current claim prerequisites -> domain control or bounded uncertainty`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify DNS cleanup against the resource inventory
+
+Join each alias with the owned provider resource and deployment state. Remove or replace stale DNS records during decommissioning and verify active services still resolve. A provider error page can indicate an unbound mapping and is insufficient to establish ownership or claimability. Do not reserve the resource as a verification step.

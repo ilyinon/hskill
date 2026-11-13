@@ -1,0 +1,32 @@
+{
+  "single_owned": {
+    "status": 200,
+    "body": {
+      "id": "p-3",
+      "display_name": "North workshop"
+    },
+    "requested": "p-3",
+    "principal": "viewer-a"
+  },
+  "single_other_tenant": {
+    "status": 404,
+    "requested": "p-9",
+    "principal": "viewer-a"
+  },
+  "mixed_batch": {
+    "status": 200,
+    "body": [
+      {
+        "id": "p-3",
+        "display_name": "North workshop",
+        "staff_note": "synthetic marker"
+      }
+    ],
+    "requested": [
+      "p-3",
+      "p-9"
+    ],
+    "principal": "viewer-a"
+  },
+  "database_change": "none"
+}

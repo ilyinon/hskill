@@ -24,3 +24,7 @@ A malformed path or unsupported method did not test the original authorization d
 Track `fixed principal -> normalized route -> authorization -> protected representation/action`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify consistent authorization
+
+Test the protected representation through the application's supported methods and entry points. Fix the authenticated principal and object in each comparison. Check that denied responses contain no protected body, redirect target, or cached variant, and that the permitted control still returns the intended representation.

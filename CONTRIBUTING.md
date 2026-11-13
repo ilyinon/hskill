@@ -42,7 +42,7 @@ checks 15 additional inert arithmetic/state contracts from canonical per-topic
 JSON data; it does not run product runtimes or skill payload catalogs.
 
 Use the blind preparation and grading workflow in [tests/EVALUATION.md](tests/EVALUATION.md)
-after changing routing or evidence rules. Its 53 cases include real local
+after changing routing or evidence rules. Its 56 cases include real local
 artifacts; expected outcomes stay outside the evaluating agent's context.
 Preserve answers, read logs, input/rubric digests, settings, and grading reasons.
 The ten `solve-*` and sixteen `extend-*` transfer cases change values or

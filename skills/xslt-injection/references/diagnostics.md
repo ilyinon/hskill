@@ -24,3 +24,7 @@ A stylesheet syntax error did not test resource access. XML entity, document(), 
 Track `stylesheet control -> valid transform -> resource/extension resolver -> bounded read/write/effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify transform resource policy
+
+Keep stylesheets fixed where possible. For any supported user-defined transforms, disable unneeded extension functions and apply explicit resource policies to stylesheet compilation and transformation. In a test harness with a recording resolver, check legitimate output and verify denied operations cannot perform external reads or writes.

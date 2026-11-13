@@ -24,3 +24,7 @@ A sensor/test-harness failure cannot prove evasion. Preserve logs and controls; 
 Track `benign test action -> actual execution/result -> collection health -> control-specific verdict -> bounded conclusion`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Validate protection and telemetry with approved samples
+
+Record the effective policy, sensor health, exclusions, and deployment group. Use approved benign verification artifacts to confirm execution prevention and alert delivery separately. Correlate local events with the central console and account for forwarding delay before reporting a telemetry gap.

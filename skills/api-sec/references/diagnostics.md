@@ -26,3 +26,7 @@ result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
 
 Use [API authorization](../../api-authorization-and-bola/SKILL.md) for this boundary; [JWT validation](../../jwt-oauth-token-attacks/SKILL.md) applies when token trust itself is in question.
+
+## Choose a review artifact by question
+
+Use deployed routes and schemas for coverage, the credential and proxy contract for authentication, and resolver or query code for object authorization. Keep those three claims separate in the report. An undocumented route can still enforce authorization, and a valid credential can still be denied access to an object.

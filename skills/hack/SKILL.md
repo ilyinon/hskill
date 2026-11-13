@@ -21,7 +21,7 @@ Use this as the shared entry point. Read only the branch needed for the current 
 | Current task | Read when needed |
 |---|---|
 | New web/API target with unknown surface | [Attack surface mapping](../attack-surface-mapping/SKILL.md); [red-team workflow](./RED_TEAM.md) for engagement planning |
-| Code audit | [Code audit](./CODE_AUDIT.md) |
+| Code audit or review of a proposed fix | [Code audit](./CODE_AUDIT.md), including [fix verification](./CODE_AUDIT.md#review-a-proposed-fix) |
 | Source/secret leak | [Leak handling](./SOURCE_LEAK.md) |
 | SOC triage, detection, or incident response | Relevant section of [blue-team workflow](./BLUE_TEAM.md) |
 | JWT signature, signing key, or token claims | [JWT validation](../jwt-oauth-token-attacks/SKILL.md) |
