@@ -3,6 +3,21 @@
   "coverage": "Partial registry for reviewed techniques. Absence of a record means untracked verification, not validated or invalid. Source review and offline fixture tests do not certify every example or affected software version.",
   "techniques": [
     {
+      "id": "archived-image-provenance",
+      "reference": "osint-web-archives/references/diagnostics.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://archivesupport.zendesk.com/hc/en-us/articles/360004651732-Using-The-Wayback-Machine",
+        "https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server",
+        "https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html"
+      ],
+      "sources_reviewed_on": "2026-11-13",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Documentation review only. The catalog scenario is synthetic and does not measure model solve rate or archive availability."
+    },
+    {
       "id": "jwt-algorithm-policy",
       "reference": "jwt-oauth-token-attacks/references/jwt-signature-policy.md",
       "status": "offline-tested",

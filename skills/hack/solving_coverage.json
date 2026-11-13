@@ -432,6 +432,12 @@
       "offline_tests": []
     },
     {
+      "topic": "osint-web-archives",
+      "diagnostics": "osint-web-archives/references/diagnostics.md",
+      "worked_case": "osint-web-archives/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
       "topic": "path-traversal-lfi",
       "diagnostics": "path-traversal-lfi/references/diagnostics.md",
       "worked_case": "path-traversal-lfi/references/worked-cases.md",

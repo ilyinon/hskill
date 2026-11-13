@@ -21,6 +21,7 @@ Read this only when the task does not already identify its technical topic. Sele
 | Binary, VM, or memory corruption | [Binary protections](../binary-protection-bypass/SKILL.md), [VM reversing](../vm-and-bytecode-reverse/SKILL.md), [symbolic execution](../symbolic-execution-tools/SKILL.md); stack or heap: [ROP](../stack-overflow-and-rop/SKILL.md) or [heap](../heap-exploitation/SKILL.md) |
 | Cryptographic construction | Substitution/transposition text: [classical](../classical-cipher-analysis/SKILL.md); cipher modes/XOR: [symmetric](../symmetric-cipher-attacks/SKILL.md); modular public-key parameters: [RSA](../rsa-attack-techniques/SKILL.md); digest/MAC: [hash](../hash-attack-techniques/SKILL.md); bounded algebra/leaked bits: [lattice](../lattice-crypto-attacks/SKILL.md) |
 | PRNG outputs, MT19937/LCG state or next-word prediction | [Symmetric/PRNG](../symmetric-cipher-attacks/SKILL.md); inspect the observation contract before selecting a recovery method |
+| Archived page, catalog photo, or visible text in a missing image | [OSINT web archives](../osint-web-archives/SKILL.md) |
 | Memory dump, capture, hidden data | [Memory](../memory-forensics-volatility/SKILL.md), [PCAP](../traffic-analysis-pcap/SKILL.md), [steganography](../steganography-techniques/SKILL.md) |
 | AI application or smart contract | [AI/ML](../ai-ml-security/SKILL.md), [LLM](../llm-prompt-injection/SKILL.md), [Solidity](../smart-contract-vulnerabilities/SKILL.md), [DeFi](../defi-attack-patterns/SKILL.md) |
 

@@ -1,6 +1,6 @@
 # HackSkills
 
-Набор из **103 скиллов для AI-агентов**, которые помогают проводить аудит безопасности, исследовать уязвимости, разбирать инциденты и решать лабораторные задачи. Общая точка входа — [`hack`](skills/hack/SKILL.md): она задаёт порядок работы, требования к доказательствам и выбор нужной специализации.
+Набор включает **104 скилла для AI-агентов**, которые помогают проводить аудит безопасности, исследовать уязвимости, разбирать инциденты и решать лабораторные задачи. Общая точка входа — [`hack`](skills/hack/SKILL.md): она задаёт порядок работы, требования к доказательствам и выбор нужной специализации.
 
 В наборе есть методики, примеры, справочники и шаблоны отчётов. Агент выбирает технику по задаче и наблюдаемым данным, проверяет её предпосылки и отделяет подтверждённый результат от гипотезы.
 
@@ -27,6 +27,7 @@
 | ОС, инфраструктура и домен | [Linux](skills/linux-privilege-escalation/SKILL.md), [Windows](skills/windows-privilege-escalation/SKILL.md), [Kerberos](skills/active-directory-kerberos-attacks/SKILL.md), [контейнеры](skills/container-escape-techniques/SKILL.md), [Kubernetes](skills/kubernetes-pentesting/SKILL.md) |
 | Бинарный анализ и реверс | [Защиты бинарников](skills/binary-protection-bypass/SKILL.md), [ROP](skills/stack-overflow-and-rop/SKILL.md), [heap](skills/heap-exploitation/SKILL.md), [символьное выполнение](skills/symbolic-execution-tools/SKILL.md) |
 | Криптография | [Симметричные шифры](skills/symmetric-cipher-attacks/SKILL.md), [RSA](skills/rsa-attack-techniques/SKILL.md), [хеши](skills/hash-attack-techniques/SKILL.md), [решётки](skills/lattice-crypto-attacks/SKILL.md) |
+| OSINT | [Веб-архивы и подписи на изображениях](skills/osint-web-archives/SKILL.md) |
 | Форензика | [Память](skills/memory-forensics-volatility/SKILL.md), [PCAP](skills/traffic-analysis-pcap/SKILL.md), [стеганография](skills/steganography-techniques/SKILL.md) |
 | Мобильные приложения | [Android](skills/android-pentesting-tricks/SKILL.md), [iOS](skills/ios-pentesting-tricks/SKILL.md) |
 | AI и смарт-контракты | [AI/ML](skills/ai-ml-security/SKILL.md), [LLM](skills/llm-prompt-injection/SKILL.md), [Solidity](skills/smart-contract-vulnerabilities/SKILL.md), [DeFi](skills/defi-attack-patterns/SKILL.md) |
@@ -76,7 +77,7 @@ tests/
 
 Обычный путь чтения: **`hack` → нужная специализация → справочник для текущего шага**. Ролевые методики и указатель подключаются, когда помогают задаче. Такой порядок экономит контекст: агенту не требуется заранее читать весь набор или каждый связанный документ.
 
-Во всех **102 специализациях и тематических маршрутизаторах** доступны два дополнительных справочника:
+Во всех **103 специализациях и тематических маршрутизаторах** доступны два дополнительных справочника:
 
 - `references/diagnostics.md`: предпосылки техники, объяснения наблюдений, различающие проверки и условия завершения задачи.
 - `references/worked-cases.md`: законченный учебный разбор с неудачным первым подходом, пересмотром гипотезы, результатом и независимыми контрольными проверками. Маршрутизаторы показывают выбор нужной границы, технические темы — предметный механизм.

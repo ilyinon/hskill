@@ -27,7 +27,8 @@ Use this as the shared entry point. Read only the branch needed for the current 
 | JWT signature, signing key, or token claims | [JWT validation](../jwt-oauth-token-attacks/SKILL.md) |
 | OAuth/OIDC callback, PKCE, or account binding | [OAuth/OIDC](../oauth-oidc-misconfiguration/SKILL.md) |
 | ELF binary, firmware, or pwn task | [Stack overflow/ROP](../stack-overflow-and-rop/SKILL.md) or [protection bypass](../binary-protection-bypass/SKILL.md) as applicable; keep disassembly out of the conversation per [context budget](./references/context-budget.md) |
-| Specific technical question or artifact | Matching topic directly; use [routing](./ROUTING.md) only when the topic is unclear |
+| Archived page or image | [Web archives](../osint-web-archives/SKILL.md) |
+| Other technical question or artifact | Choose a [topic](./ROUTING.md) |
 | Broad assessment coverage | [Test matrix](./TEST_MATRIX.md), limited to observed surfaces and requested coverage |
 | Requested report or finding ready to preserve | Relevant template in [evidence/report](./EVIDENCE_REPORT.md) |
 

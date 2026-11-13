@@ -32,7 +32,7 @@ access, telemetry health, finite-word recovery, tiny raw RSA, bit extraction,
 process lifetimes, membership metrics, tool authority, callback ordering, and a
 known-topic route. Several deliberately reverse the worked case's conclusion.
 
-All 102 topic/router entries have conditional diagnostics and a worked case.
+All topic and router entries have conditional diagnostics and a worked case.
 Material coverage is recorded in `skills/hack/solving_coverage.json`; it is not
 runtime coverage. The 15 new `test_extended_solving.py` tests execute only the
 named arithmetic/state contracts from inert JSON. Supplied product traces in
