@@ -432,6 +432,18 @@
       "offline_tests": []
     },
     {
+      "topic": "osint-geolocation",
+      "diagnostics": "osint-geolocation/references/diagnostics.md",
+      "worked_case": "osint-geolocation/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
+      "topic": "osint-media-search",
+      "diagnostics": "osint-media-search/references/diagnostics.md",
+      "worked_case": "osint-media-search/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
       "topic": "osint-web-archives",
       "diagnostics": "osint-web-archives/references/diagnostics.md",
       "worked_case": "osint-web-archives/references/worked-cases.md",

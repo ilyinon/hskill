@@ -9,13 +9,44 @@
       "sources": [
         "https://archivesupport.zendesk.com/hc/en-us/articles/360004651732-Using-The-Wayback-Machine",
         "https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server",
-        "https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html"
+        "https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html",
+        "https://www.commoncrawl.org/get-started"
       ],
       "sources_reviewed_on": "2026-11-13",
       "validated_on": null,
       "tested_environment": [],
       "tests": [],
       "limitations": "Documentation review only. The catalog scenario is synthetic and does not measure model solve rate or archive availability."
+    },
+    {
+      "id": "osint-media-provenance",
+      "reference": "osint-media-search/references/diagnostics.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://support.google.com/websearch/answer/1325808",
+        "https://help.tineye.com/article/248-what-does-tineye-first-found-on-mean",
+        "https://ffmpeg.org/ffprobe.html"
+      ],
+      "sources_reviewed_on": "2026-11-13",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Documentation review only. The photo scenario is synthetic. Search availability, frame extraction, and model performance were not evaluated."
+    },
+    {
+      "id": "osint-camera-geometry",
+      "reference": "osint-geolocation/references/diagnostics.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://www.bellingcat.com/resources/how-tos/2014/07/09/verification-and-geolocation-tricks-and-tips-with-google-earth/",
+        "https://support.google.com/earth/answer/6327779",
+        "https://www.bellingcat.com/resources/2023/05/08/chronolocation-determining-when-a-photo-was-taken-using-facebook-google-street-view-and-assorted-tiny-details/"
+      ],
+      "sources_reviewed_on": "2026-11-13",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Documentation review only. The riverside comparison is synthetic. No live map coverage or model accuracy was measured."
     },
     {
       "id": "jwt-algorithm-policy",

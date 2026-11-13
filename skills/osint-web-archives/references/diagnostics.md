@@ -1,5 +1,11 @@
 # Archive image diagnostics
 
+## Recover the original URL
+
+- If you have a title or a distinctive phrase, look for quoted text, alternate spellings, and links from dated directories, calendars, or neighboring captures. Use archived navigation and recorded redirects to recover the old path and host. Record where each candidate URL came from.
+- Keep query parameters that select content. Check observed host, protocol, and path variants when a migration or redirect supports them. Inspect CDX's original URL and redirect captures to follow the historical trail.
+- Keep a small record of exact URLs, date windows, and outcomes. Before guessing new filenames, collect and deduplicate the assets in any gallery HTML you already have. Check the likely thumbnails and full images from that list.
+
 ## Find the file
 
 - If replay shows blank tiles, inspect the page source for original asset URLs. A script that opens a larger view may contain a literal filename or map a thumbnail to a different URL.
@@ -15,6 +21,10 @@ curl --get --compressed --max-time 20 'https://web.archive.org/cdx/search/cdx' \
   --data-urlencode 'output=json' \
   --data-urlencode 'fl=timestamp,original,statuscode,mimetype,digest'
 ```
+
+## Try a second public index
+
+If Wayback lacks a capture of the observed URL, check the exact URL in a suitable [Common Crawl collection](https://index.commoncrawl.org/). Choose collections by date and note their coverage. When an index hit has a WARC filename, offset, and length, use the record's bytes to confirm its target URL, capture time, and contents. The index hit identifies a candidate record. [Common Crawl retrieval guide](https://www.commoncrawl.org/get-started)
 
 ## Read the label
 
