@@ -24,3 +24,7 @@ A blocked frame is a control for that ancestor chain. A visible frame without a 
 Track `framing permission -> victim test session -> interaction -> action-specific check -> protected state change`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify frame policy at the edge
+
+Set CSP frame-ancestors in the response header and allow only intended embedding origins. Check the final response after redirects and any proxy or CDN header changes. If the product supports embedding, test an approved parent and a denied parent with an inert page. Keep intentional embedding routes distinct from settings or approval pages. [OWASP Content Security Policy](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)

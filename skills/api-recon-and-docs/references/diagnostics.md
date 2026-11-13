@@ -24,3 +24,7 @@ A failed schema download is a tooling/access gap, not absence of an API. A stale
 Track `provenance-linked clue -> in-scope host/method -> reachable handler -> identity/object inventory -> useful handoff`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Reconcile documentation with owned source
+
+Compare the OpenAPI document with registered routes, authentication middleware, and deployment configuration. Distinguish a documented path from an enabled route and an enabled route from one accessible to a particular principal. For a local review, produce a short drift report with source references and add a contract check for the routes and authorization policy that should stay in sync.

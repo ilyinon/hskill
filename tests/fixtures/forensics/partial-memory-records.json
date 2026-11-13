@@ -1,0 +1,39 @@
+{
+  "acquisition": {
+    "time_basis": "UTC",
+    "partial": true
+  },
+  "symbol_check": {
+    "inventory": "matched",
+    "module_scan": "symbol requirement unsatisfied"
+  },
+  "processes": [
+    {
+      "pid": 308,
+      "object": "0x11c0",
+      "name": "indexer",
+      "created": "2026-04-14T10:04:00Z",
+      "exited": "2026-04-14T10:08:00Z"
+    },
+    {
+      "pid": 308,
+      "object": "0x45e0",
+      "name": "updater",
+      "created": "2026-04-14T10:11:00Z",
+      "exited": null
+    }
+  ],
+  "connections": [
+    {
+      "pid": 308,
+      "opened": "2026-04-14T12:06:14+02:00",
+      "owner_object": "0x11c0"
+    },
+    {
+      "pid": 308,
+      "opened": null,
+      "owner_object": null,
+      "page": "not acquired"
+    }
+  ]
+}

@@ -22,3 +22,7 @@ Read when choosing a technique, interpreting a failed attempt, or deciding the n
 ## Close the requested task
 
 Track `capture record → directional bytes → complete protocol unit → observed event → supported incident conclusion`. For extraction, validate recovered bytes against independent lengths/format and report packet/stream locations. For triage, a visible request does not prove a server accepted it or identify the originating process. A limited fixture decoder is not a general TCP/IP implementation.
+
+## Distinguish truncation from missing data
+
+A captured length below original length shows that the saved record omits bytes. Check acquisition and export settings before attributing the truncation. A sequence gap with no corresponding packet can have other causes, including packet loss at the capture point or an incomplete time window. Inspect both directions and any retransmission before deciding whether missing bytes can be recovered. Treat a complete header and an incomplete body as different evidence. Report each stream or frame number with the observation it supports and keep the original capture untouched.

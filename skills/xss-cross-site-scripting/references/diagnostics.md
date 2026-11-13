@@ -22,3 +22,7 @@ Read when choosing a technique, interpreting a failed attempt, or deciding the n
 ## Close the requested task
 
 Track `untrusted data → transformations → final sink → parsed/executed effect → requested impact`. A code audit can identify an unsafe reachable sink without executing a browser payload. For a fix, encode for the actual context or use a text sink, then preserve allowed text rendering. Do not label an inert-markup parser test as script execution. [textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) documents the text-insertion distinction.
+
+## Verify context-specific output handling
+
+Identify the final rendering sink and its context. Prefer framework escaping or text-only DOM APIs for plain text. Where a feature intentionally accepts markup, use a maintained sanitizer with a policy for that feature. Test the rendered DOM with ordinary text containing markup characters and verify that expected text remains visible without creating elements. Test intended markup separately. [OWASP XSS Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)

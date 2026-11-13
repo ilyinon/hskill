@@ -24,3 +24,7 @@ A solver candidate for an unverified emulator is not a recovered native input. P
 Track `bytecode bytes -> decoded instruction -> state transition -> matched trace -> recovered program/input result`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Check a supplied VM trace
+
+When the task provides a toy instruction stream or offline trace, compare state at the first mismatched step. Keep the instruction offset, raw bytes, decoded operand, and before-and-after state together. Check conditional branches on both taken and fall-through paths before relying on an emulator. Treat opcodes outside the supplied trace as unknown unless the decoder or a separate observation establishes them.

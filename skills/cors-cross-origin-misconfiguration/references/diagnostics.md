@@ -24,3 +24,7 @@ A browser harness failure before dispatch is not a server-policy result. A CORS 
 Track `origin and session -> browser request dispatch -> server response -> browser script exposure -> protected data`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify the effective origin policy
+
+Review the headers returned at the browser-facing proxy for both preflight and the actual response. Compare complete origins against an explicit allowlist, and enable credentialed cross-origin reads only where needed. When the response varies by origin, check shared-cache behavior and the Vary header. Test one permitted and one unapproved origin. Check server-side authorization separately for every response that contains protected data. [Fetch Standard](https://fetch.spec.whatwg.org/#http-cors-protocol)

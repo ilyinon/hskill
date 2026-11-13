@@ -24,3 +24,7 @@ A decoder error is not absence of hidden content. Do not alter the original; an 
 Track `original bytes/channel -> exact extraction parameters -> recovered bytes -> independent format/check -> bounded interpretation`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Track what preprocessing can destroy
+
+Analyze the original bytes before using a screenshot, normalized text, or an image that has been re-encoded. JPEG recompression and resizing can alter pixel or coefficient evidence. For appended data, locate the container's structural end with a parser before inspecting the tail. Treat a signature inside an encoded stream as a candidate until a parser accepts a separately recovered object. Report the offset or extraction parameters and validate the recovered structure.

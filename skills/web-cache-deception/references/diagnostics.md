@@ -24,3 +24,7 @@ A cache miss or timeout is not disclosure. Cache-control headers alone do not pr
 Track `prime request -> effective cache key/partition -> stored representation -> clean reader -> protected bytes`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify cache privacy at the serving edge
+
+Inspect the effective cache rule, cache key, and origin response headers for personalized routes. Mark private responses so shared caches cannot store them and check whether edge rules override those headers. In an isolated cache test, use synthetic identities and assert that one identity never receives the other's marker. Keep a public asset as a positive cache control.

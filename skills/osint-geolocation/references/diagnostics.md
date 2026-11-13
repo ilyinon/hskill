@@ -12,3 +12,7 @@
 Find dated evidence that puts a visible feature before or after a change. For example, a documented opening can bound a scene showing the finished structure, and a later photograph of its removal can bound the other end. State any assumptions about whether the feature is the same object and whether it could have been restored or replaced.
 
 Use shadows only where the sun direction can be inferred from the scene and camera orientation. Perspective, slope, and local time can make several dates fit. Preserve the range the evidence supports. [Bellingcat chronolocation case](https://www.bellingcat.com/resources/2023/05/08/chronolocation-determining-when-a-photo-was-taken-using-facebook-google-street-view-and-assorted-tiny-details/)
+
+## Keep location and date confidence separate
+
+When two viewpoints fit, record one prediction for each before comparing the images. A mapped camera-to-landmark line that crosses an opaque wall is a stronger discriminator than the general appearance of the shore. Check the wall's presence at the relevant time before using it to exclude a candidate. Report the supported street segment or area if the evidence cannot resolve an exact camera position. Date bounds from an opening or removal apply only when the visible feature can be linked to the dated record.

@@ -24,3 +24,7 @@ A magic prefix or parser exception is not gadget invocation. An absent required 
 Track `untrusted bytes -> decoder -> reconstruction API -> allowed objects/hooks -> observed bounded effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify a data-only boundary
+
+For untrusted input, prefer a data-only format validated against the expected schema, with explicit size and depth limits. Map accepted fields into application objects after validation. In tests, confirm ordinary records are accepted and an unsupported record is rejected before object construction or any side effect. Keep parser errors separate from authorization decisions. [OWASP Deserialization Guidance](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)

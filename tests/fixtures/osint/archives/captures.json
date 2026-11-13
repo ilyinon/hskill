@@ -1,0 +1,46 @@
+{
+  "page": {
+    "original": "https://north-quay.example.invalid/exhibits/spring/gallery.html",
+    "requested_capture_utc": "2010-04-17T12:00:00Z",
+    "effective_capture_utc": "2010-04-18T08:20:10Z",
+    "saved_body": "page.html"
+  },
+  "assets": [
+    {
+      "original": "https://north-quay.example.invalid/exhibits/spring/thumbs/cp701.jpg",
+      "lookup": "empty_index"
+    },
+    {
+      "original": "https://north-quay.example.invalid/exhibits/spring/media/cp701.jpg",
+      "lookup": "captured",
+      "requested_capture_utc": "2010-04-18T08:20:10Z",
+      "effective_capture_utc": "2010-04-22T13:04:20Z",
+      "http_status": 200,
+      "saved_body": "replay/k7.jpg"
+    },
+    {
+      "original": "https://north-quay.example.invalid/exhibits/spring/thumbs/cp148.jpg",
+      "lookup": "captured",
+      "effective_capture_utc": "2010-04-18T08:20:31Z",
+      "http_status": 200,
+      "saved_body": "replay/r4.jpg"
+    },
+    {
+      "original": "https://north-quay.example.invalid/exhibits/spring/media/cp148.jpg",
+      "lookup": "captured",
+      "effective_capture_utc": "2010-04-20T07:51:01Z",
+      "http_status": 200,
+      "saved_body": "replay/f2.jpg"
+    },
+    {
+      "original": "https://north-quay.example.invalid/exhibits/spring/thumbs/cp592.jpg",
+      "lookup": "empty_index"
+    },
+    {
+      "original": "https://north-quay.example.invalid/exhibits/spring/media/cp592.jpg",
+      "lookup": "replay_error",
+      "http_status": 200,
+      "saved_body": "replay/v1.html"
+    }
+  ]
+}

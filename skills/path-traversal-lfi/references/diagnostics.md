@@ -24,3 +24,7 @@ A nonexistent file error proves neither disclosure nor containment. A legitimate
 Track `input -> decoded/joined path -> resolved containment -> actual open/include -> recovered bytes or effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify containment on the actual file operation
+
+Prefer a server-owned ID mapped to a file. If a relative path is required, check path components after resolution against the intended base. Preserve containment when opening the file and account for concurrent renames or symbolic links on writable trees. In an offline test, use a temporary tree with a valid child and a sibling directory and assert that the file-open layer never reads the sibling. A string-prefix check is not a containment check.

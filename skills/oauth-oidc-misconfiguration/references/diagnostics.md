@@ -22,3 +22,7 @@ Read when choosing a technique, interpreting a failed attempt, or deciding the n
 ## Close the requested task
 
 Track `request/session → grant → verified provider identity → local account → permitted action`. Choose the first unproved edge that can change the requested conclusion. A complete source lookup can support a local identity-collision finding; it does not demonstrate an entire provider takeover. For a fix, preserve both owned providers' legitimate identities without implicit linking. [RFC 8725 issuer/subject validation](https://www.rfc-editor.org/rfc/rfc8725.html#section-3.8) is relevant to the final identity pair.
+
+## Verify transaction binding after a fix
+
+Review the provider and callback configuration together. Use exact matching for registered redirect URIs where required. Bind the callback and PKCE verifier to the initiating transaction. For OpenID Connect, verify issuer, audience, and the nonce when used. In an offline callback test, a valid transaction succeeds once. An unrelated transaction or expired record must leave the user's session unchanged. [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700.html)

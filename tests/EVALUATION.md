@@ -12,7 +12,7 @@ performed by a human or an independent agent after the answer is preserved.
 Unit tests exercise selected reviewed Python fixtures and arithmetic helpers.
 ELF and PCAP files are parsed statically, never executed.
 
-The suite has 47 cases. Ten `solve-*` cases transfer the diagnostic reasoning to
+The suite has 53 cases. Ten `solve-*` cases transfer the diagnostic reasoning to
 new data or preconditions rather than repeating the published worked answers.
 They include already-enforced defenses, a partial-refund policy that permits
 multiple legitimate operations, an already-aligned stack, withheld generator
@@ -31,6 +31,12 @@ accepted certificate identity, unknown admission, direct versus relayed service
 access, telemetry health, finite-word recovery, tiny raw RSA, bit extraction,
 process lifetimes, membership metrics, tool authority, callback ordering, and a
 known-topic route. Several deliberately reverse the worked case's conclusion.
+
+Three `osint-*` cases cover an archived JPEG card, same-frame verification,
+and a blocked sightline. Three `forensics-*` cases cover a truncated PCAP,
+partial process records, and a ZIP after a PNG's structural end. Use the
+prepared directories for blind review. The case manifests and rubrics stay
+outside the solving agent's input.
 
 All topic and router entries have conditional diagnostics and a worked case.
 Material coverage is recorded in `skills/hack/solving_coverage.json`; it is not

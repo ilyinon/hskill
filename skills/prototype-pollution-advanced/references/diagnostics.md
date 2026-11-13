@@ -24,3 +24,7 @@ A historical gadget name does not prove reachability. Clean controls must not sh
 Track `confirmed source -> inherited property -> consumer guard/default -> protected behavior`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify object boundaries in application code
+
+Use schema validation for data merged from untrusted sources. Copy only explicitly permitted own properties into application state. Where arbitrary dictionary keys are required, prefer Map or a null-prototype dictionary. Test that valid options survive and that invalid or inherited keys cannot change defaults or unrelated objects. Assert the invariant at the final consumer as well as at input parsing.

@@ -24,3 +24,7 @@ A valid denial disproves only the tested path/capability. A complete source path
 ## Close the requested task
 
 Track `controlled URL → selected destination → attributable fetch → returned data/action`, marking each edge proved or unknown. For a code audit, identify the missing validation point and the affected flow. For a permitted lab objective, continue only along needed, supported edges. A DNS event alone leaves later edges open. For a fix, apply equivalent policy on redirect hops and verify accepted/denied controls; do not claim this toy host filter handles every production parser/address case.
+
+## Verify a destination-policy fix offline
+
+Inspect where the fetcher validates a destination and where the client establishes the connection. Use a fake resolver and transport to check that an approved destination connects and a denied destination produces zero transport calls. If redirects are supported, check that the same policy runs at each hop before a connection. Pair application validation with an egress policy where the service only needs a known set of destinations. [OWASP SSRF Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)

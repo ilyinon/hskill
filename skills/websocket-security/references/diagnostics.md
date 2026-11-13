@@ -24,3 +24,7 @@ A failed WebSocket client setup did not test server authorization. An authentica
 Track `browser/session -> handshake identity -> message/topic authorization -> protected frame/state`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify per-message authorization
+
+Review authentication and origin policy at the handshake and enforce authorization again on each privileged message. Check how the connection handles an expired or revoked session and apply size and rate limits. In dispatcher tests, confirm that an approved action reaches its handler and a denied action leaves state untouched. Preserve event metadata without logging session tokens or raw private message contents. [OWASP WebSocket Security](https://cheatsheetseries.owasp.org/cheatsheets/WebSocket_Security_Cheat_Sheet.html)

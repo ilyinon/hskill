@@ -24,3 +24,7 @@ A parser/tool failure did not test integrity. A collision does not establish pre
 Track `exact hash/MAC construction -> applicable property -> candidate -> original verifier -> bounded integrity/recovery result`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review message authentication in source
+
+Trace the exact bytes and context the verifier authenticates. For authenticity with a shared secret, use a library HMAC API with a separate managed key and constant-time verification. Test a valid synthetic message, the same message after a one-byte change, and the same valid tag under the wrong key. Confirm verification occurs before any protected action.

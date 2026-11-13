@@ -24,3 +24,7 @@ A tool failure or invalid encoding does not disprove a cipher family. Printable 
 Track `input representation/alphabet -> candidate transform -> full plaintext -> re-encoding and independent constraint`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Preserve the input representation
+
+For supplied puzzles, record alphabet, normalization, and byte representation before testing a transform. Check every candidate against the full input. If several keys reproduce a short message, report the surviving candidates and the additional crib or checksum needed to distinguish them. A reversible byte representation can expose the input to a cipher without identifying the cipher itself.

@@ -31,3 +31,7 @@ If Wayback lacks a capture of the observed URL, check the exact URL in a suitabl
 - Scan the edges of the image as well as the subject. Catalog numbers and values may sit in separate strips. Inspect an enlarged crop for characters that change the answer, such as a slash, hyphen, or digit.
 - If the current model accepts text only, crop the label locally and use OCR. For one line, `tesseract label.png stdout --psm 7` is a starting point. Try another crop or a larger archived copy if the output is ambiguous. [Tesseract quality guide](https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html)
 - If several files show similar subjects, match the printed identifier before extracting the value. If neither the image nor an independent dated copy is legible, report the unresolved field with the strongest available evidence.
+
+## Keep the dates separate
+
+For each relevant asset, record the original URL, the requested replay date, the effective capture date after redirects, and whether the saved body decodes. Record any printed publication date separately. A later image capture establishes when the archive captured those bytes. To link it to an earlier gallery, check the gallery's actual asset reference and corroborate the printed identifier or compare with a dated copy. When a filename could have been reused, say what the earlier HTML establishes and what the later image establishes. Cite the replay that supplied the evidence.

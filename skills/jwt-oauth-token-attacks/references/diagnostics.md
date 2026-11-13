@@ -22,3 +22,7 @@ Read when choosing a technique, interpreting a failed attempt, or deciding the n
 ## Close the requested task
 
 Track `trusted issuer/key → valid signature → correct recipient/type → mapped principal → protected capability`. A success at one edge does not prove the rest. For a fix, retain legitimate scalar/list audiences and reject a validly signed foreign-recipient token. [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725.html#section-3.9) describes recipient validation. The worked model deliberately omits other production requirements.
+
+## Verify the acceptance policy
+
+Review the verifier's configured algorithms, trusted key source, issuer, audience, expiry, and intended token type. Verify that the application chooses these rules before using claims. Test with locally signed tokens from a test issuer and vary one required claim at a time. Include a token that is valid for a different consumer or purpose and confirm it is rejected. [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725.html)

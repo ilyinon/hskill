@@ -15,3 +15,7 @@ A search result may point to a similar image, an object, or a page using the sam
 Inspect title cards, visible text, and the beginning and end of the clip. Sample frames at scene changes and add a few time-spaced frames for long static shots. Deduplicate near-identical frames before searching. Keep each selected frame's playback time and extract the native frame where possible. Use the source timeline or frame timestamps for variable-frame-rate media. [FFprobe documentation](https://ffmpeg.org/ffprobe.html)
 
 For a match, compare the scene before and after the frame when both clips are available. A clip can reuse footage from an earlier event. Cite the source and playback time for any observation that depends on a particular frame.
+
+## Resolve an uncertain match
+
+When OCR gives two readings, keep both until a separate clue resolves the text. For an object match, compare the marking with an independent catalog or other public source. For a same-frame match, compare several details tied to that shot, such as reflections and the alignment of foreground and background edges. Keep search-engine dates, page publication dates, and image capture dates in separate fields. If a provider is unavailable, record that outcome once and switch to the evidence already available.

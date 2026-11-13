@@ -24,3 +24,7 @@ A 3xx without a resolved destination is incomplete evidence. A parser rejection 
 Track `caller destination -> normalization -> policy -> actual navigation -> independently demonstrated chain effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify redirect destinations
+
+Prefer named destinations mapped server-side or validated application-relative paths. For an intentional external redirect, parse the target and compare its scheme and complete origin to an allowlist. Exercise the final Location header in tests. An allowed route should still work, and rejected input should produce a safe local fallback or an explicit error.

@@ -24,3 +24,7 @@ A processor failure did not prove execution. An upload result is an intermediate
 Track `owned input -> acceptance -> storage -> processing -> serving identity/context -> requested effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify storage and delivery controls
+
+Give stored objects application-generated names. Keep uploads outside executable web roots and validate type and size before processing. Authorize every download against the stored object's owner or tenant. Check that a supported document round-trips, a rejected input creates no stored object, and a download by a different tenant is denied. Review response media type and disposition for untrusted content. [OWASP File Upload Guidance](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html)

@@ -24,3 +24,7 @@ A request error is not evidence of a protected business invariant unless the int
 ## Close the requested task
 
 Track `actor → allowed state → operation identity → state/value change → invariant`. For the supplied fixture, integer credits are sufficient; do not create real charges. A fix must preserve valid operations and reject the violating sequence. Sequential proof does not validate atomicity under concurrency, external-provider rollback, or retry delivery semantics.
+
+## Verify the invariant in a fix
+
+Test the service through the same entry point the application uses. Include the valid sequence, an invalid state transition, and a retry of an already accepted operation. Assert the durable effect in each case, including unchanged balances or state on denial. If concurrency matters, test the transaction or persistence constraint rather than treating a sequential check as sufficient.

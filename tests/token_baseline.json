@@ -1,6 +1,6 @@
 {
-  "skills": 103,
-  "markdown_files": 607,
+  "skills": 106,
+  "markdown_files": 617,
   "full_yaml_validation": true,
   "errors": [],
   "warnings": [],
@@ -8,7 +8,7 @@
   "entry_tokens": [
     {
       "skill": "hack",
-      "tokens": 888
+      "tokens": 1018
     },
     {
       "skill": "api-sec",
@@ -63,6 +63,14 @@
       "tokens": 532
     },
     {
+      "skill": "api-recon-and-docs",
+      "tokens": 518
+    },
+    {
+      "skill": "stack-overflow-and-rop",
+      "tokens": 510
+    },
+    {
       "skill": "symmetric-cipher-attacks",
       "tokens": 508
     },
@@ -71,12 +79,12 @@
       "tokens": 508
     },
     {
-      "skill": "api-recon-and-docs",
-      "tokens": 504
-    },
-    {
       "skill": "idor-broken-object-authorization",
       "tokens": 503
+    },
+    {
+      "skill": "api-authorization-and-bola",
+      "tokens": 502
     },
     {
       "skill": "linux-privilege-escalation",
@@ -89,10 +97,6 @@
     {
       "skill": "race-condition",
       "tokens": 498
-    },
-    {
-      "skill": "api-authorization-and-bola",
-      "tokens": 497
     },
     {
       "skill": "cmdi-command-injection",
@@ -116,10 +120,6 @@
     },
     {
       "skill": "graphql-and-hidden-parameters",
-      "tokens": 474
-    },
-    {
-      "skill": "stack-overflow-and-rop",
       "tokens": 474
     },
     {
@@ -181,6 +181,10 @@
     {
       "skill": "subdomain-takeover",
       "tokens": 451
+    },
+    {
+      "skill": "binary-protection-bypass",
+      "tokens": 450
     },
     {
       "skill": "websocket-security",
@@ -279,6 +283,10 @@
       "tokens": 425
     },
     {
+      "skill": "osint-web-archives",
+      "tokens": 422
+    },
+    {
       "skill": "hash-attack-techniques",
       "tokens": 419
     },
@@ -309,10 +317,6 @@
     {
       "skill": "format-string-exploitation",
       "tokens": 416
-    },
-    {
-      "skill": "binary-protection-bypass",
-      "tokens": 414
     },
     {
       "skill": "linux-lateral-movement",
@@ -375,6 +379,10 @@
       "tokens": 388
     },
     {
+      "skill": "osint-media-search",
+      "tokens": 382
+    },
+    {
       "skill": "web-cache-deception",
       "tokens": 380
     },
@@ -393,6 +401,10 @@
     {
       "skill": "dependency-confusion",
       "tokens": 368
+    },
+    {
+      "skill": "osint-geolocation",
+      "tokens": 358
     },
     {
       "skill": "http-parameter-pollution",
@@ -606,11 +618,11 @@
     },
     {
       "path": "api-authorization-and-bola/SKILL.md",
-      "tokens": 497
+      "tokens": 502
     },
     {
       "path": "api-authorization-and-bola/references/diagnostics.md",
-      "tokens": 319
+      "tokens": 400
     },
     {
       "path": "api-authorization-and-bola/references/worked-cases.md",
@@ -618,11 +630,11 @@
     },
     {
       "path": "api-recon-and-docs/SKILL.md",
-      "tokens": 504
+      "tokens": 518
     },
     {
       "path": "api-recon-and-docs/references/diagnostics.md",
-      "tokens": 281
+      "tokens": 357
     },
     {
       "path": "api-recon-and-docs/references/worked-cases.md",
@@ -734,7 +746,7 @@
     },
     {
       "path": "binary-protection-bypass/SKILL.md",
-      "tokens": 414
+      "tokens": 450
     },
     {
       "path": "binary-protection-bypass/references/01-protection-identification.md",
@@ -790,7 +802,7 @@
     },
     {
       "path": "business-logic-vulnerabilities/CHECKLIST.md",
-      "tokens": 11038
+      "tokens": 11062
     },
     {
       "path": "business-logic-vulnerabilities/METHODOLOGY.md",
@@ -826,7 +838,7 @@
     },
     {
       "path": "business-logic-vulnerabilities/references/diagnostics.md",
-      "tokens": 438
+      "tokens": 512
     },
     {
       "path": "business-logic-vulnerabilities/references/worked-cases.md",
@@ -854,7 +866,7 @@
     },
     {
       "path": "classical-cipher-analysis/references/diagnostics.md",
-      "tokens": 273
+      "tokens": 344
     },
     {
       "path": "classical-cipher-analysis/references/worked-cases.md",
@@ -866,7 +878,7 @@
     },
     {
       "path": "clickjacking/references/diagnostics.md",
-      "tokens": 260
+      "tokens": 362
     },
     {
       "path": "clickjacking/references/legacy-playbook.md",
@@ -898,7 +910,7 @@
     },
     {
       "path": "cmdi-command-injection/references/diagnostics.md",
-      "tokens": 264
+      "tokens": 347
     },
     {
       "path": "cmdi-command-injection/references/worked-cases.md",
@@ -922,7 +934,7 @@
     },
     {
       "path": "code-obfuscation-deobfuscation/references/diagnostics.md",
-      "tokens": 267
+      "tokens": 340
     },
     {
       "path": "code-obfuscation-deobfuscation/references/worked-cases.md",
@@ -946,7 +958,7 @@
     },
     {
       "path": "container-escape-techniques/references/diagnostics.md",
-      "tokens": 270
+      "tokens": 374
     },
     {
       "path": "container-escape-techniques/references/worked-cases.md",
@@ -970,7 +982,7 @@
     },
     {
       "path": "cors-cross-origin-misconfiguration/references/diagnostics.md",
-      "tokens": 280
+      "tokens": 382
     },
     {
       "path": "cors-cross-origin-misconfiguration/references/worked-cases.md",
@@ -1034,7 +1046,7 @@
     },
     {
       "path": "csrf-cross-site-request-forgery/references/diagnostics.md",
-      "tokens": 276
+      "tokens": 390
     },
     {
       "path": "csrf-cross-site-request-forgery/references/worked-cases.md",
@@ -1106,7 +1118,7 @@
     },
     {
       "path": "dependency-confusion/references/02-defense.md",
-      "tokens": 565
+      "tokens": 668
     },
     {
       "path": "dependency-confusion/references/diagnostics.md",
@@ -1142,7 +1154,7 @@
     },
     {
       "path": "deserialization-insecure/references/diagnostics.md",
-      "tokens": 268
+      "tokens": 367
     },
     {
       "path": "deserialization-insecure/references/worked-cases.md",
@@ -1314,11 +1326,11 @@
     },
     {
       "path": "hack/ROUTING.md",
-      "tokens": 1126
+      "tokens": 1235
     },
     {
       "path": "hack/SKILL.md",
-      "tokens": 888
+      "tokens": 1018
     },
     {
       "path": "hack/SOLVING.md",
@@ -1339,6 +1351,10 @@
     {
       "path": "hack/references/chain-contracts.md",
       "tokens": 485
+    },
+    {
+      "path": "hack/references/context-budget.md",
+      "tokens": 593
     },
     {
       "path": "hack/references/evidence-state.md",
@@ -1386,7 +1402,7 @@
     },
     {
       "path": "hash-attack-techniques/references/diagnostics.md",
-      "tokens": 283
+      "tokens": 357
     },
     {
       "path": "hash-attack-techniques/references/worked-cases.md",
@@ -1434,7 +1450,7 @@
     },
     {
       "path": "http-host-header-attacks/references/diagnostics.md",
-      "tokens": 278
+      "tokens": 347
     },
     {
       "path": "http-host-header-attacks/references/worked-cases.md",
@@ -1590,7 +1606,7 @@
     },
     {
       "path": "jwt-oauth-token-attacks/references/diagnostics.md",
-      "tokens": 465
+      "tokens": 561
     },
     {
       "path": "jwt-oauth-token-attacks/references/jwt-claims-lifecycle.md",
@@ -1658,7 +1674,7 @@
     },
     {
       "path": "kubernetes-pentesting/references/diagnostics.md",
-      "tokens": 268
+      "tokens": 339
     },
     {
       "path": "kubernetes-pentesting/references/worked-cases.md",
@@ -1774,7 +1790,7 @@
     },
     {
       "path": "llm-prompt-injection/references/diagnostics.md",
-      "tokens": 274
+      "tokens": 381
     },
     {
       "path": "llm-prompt-injection/references/worked-cases.md",
@@ -1846,7 +1862,7 @@
     },
     {
       "path": "memory-forensics-volatility/references/diagnostics.md",
-      "tokens": 276
+      "tokens": 375
     },
     {
       "path": "memory-forensics-volatility/references/worked-cases.md",
@@ -1958,7 +1974,7 @@
     },
     {
       "path": "oauth-oidc-misconfiguration/references/diagnostics.md",
-      "tokens": 488
+      "tokens": 589
     },
     {
       "path": "oauth-oidc-misconfiguration/references/flow-checklist.md",
@@ -1990,11 +2006,47 @@
     },
     {
       "path": "open-redirect/references/diagnostics.md",
-      "tokens": 263
+      "tokens": 330
     },
     {
       "path": "open-redirect/references/worked-cases.md",
       "tokens": 241
+    },
+    {
+      "path": "osint-geolocation/SKILL.md",
+      "tokens": 358
+    },
+    {
+      "path": "osint-geolocation/references/diagnostics.md",
+      "tokens": 480
+    },
+    {
+      "path": "osint-geolocation/references/worked-cases.md",
+      "tokens": 201
+    },
+    {
+      "path": "osint-media-search/SKILL.md",
+      "tokens": 382
+    },
+    {
+      "path": "osint-media-search/references/diagnostics.md",
+      "tokens": 512
+    },
+    {
+      "path": "osint-media-search/references/worked-cases.md",
+      "tokens": 216
+    },
+    {
+      "path": "osint-web-archives/SKILL.md",
+      "tokens": 422
+    },
+    {
+      "path": "osint-web-archives/references/diagnostics.md",
+      "tokens": 862
+    },
+    {
+      "path": "osint-web-archives/references/worked-cases.md",
+      "tokens": 237
     },
     {
       "path": "path-traversal-lfi/SKILL.md",
@@ -2018,7 +2070,7 @@
     },
     {
       "path": "path-traversal-lfi/references/diagnostics.md",
-      "tokens": 279
+      "tokens": 373
     },
     {
       "path": "path-traversal-lfi/references/worked-cases.md",
@@ -2062,7 +2114,7 @@
     },
     {
       "path": "prototype-pollution-advanced/references/diagnostics.md",
-      "tokens": 267
+      "tokens": 344
     },
     {
       "path": "prototype-pollution-advanced/references/worked-cases.md",
@@ -2090,7 +2142,7 @@
     },
     {
       "path": "race-condition/references/diagnostics.md",
-      "tokens": 271
+      "tokens": 347
     },
     {
       "path": "race-condition/references/worked-cases.md",
@@ -2294,7 +2346,7 @@
     },
     {
       "path": "sqli-sql-injection/references/diagnostics.md",
-      "tokens": 539
+      "tokens": 648
     },
     {
       "path": "sqli-sql-injection/references/worked-cases.md",
@@ -2326,7 +2378,7 @@
     },
     {
       "path": "ssrf-server-side-request-forgery/references/diagnostics.md",
-      "tokens": 535
+      "tokens": 655
     },
     {
       "path": "ssrf-server-side-request-forgery/references/worked-cases.md",
@@ -2366,11 +2418,11 @@
     },
     {
       "path": "stack-overflow-and-rop/SKILL.md",
-      "tokens": 474
+      "tokens": 510
     },
     {
       "path": "stack-overflow-and-rop/references/01-stack-layout-fundamentals.md",
-      "tokens": 1690
+      "tokens": 1931
     },
     {
       "path": "stack-overflow-and-rop/references/02-ret2dlresolve.md",
@@ -2378,7 +2430,7 @@
     },
     {
       "path": "stack-overflow-and-rop/references/diagnostics.md",
-      "tokens": 470
+      "tokens": 513
     },
     {
       "path": "stack-overflow-and-rop/references/worked-cases.md",
@@ -2402,7 +2454,7 @@
     },
     {
       "path": "steganography-techniques/references/diagnostics.md",
-      "tokens": 264
+      "tokens": 354
     },
     {
       "path": "steganography-techniques/references/worked-cases.md",
@@ -2498,7 +2550,7 @@
     },
     {
       "path": "traffic-analysis-pcap/references/diagnostics.md",
-      "tokens": 437
+      "tokens": 545
     },
     {
       "path": "traffic-analysis-pcap/references/worked-cases.md",
@@ -2590,7 +2642,7 @@
     },
     {
       "path": "upload-insecure-files/references/diagnostics.md",
-      "tokens": 265
+      "tokens": 373
     },
     {
       "path": "upload-insecure-files/references/worked-cases.md",
@@ -2614,7 +2666,7 @@
     },
     {
       "path": "vm-and-bytecode-reverse/references/diagnostics.md",
-      "tokens": 281
+      "tokens": 362
     },
     {
       "path": "vm-and-bytecode-reverse/references/worked-cases.md",
@@ -2662,7 +2714,7 @@
     },
     {
       "path": "web-cache-deception/references/diagnostics.md",
-      "tokens": 266
+      "tokens": 340
     },
     {
       "path": "web-cache-deception/references/worked-cases.md",
@@ -2686,7 +2738,7 @@
     },
     {
       "path": "websocket-security/references/diagnostics.md",
-      "tokens": 248
+      "tokens": 352
     },
     {
       "path": "websocket-security/references/worked-cases.md",
@@ -2814,7 +2866,7 @@
     },
     {
       "path": "xss-cross-site-scripting/references/diagnostics.md",
-      "tokens": 463
+      "tokens": 570
     },
     {
       "path": "xss-cross-site-scripting/references/worked-cases.md",
@@ -2842,7 +2894,7 @@
     },
     {
       "path": "xxe-xml-external-entity/references/diagnostics.md",
-      "tokens": 281
+      "tokens": 390
     },
     {
       "path": "xxe-xml-external-entity/references/worked-cases.md",

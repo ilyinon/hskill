@@ -24,3 +24,7 @@ A model refusal or tool-harness error is not proof about the actual authority bo
 Track `untrusted content -> model interpretation -> tool authorization -> actual protected action/data -> bounded violation`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Review the tool boundary
+
+Keep retrieved text in data fields. Validate each proposed call in the application against the authenticated user's permissions, the selected resource, and the current operation. Enforce those checks before invoking any connector. Use a stub dispatcher with inert inputs to verify that a legitimate request reaches its intended tool and that an unauthorized request never reaches the dispatcher. Check the application audit record separately from the model's reply. [OpenAI agent safety guidance](https://developers.openai.com/api/docs/guides/agent-builder-safety)

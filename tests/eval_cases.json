@@ -629,6 +629,96 @@
         "completion": "Decode each block separately, concatenate bytes 'delta:72\\n'; SHA-256 136dc45b81b398ce159c63538cb403bdcf22316a00b760b46db5a8686326bd08.",
         "failure": "Setup failure before any server call does not establish authorization denial or empty payload. Static shape validity leaves semantic acceptance untested."
       }
+    },
+    {
+      "id": "osint-archive-card",
+      "request": "Use the saved gallery and archive records to report the capacity printed on card D-42. Give the page publication date, effective page capture, and effective image capture for your evidence, and explain how you identified the card. Use only the supplied files.",
+      "artifacts": [
+        "tests/fixtures/osint/archives/captures.json",
+        "tests/fixtures/osint/archives/page.html",
+        "tests/fixtures/osint/archives/replay/f2.jpg",
+        "tests/fixtures/osint/archives/replay/k7.jpg",
+        "tests/fixtures/osint/archives/replay/r4.jpg",
+        "tests/fixtures/osint/archives/replay/v1.html"
+      ],
+      "criteria": {
+        "routing": "Use the web-archive skill and inspect the page, saved archive metadata, and original image bytes.",
+        "evidence": "Report capacity 16–18 from a JPEG where D-42 and the range are visible together. Resolve an observed HTML asset URL against its base, match it to the capture record, and cite its saved replay. Prefer the legible full image f2.jpg at 2010-04-20T07:51:01Z. Accept k7.jpg at 2010-04-22T13:04:20Z if the identifier and range are actually verified there. Explain why the 200 HTML replay or D-24 image does not establish the answer.",
+        "dates": "Distinguish publication on 2010-04-16 from the effective page capture at 2010-04-18T08:20:10Z and the effective image timestamp. Use the effective dates rather than requested replay dates. Do not attribute the later JPEG bytes to the earlier page capture.",
+        "scope": "Use only the offline artifact set. Do not contact an archive or infer filenames by guessing."
+      },
+      "finding_expected": "not_applicable"
+    },
+    {
+      "id": "osint-media-same-frame",
+      "request": "Identify the object shown in supplied.jpg and find the earliest confirmed publication of that same frame among the saved collection records. Explain which visual details support the match and what the unavailable visual search tells you.",
+      "artifacts": [
+        "tests/fixtures/osint/media/collection.txt",
+        "tests/fixtures/osint/media/photo-a.jpg",
+        "tests/fixtures/osint/media/photo-b.jpg",
+        "tests/fixtures/osint/media/supplied.jpg"
+      ],
+      "criteria": {
+        "routing": "Use media-search guidance with local OCR or direct inspection. Use the register and supplied records for corroboration.",
+        "evidence": "Identify the blue-gray Marlin display launch M-18 by the long forward pane and plate. Identify photo-b.jpg, dated 2014-06-21, as the earliest confirmed publication in the supplied collection. Use frame-specific details such as diagonal reflection, pale mark on the hull, or alignment of the dock line. Explain why earlier photo-a.jpg is a different frame of the same object.",
+        "scope": "Distinguish unavailable search from a verified no-match result. Limit the earliest-publication claim to the supplied collection."
+      },
+      "finding_expected": "not_applicable"
+    },
+    {
+      "id": "osint-geolocation-sightline",
+      "request": "Use the supplied survey and public works records to decide which of the two public viewpoints matches the scene and bound when it could have been drawn from that view. Explain the evidence for each conclusion.",
+      "artifacts": [
+        "tests/fixtures/osint/geolocation/plan.png",
+        "tests/fixtures/osint/geolocation/records.txt",
+        "tests/fixtures/osint/geolocation/scene.png"
+      ],
+      "criteria": {
+        "routing": "Use geolocation guidance and compare the scene, plan, and dated works records.",
+        "evidence": "Select B. The scene shows the tower unobstructed. The A-to-tower sightline crosses the opaque wall near A, where the line to the tower top is below the wall height. The B-to-tower line avoids it. Use the geometry rather than a general resemblance.",
+        "dates": "Bound the depicted scene from 2012-05-08 to 2017-09-14 using installation and removal of the same visible brown shed. A schematic plan does not determine an exact coordinate or capture date.",
+        "scope": "Use only the supplied offline records."
+      },
+      "finding_expected": "not_applicable"
+    },
+    {
+      "id": "forensics-pcap-truncation",
+      "request": "Review the supplied PCAP. Report the HTTP request target if supported, identify the missing evidence, and say whether the capture establishes a server response. Give frame references.",
+      "artifacts": [
+        "tests/fixtures/forensics/truncated-stream.pcap"
+      ],
+      "criteria": {
+        "routing": "Use offline capture analysis and distinguish capture lengths from wire lengths.",
+        "evidence": "Frame 1 has 83 captured bytes of 101, omitting 18 trailing wire bytes. Frame 2 arrives later but contains the earlier TCP bytes. Reconstruct the visible request line GET /status HTTP/1.1 from frames 2 and 1. Do not claim the full headers or any server response.",
+        "scope": "Use only the saved capture and no target requests."
+      },
+      "finding_expected": "not_applicable"
+    },
+    {
+      "id": "forensics-memory-partial",
+      "request": "Attribute each supplied connection record to a process instance where possible, and report whether the records support a conclusion about loaded modules.",
+      "artifacts": [
+        "tests/fixtures/forensics/partial-memory-records.json"
+      ],
+      "criteria": {
+        "routing": "Use memory-forensics guidance and treat the input as saved records, not a raw memory image.",
+        "evidence": "First connection maps to indexer object 0x11c0 at 10:06:14 UTC, before that instance exited. Second remains ambiguous because both time and object are missing and PID 308 was reused. A failed module scan leaves module presence unknown.",
+        "scope": "Do not claim a real Volatility run or malware attribution."
+      },
+      "finding_expected": "not_applicable"
+    },
+    {
+      "id": "forensics-stego-structural-tail",
+      "request": "Inspect the supplied PNG for a verifiable embedded object. Explain how you located it, report what it contains, and distinguish it from a signature-like byte sequence elsewhere in the file.",
+      "artifacts": [
+        "tests/fixtures/forensics/poster.png"
+      ],
+      "criteria": {
+        "routing": "Analyze original container bytes and structural bounds.",
+        "evidence": "Walk PNG chunks to the IEND boundary, then validate the appended ZIP separately. Report its single inventory.txt member and harbor-63 marker. The PK byte sequence inside a private PNG chunk is not a ZIP boundary.",
+        "scope": "Read the inert artifact and recovered text without executing anything."
+      },
+      "finding_expected": "not_applicable"
     }
   ]
 }

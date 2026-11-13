@@ -24,3 +24,7 @@ A local command-builder error did not reach the intended sink. A literal semicol
 Track `input -> invocation mode -> actual argv/interpreter -> intended operation -> bounded effect`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify the process boundary in a fix
+
+Prefer a direct library operation. Where a subprocess is needed, choose the executable in code, pass a structured argument list without a shell, and validate input according to the program's argument contract. A shell-free call still needs protection from user-selected flags. Spy on the process launcher in tests to verify the expected executable and arguments and confirm rejected input does not start a process.

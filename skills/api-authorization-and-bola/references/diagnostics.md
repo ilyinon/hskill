@@ -26,3 +26,7 @@ result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
 
 For nested object checks, use the canonical [IDOR diagnostics](../../idor-broken-object-authorization/references/diagnostics.md) and [parent/child case](../../idor-broken-object-authorization/references/worked-cases.md).
+
+## Verify authorization in application code
+
+Trace the authenticated principal through the controller and service into the object lookup. Scope both collection and single-object access to the authorized tenant or owner. Check nested resources against the same relationship. Use a request DTO with explicit writable fields. For regression tests, keep the principal fixed and compare an allowed object with a denied one, and assert that denied updates leave the stored record unchanged.

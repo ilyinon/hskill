@@ -24,3 +24,7 @@ A proxy/HTTP parse error before the builder is not evidence of poisoning. A gene
 Track `untrusted authority -> trusted-hop/allowlist decision -> actual URL/router consumer -> protected artifact -> bounded impact`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify authority for generated links
+
+Use a configured public origin for password reset and verification URLs. At the edge, accept only expected hosts and remove untrusted forwarding metadata before setting trusted values. In a handler test, hold the account and request path fixed and vary the incoming authority. Confirm generated links retain the configured origin or the request is rejected.

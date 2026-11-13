@@ -5,7 +5,7 @@
     {
       "id": "archived-image-provenance",
       "reference": "osint-web-archives/references/diagnostics.md",
-      "status": "source-reviewed",
+      "status": "offline-tested",
       "sources": [
         "https://archivesupport.zendesk.com/hc/en-us/articles/360004651732-Using-The-Wayback-Machine",
         "https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server",
@@ -13,10 +13,18 @@
         "https://www.commoncrawl.org/get-started"
       ],
       "sources_reviewed_on": "2026-11-13",
-      "validated_on": null,
-      "tested_environment": [],
-      "tests": [],
-      "limitations": "Documentation review only. The catalog scenario is synthetic and does not measure model solve rate or archive availability."
+      "validated_on": "2026-11-13",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "Offline gallery HTML, capture metadata, and replay byte fixtures."
+        }
+      ],
+      "tests": [
+        "test_analysis_fixtures.AnalysisFixtures.test_archive_has_distinct_dates_and_a_non_image_replay"
+      ],
+      "limitations": "The offline fixture checks date boundaries and distinguishes an HTML replay error from a JPEG. It does not measure archive availability or model solve rate."
     },
     {
       "id": "osint-media-provenance",

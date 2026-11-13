@@ -14,6 +14,10 @@ For other original section numbers, use the [entry index](../SKILL.md#references
 
 ---
 
+### Verify CI source and artifact policy
+
+Review effective resolver configuration for the build job, including environment overrides and lockfile provenance. Route private names to an approved registry and enforce the recorded artifact hashes during install where the ecosystem supports them. For pip, require hashes for the complete dependency set. Exercise the CI policy with an approved artifact and a different digest in an offline check. Confirm that rejection happens before installation. [pip secure installs](https://pip.pypa.io/en/stable/topics/secure-installs/)
+
 ## 7. DECISION TREE
 
 ```text

@@ -24,3 +24,7 @@ A malformed XML error did not test external loading. Serving an SVG as bytes doe
 Track `entry bytes -> actual XML stage -> resource resolver -> returned/used marker -> requested boundary`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify the parser configuration
+
+Identify the parser and every later processing stage that can resolve resources. Disable external DTDs and entities where the input contract does not need them and use a resolver that denies external I/O. Check schema imports and transforms separately if present. Use a recording resolver in tests and confirm normal documents still parse while external requests never reach the I/O layer. [OWASP XXE Prevention](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)

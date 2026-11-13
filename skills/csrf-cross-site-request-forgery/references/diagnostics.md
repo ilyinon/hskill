@@ -24,3 +24,7 @@ A CLI request with manually inserted victim credentials does not establish brows
 Track `attacker context -> browser-eligible request/cookies -> server binding check -> committed protected state`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify the application control
+
+Review each state-changing route, including alternate representations and login flows. Confirm framework CSRF validation is active and bound to the intended session where applicable. Test valid and missing or rejected proof through the same application handler and assert that denied requests leave state unchanged. Treat cookie SameSite settings as an additional browser control and confirm any cross-site flows the product intentionally supports. [OWASP CSRF Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)

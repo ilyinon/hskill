@@ -390,7 +390,8 @@
       "diagnostics": "memory-forensics-volatility/references/diagnostics.md",
       "worked_case": "memory-forensics-volatility/references/worked-cases.md",
       "offline_tests": [
-        "test_extended_solving.ExtendedSolving.test_process_instance_lifetime_and_ambiguity"
+        "test_extended_solving.ExtendedSolving.test_process_instance_lifetime_and_ambiguity",
+        "test_analysis_fixtures.AnalysisFixtures.test_partial_memory_records_require_more_than_pid"
       ]
     },
     {
@@ -447,7 +448,9 @@
       "topic": "osint-web-archives",
       "diagnostics": "osint-web-archives/references/diagnostics.md",
       "worked_case": "osint-web-archives/references/worked-cases.md",
-      "offline_tests": []
+      "offline_tests": [
+        "test_analysis_fixtures.AnalysisFixtures.test_archive_has_distinct_dates_and_a_non_image_replay"
+      ]
     },
     {
       "topic": "path-traversal-lfi",
@@ -562,7 +565,8 @@
       "diagnostics": "steganography-techniques/references/diagnostics.md",
       "worked_case": "steganography-techniques/references/worked-cases.md",
       "offline_tests": [
-        "test_extended_solving.ExtendedSolving.test_lsb_recovery_and_corruption_control"
+        "test_extended_solving.ExtendedSolving.test_lsb_recovery_and_corruption_control",
+        "test_analysis_fixtures.AnalysisFixtures.test_png_decoy_signature_precedes_a_validated_zip_tail"
       ]
     },
     {
@@ -592,7 +596,8 @@
       "diagnostics": "traffic-analysis-pcap/references/diagnostics.md",
       "worked_case": "traffic-analysis-pcap/references/worked-cases.md",
       "offline_tests": [
-        "test_solving_examples.SolvingExamples.test_tcp_sequence_reassembly_and_missing_bytes"
+        "test_solving_examples.SolvingExamples.test_tcp_sequence_reassembly_and_missing_bytes",
+        "test_analysis_fixtures.AnalysisFixtures.test_truncated_capture_retains_request_line_in_sequence_order"
       ]
     },
     {

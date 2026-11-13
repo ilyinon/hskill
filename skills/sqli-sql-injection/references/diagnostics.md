@@ -24,3 +24,7 @@ Treat structure control and business impact separately. Authorized ordering chan
 ## Close the requested task
 
 Map `input component → constructed statement/binding → observed semantic change → policy impact`. A source audit can finish at a complete unsafe construction plus a valid controlled query. Extraction, file access, and execution require separate capabilities and are unnecessary when the task is to identify/fix the construction. Verify a fix with a legitimate sort, a rejected raw expression, and unchanged literal-value behavior. [SQLite ORDER BY](https://www.sqlite.org/lang_select.html#orderby) and [Python binding API](https://docs.python.org/3/library/sqlite3.html) describe the example's engine/API.
+
+## Verify parameter binding in a fix
+
+Inspect the final driver call. Use bound parameters for values and map requested sort fields or directions to approved static SQL fragments. In tests, spy on the driver to verify that varying a value changes only its bound parameter. Exercise every allowed sort option and check that an unknown field never reaches the driver. Confirm ordinary queries still return the expected rows. [OWASP SQL Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)

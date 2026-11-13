@@ -24,3 +24,7 @@ A plugin/symbol error did not prove absence of a process. RWX, a familiar name o
 Track `image provenance -> compatible parsing -> process instance/time -> correlated artifacts -> bounded incident conclusion`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Handle an incomplete image
+
+Run a basic inventory with matching symbols before interpreting a specialized plugin. Keep the plugin name, version, symbol identity, and exact error with the report. If an artifact points to a paged-out or unreadable region, record the field as unavailable. Distinguish a scan hit for a terminated process from an active process with the same PID by comparing object offsets and lifetimes. Redact sensitive values in exported reports when the requested conclusion only needs presence or provenance.

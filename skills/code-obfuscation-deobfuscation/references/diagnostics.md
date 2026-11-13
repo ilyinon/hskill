@@ -24,3 +24,7 @@ A disassembler/emulator failure is not evidence that a branch is unreachable. Pr
 Track `original inputs/state -> exact machine semantics -> simplified representation -> matching outputs/effects`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Validate an offline simplification
+
+Simplify one expression or block at a time and keep the original alongside it. Use boundary values for signedness, overflow, and shifts. Compare changes to state or output as well as the final returned value. If the sample is untrusted, perform static analysis or evaluate a small isolated expression model rather than running the original file.

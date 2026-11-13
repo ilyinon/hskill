@@ -24,3 +24,7 @@ A client scheduling failure did not test overlap. A sequential violation is a do
 Track `shared state -> overlapping checks -> committed effects -> violated invariant -> atomic repair and controls`. Mark each edge proved or unknown and stop at the requested
 result. A synthetic contract or supplied trace supports only its stated model;
 production behavior needs independent evidence from the actual implementation.
+
+## Verify atomicity in a fix
+
+Put the invariant in a transaction, unique constraint, or conditional write that covers every writer. Use a controlled interleaving in the application test to hold both operations at the same point. Assert the final persisted state, the allowed retry behavior, and the result of one ordinary operation. Repeating concurrent requests without controlling the ordering gives weaker evidence.
