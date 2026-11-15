@@ -446,7 +446,10 @@
       "topic": "osint-media-search",
       "diagnostics": "osint-media-search/references/diagnostics.md",
       "worked_case": "osint-media-search/references/worked-cases.md",
-      "offline_tests": []
+      "offline_tests": [
+        "test_image_reassembly.ReassemblePngTests.test_assembles_all_rotated_fragments_pixel_for_pixel",
+        "test_image_reassembly.ReassemblePngTests.test_missing_piece_is_reported_without_writing_an_image"
+      ]
     },
     {
       "topic": "osint-web-archives",

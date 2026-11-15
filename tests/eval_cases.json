@@ -681,6 +681,36 @@
       },
       "finding_expected": "not_applicable"
     },
+  {
+    "id": "osint-identifier-photo",
+    "request": "Using only the supplied files, reassemble the fragments and identify the field card. Trace the last recorded sighting to the relevant saved photo and give the camera's longitude. The camera latitude rounds to 55.2104 N. Cite the records that support any conclusion. Preserve assembled.png. Local image tools and the reviewed skill helper are allowed.",
+    "artifacts": [
+      "tests/fixtures/osint/identifier-chain/fragments.zip",
+      "tests/fixtures/osint/identifier-chain/report-linked.txt",
+      "tests/fixtures/osint/identifier-chain/photo-records.txt"
+    ],
+    "criteria": {
+      "assembly": "Produce assembled.png using all six fragments. RGB pixels are the 560x208 original up to a quarter-turn. Read XR28461507K and series 2024.",
+      "join": "Use R-32 entry H-32, its explicit Q41 photo URL and the matching bridge-kite profile. Do not use similar title, date, or latitude as attribution.",
+      "longitude": "Give camera longitude -3.14182 (3.14182 W), or the justified rounding -3.1418. Identify the white harbor signal tower and distinguish its -3.12290 subject longitude from the camera's."
+    },
+    "finding_expected": "not_applicable"
+  },
+  {
+    "id": "osint-identifier-no-attribution",
+    "request": "Using only the supplied files, reassemble the fragments and identify the field card. Trace the last recorded sighting to the relevant saved photo and give the camera's longitude. The camera latitude rounds to 55.2104 N. Cite the records that support any conclusion. Preserve assembled.png. Local image tools and the reviewed skill helper are allowed.",
+    "artifacts": [
+      "tests/fixtures/osint/identifier-chain/fragments.zip",
+      "tests/fixtures/osint/identifier-chain/report-unlinked.txt",
+      "tests/fixtures/osint/identifier-chain/photo-records.txt"
+    ],
+    "criteria": {
+      "assembly": "Produce assembled.png using all six fragments. RGB pixels are the 560x208 original up to a quarter-turn. Read XR28461507K and series 2024.",
+      "join": "Recover R-32 entry H-32 without attributing it to either photographer. Both saved photo candidates fit the given latitude. The temporary block leaves attribution unknown.",
+      "longitude": "Withhold a final longitude and identify the missing H-32 evidence: a direct photo link or a public contributor-to-photo link specific to that entry. Do not contact a live service."
+    },
+    "finding_expected": "not_applicable"
+  },
     {
       "id": "forensics-pcap-truncation",
       "request": "Review the supplied PCAP. Report the HTTP request target if supported, identify the missing evidence, and say whether the capture establishes a server response. Give frame references.",

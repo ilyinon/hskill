@@ -1,0 +1,10 @@
+Saved public report at https://field-register.example/reports/R-32
+Object type: Harbor camera field card
+Identifier: XR28461507K
+Series: 2024
+
+Entry H-19 | 2025-08-05T13:10:00Z | Alder Bay | item checked in
+Entry H-32 | 2025-08-08T17:20:00Z | Alder Bay | location and time only
+
+The link to extended entry details returned a temporary access block.
+This capture shows no contributor, photo URL or note for H-32.

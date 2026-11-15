@@ -1,6 +1,6 @@
 ---
 name: osint-media-search
-description: Find the source of a public photo or video, identify an object shown in it, or trace a repost using visible clues, OCR, reverse image search, and video frames.
+description: Find the source of a public photo or video, identify an object shown in it, or trace a repost using visible clues, OCR, reverse image search, and video frames. Also use for fragmented scans or an object identifier that leads to a photo.
 ---
 
 # OSINT media search
@@ -13,6 +13,7 @@ description: Find the source of a public photo or video, identify an object show
 
 ## References
 
+- [Identifier trails](./references/identifier-trails.md) for reassembling fragmented scans and linking a public record to a specific photo.
 - [Diagnostics](./references/diagnostics.md) for search choices, fallback, and video frames.
 - [Worked case](./references/worked-cases.md) for distinguishing a repost from a similar photo.
 - [Web archives](../osint-web-archives/SKILL.md) when a page or image needs dated archival evidence.

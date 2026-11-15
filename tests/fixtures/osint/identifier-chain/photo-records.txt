@@ -1,0 +1,19 @@
+Saved public photo record https://harbor-photos.example/photos/Q41
+Title: Alder Bay from the west platform
+Contributor profile: https://harbor-photos.example/u/bridge-kite
+Capture timestamp: 2025-08-08T16:55:00Z
+Posted: 2025-08-09
+Camera location WGS84: 55.21041 N, 3.14182 W
+Subject location WGS84: 55.21041 N, 3.12290 W
+Camera facing: east, 90 degrees
+Caption: White harbor signal tower on the far shore.
+
+Saved public photo record https://harbor-photos.example/photos/Q48
+Title: Alder Bay from the west platform
+Contributor profile: https://harbor-photos.example/u/sandbar
+Capture timestamp: 2025-08-08T16:59:00Z
+Posted: 2025-08-09
+Camera location WGS84: 55.21042 N, 3.17743 W
+Subject location WGS84: 55.21042 N, 3.14589 W
+Camera facing: east, 90 degrees
+Caption: White harbor signal tower on the far shore.

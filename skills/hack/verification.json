@@ -42,6 +42,29 @@
       "limitations": "Documentation review only. The photo scenario is synthetic. Search availability, frame extraction, and model performance were not evaluated."
     },
     {
+      "id": "png-fragment-reassembly",
+      "reference": "osint-media-search/references/identifier-trails.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://numpy.org/doc/stable/reference/generated/numpy.fft.rfft2.html",
+        "https://pillow.readthedocs.io/en/stable/reference/Image.html"
+      ],
+      "sources_reviewed_on": "2026-11-15",
+      "validated_on": "2026-11-15",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.12.14",
+          "configuration": "Local Pillow 13.0.0 and NumPy 2.3.5, no network."
+        }
+      ],
+      "tests": [
+        "test_image_reassembly.ReassemblePngTests.test_assembles_all_rotated_fragments_pixel_for_pixel",
+        "test_image_reassembly.ReassemblePngTests.test_missing_piece_is_reported_without_writing_an_image"
+      ],
+      "limitations": "Tests verify binary-alpha irregular seams with quarter-turn rotations and an incomplete control. They do not measure OCR accuracy, public-record availability or model solve rates."
+    },
+    {
       "id": "osint-camera-geometry",
       "reference": "osint-geolocation/references/diagnostics.md",
       "status": "source-reviewed",

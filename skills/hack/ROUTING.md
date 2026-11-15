@@ -32,5 +32,6 @@ For a narrower unlisted topic, search sibling directory names first (`rg --files
 | Evidence or task | Entry |
 |---|---|
 | Archived page, missing media, or text printed on an archived card | [Web archives](../osint-web-archives/SKILL.md) |
+| Fragmented scan or object identifier expected to lead to a photo | [Follow an identifier](../osint-media-search/references/identifier-trails.md) |
 | Find where a photo or video appeared, identify an object, or trace a repost | [Media search](../osint-media-search/SKILL.md) |
 | Locate a scene or bound its date using landmarks and dated imagery | [Geolocation](../osint-geolocation/SKILL.md) |
