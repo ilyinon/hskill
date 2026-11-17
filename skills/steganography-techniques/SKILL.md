@@ -14,7 +14,7 @@ description: >-
 
 ## Periodic patterns in PNGs
 
-For repeated tiles, stripes, or woven patterns, measure the repeat on the original sample grid. Reconstruct the crop from the extracted sequences and crossing rule, then verify a second repeat when available. Use [periodic PNG analysis](./references/periodic-png-patterns.md) for palette, transparency, alignment, and mismatch checks.
+For repeated tiles, stripes, or woven patterns, use [periodic PNG analysis](./references/periodic-png-patterns.md) to reconstruct the crop and check a held-out repeat when available. Reuse the verified extraction and move on to decoding. If the puzzle identifies two equal-length hex strings as key and ciphertext without specifying a transform, try per-digit XOR first. Preserve the nonce's width and prefer the advertised raw format for an authorized check.
 
 ## Evidence and limits
 

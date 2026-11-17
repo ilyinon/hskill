@@ -227,13 +227,14 @@
         {
           "component": "CPython",
           "version": "3.9.6",
-          "configuration": "stdlib comparison of supplied binary tile samples"
+          "configuration": "stdlib checks of supplied binary tile samples and a synthetic grayscale hex ramp"
         }
       ],
       "tests": [
-        "test_reference_examples.ReferenceExamples.test_periodic_png_reconstruction_and_mismatch_control"
+        "test_reference_examples.ReferenceExamples.test_periodic_png_reconstruction_and_mismatch_control",
+        "test_reference_examples.ReferenceExamples.test_periodic_png_grayscale_xor_preserves_width"
       ],
-      "limitations": "Checks the worked tile arithmetic and one changed-sample control. PNG decoder behavior, reconstruction on other files, and any hidden message require separate evidence."
+      "limitations": "Checks the worked tile arithmetic, one changed-sample control, and fixed-width XOR on synthetic grayscale samples. PNG decoder behavior on other files, agent routing, and validator acceptance require separate evidence."
     },
     {
       "id": "png-ihdr-layout",

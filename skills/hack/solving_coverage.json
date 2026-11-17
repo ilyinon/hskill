@@ -575,7 +575,8 @@
       "offline_tests": [
         "test_extended_solving.ExtendedSolving.test_lsb_recovery_and_corruption_control",
         "test_analysis_fixtures.AnalysisFixtures.test_png_decoy_signature_precedes_a_validated_zip_tail",
-        "test_reference_examples.ReferenceExamples.test_periodic_png_reconstruction_and_mismatch_control"
+        "test_reference_examples.ReferenceExamples.test_periodic_png_reconstruction_and_mismatch_control",
+        "test_reference_examples.ReferenceExamples.test_periodic_png_grayscale_xor_preserves_width"
       ]
     },
     {

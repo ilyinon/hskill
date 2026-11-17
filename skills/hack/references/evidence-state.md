@@ -24,6 +24,13 @@ and **stale/needs recheck** distinct. Confidence words alone cannot replace a
 missing dependency. Negative results also depend on the baseline, valid tool
 operation, and tested conditions.
 
+For a puzzle answer, record the artifact hash, task page, exact validator input,
+input format (raw or wrapped), and verbatim verdict in the task's working
+record. If the form advertises a raw nonce, preserve its width and leading zeros
+and prefer the raw form for the first authorized normal check. When a reported
+rejection lacks the exact input or page, keep acceptance unresolved and check
+the submission format before changing a reproducible decode.
+
 When an input changes, record a new source identity rather than overwriting the
 old evidence. A file hash can identify bytes; it cannot prove the current live
 configuration. Track the relevant build/session/object/time explicitly. Invalidate

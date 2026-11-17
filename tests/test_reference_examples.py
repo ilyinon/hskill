@@ -94,6 +94,20 @@ class ReferenceExamples(unittest.TestCase):
         altered = (str(1 - int(first[0])) + first[1:], observed[2])
         self.assertEqual(sum(a != b for a, b in zip("".join(tile), "".join(altered))), 1)
 
+    def test_periodic_png_grayscale_xor_preserves_width(self):
+        reference = (ROOT / "steganography-techniques/references/periodic-png-patterns.md").read_text()
+        example = re.search(r"`([0-9a-f]+)` XOR `([0-9a-f]+)` gives `([0-9a-f]+)`", reference)
+        self.assertIsNotNone(example)
+        key, ciphertext, expected = example.groups()
+        self.assertEqual(len(key), len(ciphertext))
+        self.assertEqual(len(key), len(expected))
+        self.assertTrue(expected.startswith("0"))
+        key_samples = [int(digit, 16) * 0x11 for digit in key]
+        ciphertext_samples = [int(digit, 16) * 0x11 for digit in ciphertext]
+        nonce = "".join(format((a // 0x11) ^ (b // 0x11), "x")
+                        for a, b in zip(key_samples, ciphertext_samples))
+        self.assertEqual(nonce, expected)
+
     def test_png_ihdr_dimension_recovery_layout(self):
         matches = []
         for path in (ROOT / "steganography-techniques").rglob("*.md"):
