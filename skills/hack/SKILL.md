@@ -42,6 +42,8 @@ For broad web/API work, prioritize authentication, object/tenant permissions, an
 
 Follow a partial chain when it can change the conclusion within scope and budget. A setup/tool error or an unmet prerequisite is not a valid negative result. Stop or change approach when the hypothesis is disproved, evidence repeats without reducing uncertainty, the permitted proof is sufficient, or a scope/action limit is reached. Record untested work as not covered; N/A requires an applicability reason.
 
+For local image processing, check required commands and Python imports once. Use the configured Python or a workspace-local virtual environment. Leave system package installation and privilege changes to the operator.
+
 Maintain a compact working record only when task size warrants it: scope, known facts, hypotheses, checks already tried, evidence locations, and next action. Reuse it after context compaction. Match the final answer to the user's requested deliverable.
 
 Keep bulk tool output (disassembly, dumps, logs, pcaps, large responses) in files and extract answers from it locally; load only decision-changing slices into the conversation. See [context budget](./references/context-budget.md).
