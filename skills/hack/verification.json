@@ -213,6 +213,29 @@
       "limitations": "624 consecutive full 32-bit outputs from one CPython Random instance, compatible state layout. Not truncated/mixed outputs, SystemRandom, or cryptographic RNGs."
     },
     {
+      "id": "png-periodic-reconstruction",
+      "reference": "steganography-techniques/references/periodic-png-patterns.md",
+      "status": "offline-tested",
+      "sources": [
+        "https://www.w3.org/TR/png-3/#11PLTE",
+        "https://www.w3.org/TR/png-3/#11tRNS",
+        "https://www.w3.org/TR/png-3/#11fcTL"
+      ],
+      "sources_reviewed_on": "2026-11-17",
+      "validated_on": "2026-11-17",
+      "tested_environment": [
+        {
+          "component": "CPython",
+          "version": "3.9.6",
+          "configuration": "stdlib comparison of supplied binary tile samples"
+        }
+      ],
+      "tests": [
+        "test_reference_examples.ReferenceExamples.test_periodic_png_reconstruction_and_mismatch_control"
+      ],
+      "limitations": "Checks the worked tile arithmetic and one changed-sample control. PNG decoder behavior, reconstruction on other files, and any hidden message require separate evidence."
+    },
+    {
       "id": "png-ihdr-layout",
       "reference": "steganography-techniques/references/01-image-steganography.md",
       "status": "offline-tested",

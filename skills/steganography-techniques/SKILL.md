@@ -1,7 +1,7 @@
 ---
 name: steganography-techniques
 description: >-
-  Steganography detection and extraction playbook. Use when analyzing images (LSB, PNG chunks, JPEG DCT, EXIF), audio (spectrogram, DTMF), files (polyglots, appended data, ADS), and text (whitespace, zero-width, homoglyphs) for hidden data.
+  Steganography detection and extraction playbook. Use when analyzing images (LSB, PNG chunks, periodic pixel patterns, JPEG DCT, EXIF), audio (spectrogram, DTMF), files (polyglots, appended data, ADS), and text (whitespace, zero-width, homoglyphs) for hidden data.
 ---
 
 # Steganography Techniques
@@ -11,6 +11,10 @@ description: >-
 - Preserve the original and identify the actual file/container format
 - Inspect metadata, structure, appended data, and modality-specific channels
 - Select bit-plane, coefficient, spectrogram, archive, or text analysis from observed evidence.
+
+## Periodic patterns in PNGs
+
+For repeated tiles, stripes, or woven patterns, measure the repeat on the original sample grid. Reconstruct the crop from the extracted sequences and crossing rule, then verify a second repeat when available. Use [periodic PNG analysis](./references/periodic-png-patterns.md) for palette, transparency, alignment, and mismatch checks.
 
 ## Evidence and limits
 

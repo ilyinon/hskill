@@ -80,6 +80,20 @@ class ReferenceExamples(unittest.TestCase):
         with self.assertRaises(ValueError):
             helpers["cbc_multibyte_flip"](ct, 16, [(16, 0, 1), (32, 0, 1)])
 
+    def test_periodic_png_reconstruction_and_mismatch_control(self):
+        reference = (ROOT / "steganography-techniques/references/periodic-png-patterns.md").read_text()
+        sequences = re.search(r"Warp `([01]+)` and weft `([01]+)`", reference)
+        observed = re.search(r"The observed tile rows are `([01]+)` and `([01]+)`", reference)
+        self.assertIsNotNone(sequences)
+        self.assertIsNotNone(observed)
+        warp, weft = sequences.groups()
+        tile = tuple("".join(warp[x] if (x + y) % 2 == 0 else weft[y]
+                             for x in range(len(warp))) for y in range(len(weft)))
+        self.assertEqual(tile, observed.groups())
+        first = observed[1]
+        altered = (str(1 - int(first[0])) + first[1:], observed[2])
+        self.assertEqual(sum(a != b for a, b in zip("".join(tile), "".join(altered))), 1)
+
     def test_png_ihdr_dimension_recovery_layout(self):
         matches = []
         for path in (ROOT / "steganography-techniques").rglob("*.md"):
