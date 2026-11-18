@@ -8,6 +8,7 @@ Read this only when the task does not already identify its technical topic. Sele
 | Login, reset, session | [Authentication](../authbypass-authentication-flaws/SKILL.md); JWT signing/key/claims: [validation](../jwt-oauth-token-attacks/SKILL.md); federation: [OAuth/OIDC](../oauth-oidc-misconfiguration/SKILL.md) or [SAML](../saml-sso-assertion-attacks/SKILL.md) |
 | Object, tenant, or function permissions | [IDOR](../idor-broken-object-authorization/SKILL.md); API-specific: [BOLA](../api-authorization-and-bola/SKILL.md) |
 | Input evaluated by an interpreter; type unclear | [Injection routing](../injection-checking/SKILL.md) |
+| Search/filter parameters leak data one character at a time (LIKE wildcards, Ransack) | [ORM search injection](../orm-search-injection/SKILL.md) |
 | URL fetched by server | [SSRF](../ssrf-server-side-request-forgery/SKILL.md) |
 | XML/SVG/Office parsing | [XXE](../xxe-xml-external-entity/SKILL.md); stylesheet transform: [XSLT](../xslt-injection/SKILL.md) |
 | Upload, preview, filename, download | [Upload workflow](../upload-insecure-files/SKILL.md); file path/include: [traversal](../path-traversal-lfi/SKILL.md) |

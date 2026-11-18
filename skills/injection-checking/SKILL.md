@@ -22,6 +22,7 @@ After confirming this is an injection-class issue, use it to decide whether it i
 
 - [XSS Cross Site Scripting](../xss-cross-site-scripting/SKILL.md)
 - [SQLi SQL Injection](../sqli-sql-injection/SKILL.md)
+- [ORM Search Injection (LIKE wildcards, Ransack oracle)](../orm-search-injection/SKILL.md)
 - [SSRF Server Side Request Forgery](../ssrf-server-side-request-forgery/SKILL.md)
 - [XXE XML External Entity](../xxe-xml-external-entity/SKILL.md)
 - [SSTI Server Side Template Injection](../ssti-server-side-template-injection/SKILL.md)
