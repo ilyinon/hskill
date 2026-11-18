@@ -392,7 +392,7 @@ p= fs.readFileSync('/etc/passwd','utf8')
 
 ## 14. BLIND SSTI DETECTION
 
-When template output is not directly visible in the response:
+When template output is not directly visible in the response: try OOB (DNS/HTTP callback) before timing — one target-generated callback proves egress and RCE at once, while per-request timing budgets cost minutes per byte. A callback host tested only from the attacker box is a wrong-side test; it proves nothing about target egress.
 
 ### Timing-based
 

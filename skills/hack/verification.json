@@ -683,6 +683,28 @@
       "tested_environment": [],
       "tests": [],
       "limitations": "Source review of python-dotenv 1.0.1 write/load behavior and the documented set_key round-trip fix in 1.2.3. The original notes report a separate lab observation; no run artifact or repository test supports that report. The worked case describes expected precedence, not an executed validation."
+    },
+    {
+      "id": "ssti-scenario-examples",
+      "reference": "ssti-server-side-template-injection/SCENARIOS.md",
+      "status": "unverified",
+      "sources": [],
+      "sources_reviewed_on": null,
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Applies to the example changes in this revision. Documentation checks cover structure and references. The engine version, configuration, and runtime behavior have not been validated."
+    },
+    {
+      "id": "freemarker-reference-examples",
+      "reference": "ssti-server-side-template-injection/references/02-freemarker-java-rce.md",
+      "status": "unverified",
+      "sources": [],
+      "sources_reviewed_on": null,
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Applies to the example changes in this revision. Documentation checks cover structure and references. The engine version, configuration, and runtime behavior have not been validated."
     }
   ]
 }

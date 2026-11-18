@@ -1,8 +1,7 @@
 # Keep evidence valid across changes and resumptions
 
-Use for a long task, changing inputs, or a context handoff. Keep a small working
-record in the task's existing notes; a separate file is optional. Store necessary
-facts and links to originals, not copied payload catalogs or sensitive values.
+For long runs, changed inputs, or handoffs, keep a short record in the task's
+notes. Store necessary facts and links to originals. Redact sensitive values.
 
 ```text
 goal: recover the requested bytes for r17 revision 5
@@ -53,6 +52,5 @@ Before resuming after compaction or a handoff:
 3. Resume at the first affected edge. Reuse sound evidence instead of repeating
    every step or treating an old summary as a new observation.
 
-Keep derived conclusions traceable to raw artifacts. An agent's previous answer,
-a screenshot caption, or a note saying “verified” is not an independent source.
-Do not fill missing observations with plausible text when saving a checkpoint.
+Trace conclusions to raw artifacts. Support prior answers, captions, and
+verification notes with independent evidence. Record missing observations as unknown.

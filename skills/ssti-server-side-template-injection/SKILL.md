@@ -11,6 +11,7 @@ description: >-
 - Establish whether user input becomes template source or only data
 - Compare harmless evaluation with literal and invalid-expression controls
 - Identify engine, integration, sandbox, and version before selecting engine-specific techniques.
+- When rendering is blind (no output reflected), establish a target-side OOB callback channel first; build timing oracles only after egress is confirmed absent (SCENARIOS.md §11).
 
 ## Evidence and limits
 

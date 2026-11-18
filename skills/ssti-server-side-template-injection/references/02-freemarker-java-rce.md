@@ -160,9 +160,11 @@ ${7*7}           → 49 (FreeMarker, Velocity, EL, Thymeleaf)
 
 ## 14. BLIND SSTI TECHNIQUES
 
+> Verification status is unverified for this example. The engine version,
+> configuration, and runtime outcome were not validated.
+
 - **Boolean-based**: Compare `(3*4/2)` vs `3*)2(/4` — if the first resolves and the second errors, evaluation is likely
-- **Time-based**: `{{sleep(5)}}` or the engine-specific equivalent for delay
-- **OOB**: DNS/HTTP callback via template expressions when direct output is not visible
+- **Time-based**: `{{sleep(5)}}` or the engine-specific equivalent for delay — slowest channel; per-byte proportional-sleep readers are a last resort after egress and DNS are both confirmed unavailable
 - **Error-based**: Force different error messages based on true/false conditions
 
 ---
