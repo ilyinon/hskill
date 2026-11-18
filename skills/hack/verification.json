@@ -669,6 +669,20 @@
         "test_extended_solving.ExtendedSolving.test_hmac_rfc_vector_and_changed_message"
       ],
       "limitations": "Only RFC4231 test case2 HMAC-SHA256 arithmetic and a changed-message control were executed. No production verifier, timing oracle, secret recovery or general implementation certification."
+    },
+    {
+      "id": "dotenv-set-key-injection",
+      "reference": "dotenv-set-key-injection/references/diagnostics.md",
+      "status": "source-reviewed",
+      "sources": [
+        "https://raw.githubusercontent.com/theskumar/python-dotenv/v1.0.1/src/dotenv/main.py",
+        "https://github.com/theskumar/python-dotenv/releases/tag/v1.2.3"
+      ],
+      "sources_reviewed_on": "2026-11-18",
+      "validated_on": null,
+      "tested_environment": [],
+      "tests": [],
+      "limitations": "Source review of python-dotenv 1.0.1 write/load behavior and the documented set_key round-trip fix in 1.2.3. The original notes report a separate lab observation; no run artifact or repository test supports that report. The worked case describes expected precedence, not an executed validation."
     }
   ]
 }

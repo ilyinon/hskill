@@ -222,6 +222,12 @@
       "offline_tests": []
     },
     {
+      "topic": "dotenv-set-key-injection",
+      "diagnostics": "dotenv-set-key-injection/references/diagnostics.md",
+      "worked_case": "dotenv-set-key-injection/references/worked-cases.md",
+      "offline_tests": []
+    },
+    {
       "topic": "email-header-injection",
       "diagnostics": "email-header-injection/references/diagnostics.md",
       "worked_case": "email-header-injection/references/worked-cases.md",
